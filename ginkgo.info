@@ -1,0 +1,31 @@
+; $Id$
+name = "Ginkgo"
+description = "Next gen ginkgo (aka 'coldbrew')."
+version = "0.1"
+core = "6.x"
+atrium = "1.x"
+engine = "phptemplate"
+base theme = "tao"
+
+stylesheets[screen][] = "forms.css"
+stylesheets[screen][] = "style.css"
+stylesheets[screen][] = "theme.css"
+
+stylesheets[print][] = "print-custom.css"
+
+scripts[] = "js/coldbrew.js"
+
+regions[right] = "Right sidebar"
+regions[content] = "Content"
+regions[header] = "Header"
+regions[space_tools] = "Space tools"
+regions[page_tools] = "Page tools"
+
+admin[admin menu] = "0"
+admin[admin inline] = "0"
+
+features[] = ""
+
+spaces_design_site = "#44aa55"
+spaces_design_og = "#3399aa"
+spaces_design_user = "#992244"

@@ -1,0 +1,1 @@
+<div class='views-field-log'><?php print $output ?></div>

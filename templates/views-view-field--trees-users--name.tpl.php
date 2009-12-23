@@ -1,0 +1,1 @@
+<div class='views-field-name'><?php print $output ?></div>

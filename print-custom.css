@@ -1,0 +1,19 @@
+/**
+ * Hide UI related widgets on print.
+ */
+div.node .diff-inline-controls,
+div.node .xref {
+  display:none;
+  }
+
+/**
+ * Case state display
+ */
+div.atrium-case-summary { margin:0pt 0pt 10pt; }
+
+  div.atrium-case-summary div.primary {
+    float:left;
+    width:50%;
+    }
+
+  div.atrium-case-summary label { margin-right:1em; }

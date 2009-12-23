@@ -1,0 +1,38 @@
+/* Float swaps */
+#features-menu,
+#features-menu li a span.icon,
+#features-menu li.active a span.label,
+#features-menu li.active a:hover span.label,
+
+#branding a.spaces-logo,
+#branding h1.space-title a,
+
+#global div.breadcrumb,
+
+#header div.block-toggle ul.links li,
+#header div.block-toggle div.item-list li,
+
+#block-atrium_intranet-account h2.block-title div.picture,
+#block-atrium_intranet-account div.user-info a.username,
+#block-atrium_intranet-account div.user-info div.picture { float:right; }
+
+#header,
+#branding div.search,
+#space-tools { float:left; }
+
+/* Margin swaps */
+#block-atrium_intranet-account h2.block-title div.picture,
+#global div.picture,
+#features-menu li {
+  margin-right:0px;
+  margin-left:5px;
+  }
+
+/* Padding swaps */
+body.logged-in #block-atrium_intranet-account h2.block-title {
+  padding-right:5px;
+  padding-left:10px;
+  }
+
+/* Logo alignment */
+#branding a.spaces-logo { background-position:100% 50%; }

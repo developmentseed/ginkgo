@@ -1,0 +1,18 @@
+form#spaces-customize-form div.region-right {
+  float:left;
+  }
+
+form#spaces-customize-form div.region-content,
+div.form div.form-message-public span.icon,
+div.form div.form-message-private span.icon,
+#content div.container-inline-date,
+#ucreate-user-form div.form-checkboxes div.form-option,
+#spaces-og-user-groups-form div.form-checkboxes div.form-option {
+  float:right;
+  }
+
+div.form div.form-message-public span.icon,
+div.form div.form-message-private span.icon {
+  margin-right:0px;
+  margin-left:10px;
+  }
