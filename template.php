@@ -182,16 +182,18 @@ function ginkgo_preprocess_user_profile_form(&$vars) {
 /**
  * Make logo markup overridable.
  */
-function ginkgo_spaces_design_logo($filepath) {
-  $url = imagecache_create_url('spaces-logo', $filepath);
-  $space = spaces_get_space();
-  $options = array(
-    'attributes' => array(
-      'class' => 'spaces-logo',
-      'style' => 'background-image:url(\''. $url .'\')'
-    ),
-  );
-  return l($space->title, '<front>', $options);
+function ginkgo_designkit_image($name, $filepath) {
+  if ($name === 'logo') {
+    $title = variable_get('site_name', '');
+    if (module_exists('spaces')) {
+      $space = spaces_get_space();
+      $title = $space->title();
+    }
+    $url = imagecache_create_url("designkit-image-{$name}", $filepath);
+    $options = array('attributes' => array('class' => 'logo', 'style' => "background-image:url('{$url}')"));
+    return l($space->title, '<front>', $options);
+  }
+  return theme_designkit_image($name, $filepath);
 }
 
 /**

@@ -23,4 +23,9 @@ regions[page_tools] = "Page tools"
 
 features[] = ""
 
-designkit[color][background] = "#44aa55"
+designkit[color][background][title] = "Background"
+designkit[color][background][description] = "Color for headers, other fills."
+designkit[color][background][default] = "#44aa55"
+designkit[image][logo][title] = "Logo"
+designkit[image][logo][description] = "Header logo."
+designkit[image][logo][imagecache] = "imagecache_scale:300x40"

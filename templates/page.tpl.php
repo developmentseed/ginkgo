@@ -21,8 +21,8 @@
   </div></div>
 
   <div id='branding' class='atrium-skin'><div class='limiter clear-block'>
-    <?php if (!empty($spaces_logo)): ?>
-      <?php print $spaces_logo ?>
+    <?php if (!empty($logo)): ?>
+      <?php print $logo ?>
     <?php elseif ($space_title): ?>
       <h1 class='space-title'><?php print $space_title ?></h1>
     <?php endif; ?>
