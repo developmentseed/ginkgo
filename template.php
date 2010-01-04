@@ -84,29 +84,6 @@ function ginkgo_preprocess_page(&$vars) {
   // @TODO: Implement IE styles key in tao.
   $ie = base_path() . path_to_theme() .'/ie.css';
   $vars['ie'] = "<!--[if lte IE 8]><style type='text/css' media='screen'>@import '{$ie}';</style><![endif]-->";
-
-  // Add spaces design CSS back in
-  if (!isset($_GET['print'])) {
-    if (empty($vars['spaces_design_styles'])) {
-      global $theme_info;
-      $space = spaces_get_space();
-
-      // Retrieve default colors from info file
-      if (isset($theme_info->info["spaces_design_{$space->type}"])) {
-        $default = $theme_info->info["spaces_design_{$space->type}"];
-      }
-      else {
-        $default = '#3399aa';
-      }
-
-      $color = !empty($settings["color_{$space->type}"]) ? $settings["color_{$space->type}"] : $default;
-      $vars['styles'] .= theme('spaces_design', $color);
-      $vars['attr']['class'] .= ' spaces-design';
-    }
-    else {
-      $vars['styles'] .= $vars['spaces_design_styles'];
-    }
-  }
 }
 
 /**
@@ -153,49 +130,6 @@ function ginkgo_preprocess_comment(&$vars) {
     }
     else if (context_isset('comment', 'preview')) {
       $vars = array();
-    }
-  }
-}
-
-/**
- * Preprocessor for theme_spaces_design().
- */
-function ginkgo_preprocess_spaces_design(&$vars) {
-  if (module_exists('color') && !empty($vars['color'])) {
-    if ($rgb = _color_unpack($vars['color'], TRUE)) {
-      $classes = context_get('theme', 'body_classes');
-      $classes .= ' color';
-      context_set('theme', 'body_classes', $classes);
-
-      $hsl = _color_rgb2hsl($rgb);
-
-      if ($hsl[2] > .8) {
-        $hsl[2] = .7;
-        $rgb = _color_hsl2rgb($hsl);
-      }
-
-      // This code generates color values that are blended against
-      // Black/White -- IT DOES NOT PRESERVE SATURATION.
-      $modifiers = array(
-        'upshiftplus' => array('+', .5),
-        'upshift' => array('+', .25),
-        'downshift' => array('-', .2),
-      );
-      foreach ($modifiers as $id => $modifier) {
-        $color = $rgb;
-        foreach ($rgb as $k => $v) {
-          switch ($modifier[0]) {
-            case '-':
-              $color[$k] = $color[$k] * (1 - $modifier[1]);
-              break;
-            default:
-              $color[$k] = $color[$k] + ((1 - $color[$k]) * $modifier[1]);
-              break;
-          }
-        }
-        $vars[$id] = _color_pack($color, TRUE);
-      }
-      $vars['color'] = _color_pack($rgb, TRUE);
     }
   }
 }

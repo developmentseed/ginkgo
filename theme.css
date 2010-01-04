@@ -18,6 +18,27 @@ body.anonymous-login #page-header div.limiter,
 body.anonymous-login #page div.limiter { width:560px; }
 
 /**
+ * Default designkit colors ===========================================
+ */
+#global,
+#branding,
+#navigation,
+#content h2.block-title { background-color:#44aa55; }
+
+#branding form input.form-text { border-color:#72bf7f; }
+
+#branding form input.form-text { background-color:#368844; }
+
+#header div.block-widget,
+#header div.toggle-blocks,
+#header h2.block-title { border-color:#368844; }
+
+#global,
+#header h2.block-title,
+#header div.block-widget a,
+#global div.breadcrumb a { color:#a1d4aa; }
+
+/**
  * Global navbar  =====================================================
  */
 #global {

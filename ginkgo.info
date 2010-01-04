@@ -21,11 +21,6 @@ regions[header] = "Header"
 regions[space_tools] = "Space tools"
 regions[page_tools] = "Page tools"
 
-admin[admin menu] = "0"
-admin[admin inline] = "0"
-
 features[] = ""
 
-spaces_design_site = "#44aa55"
-spaces_design_og = "#3399aa"
-spaces_design_user = "#992244"
+designkit[color][background] = "#44aa55"
