@@ -11,7 +11,7 @@
 
   <?php if ($messages): ?><div id='growl'><?php print $messages; ?></div><?php endif; ?>
 
-  <div id='global' class='atrium-skin'><div class='limiter clear-block'>
+  <div id='global'><div class='limiter clear-block'>
     <?php if ($header): ?>
       <div id='header' class='dropdown-blocks toggle-blocks clear-block'>
         <?php print $header ?>
@@ -22,7 +22,7 @@
   </div></div>
 
   <?php if ($primary_links): ?>
-  <div id='navigation' class='atrium-skin'><div class='limiter clear-block'>
+  <div id='navigation'><div class='limiter clear-block'>
     <?php if (isset($primary_links)) print theme('links', $primary_links, array('id' => 'features-menu', 'class' => 'links primary-links')) ?>
     <?php if ($space_tools): ?>
       <div id='space-tools'><div class='dropdown-blocks toggle-blocks clear-block'><?php print $space_tools ?></div></div>

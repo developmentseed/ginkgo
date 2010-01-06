@@ -1,12 +1,23 @@
 /**
  * Ginkgo theme stylesheet.
  */
-.atrium-skin { background-image:url(images/sprite_skin.png); }
-
 div.limiter {
   max-width:1280px;
   padding:0px 20px;
   }
+
+/**
+ * Skinnable elements =================================================
+ */
+#global,
+#global a.logo,
+#global div.breadcrumb span.link-0 a,
+#global div.breadcrumb span.divider,
+#navigation,
+#header #block-atrium_intranet-navigate h2.block-title,
+#header #block-atrium_intranet-navigate h2.toggle-active,
+#features-menu li,
+#features-menu li a { background-image:url(images/sprite_skin.png); }
 
 /**
  * Default designkit colors ===========================================
@@ -40,10 +51,10 @@ body div.page-region div.block h2.block-title {
   text-indent:-999px;
   overflow:hidden;
 
-  float:right;
+  position:absolute;
+  right:20px;
   height:40px;
   width:300px;
-  background-image:url(images/sprite_skin.png);
   background-repeat:no-repeat;
   background-position:100% -440px;
   }
@@ -143,17 +154,17 @@ body.logged-in #block-atrium_intranet-account h2.block-title {
 
   #global div.breadcrumb span.link-0 a,
   #global div.breadcrumb span.divider {
-    background:url(images/sprite_skin.png) -20px -410px no-repeat;
+    background-position:-20px -410px;
+    background-repeat:no-repeat;
     text-indent:-999px;
     overflow:hidden;
     width:20px;
     }
 
-  #global div.breadcrumb span.link-0 a { background:url(images/sprite_skin.png) 0px -410px no-repeat; }
+  #global div.breadcrumb span.link-0 a { background-position:0px -410px; }
 
 /* Navigate */
 #header #block-atrium_intranet-navigate h2.block-title {
-  background-image:url(images/sprite_skin.png);
   background-position:-335px -415px;
   background-repeat:no-repeat;
 
@@ -166,7 +177,6 @@ body.logged-in #block-atrium_intranet-account h2.block-title {
   }
 
   #header #block-atrium_intranet-navigate h2.toggle-active {
-    background-image:url(images/sprite_skin.png);
     background-position:-305px -415px;
     background-repeat:no-repeat;
     }
