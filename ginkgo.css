@@ -195,8 +195,9 @@ a.user-picture {
 
 .dropdown-blocks div.block-toggle div.block-content {
   z-index:1250;
-  background:#eee url(images/bleeds.png) 0px 100% repeat-x;
+  background:#f8f8f8;
   border:5px solid #fff;
+  padding:0px;
   right:0px;
 
   /* W00T */
@@ -210,7 +211,8 @@ a.user-picture {
 .dropdown-blocks div.block-toggle form,
 .dropdown-blocks div.block-toggle ul.links,
 .dropdown-blocks div.block-toggle div.item-list {
-  border:1px solid #ddd;
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
   min-width:180px;
   }
 
@@ -227,20 +229,42 @@ a.user-picture {
 .dropdown-blocks div.block-toggle div.item-list li a {
   float:none;
   display:block;
-  padding:5px 40px 4px 10px;
+  overflow:hidden;
+  padding:2px 40px 2px 10px;
   border-bottom:1px solid #eee;
   }
 
-.dropdown-blocks div.block-toggle ul.links li a span,
-.dropdown-blocks div.block-toggle div.item-list li a span {
-  float:left;
-  margin-right:10px;
+  .dropdown-blocks div.block-toggle ul.links li a:hover,
+  .dropdown-blocks div.block-toggle div.item-list li a:hover {
+    background:#999;
+    color:#fff;
+    }
+
+  .dropdown-blocks div.block-toggle ul.links li a span,
+  .dropdown-blocks div.block-toggle div.item-list li a span {
+    float:left;
+    margin-right:10px;
+    }
+
+/* Panes */
+.dropdown-blocks div.block-toggle div.panes {
+  width:360px;
+  background:url(images/vrule.png) 179px 0px repeat-y;
   }
 
-.dropdown-blocks div.block-toggle ul.links li a:hover,
-.dropdown-blocks div.block-toggle div.item-list li a:hover {
-  background:#999;
-  color:#fff;
+  .dropdown-blocks div.block-toggle div.pane-left,
+  .dropdown-blocks div.block-toggle div.pane-right {
+    width:180px;
+    float:left;
+    }
+
+/* Headings */
+.dropdown-blocks div.block-toggle div.block-content h1,
+.dropdown-blocks div.block-toggle div.block-content h2,
+.dropdown-blocks div.block-toggle div.block-content h3 {
+  background:#fff;
+  padding:2px 10px;
+  border-bottom:1px solid #eee;
   }
 
 /* Forms */
@@ -316,7 +340,7 @@ div.pager li.pager-current {
   -webkit-border-radius:5px;
   text-shadow:#fff 0px 1px 0px;
   padding:5px 15px;
-  margin-right:5px;
+  margin-right:1px;
   background:transparent;
   }
 
@@ -551,7 +575,7 @@ div.comment-submitted {
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
 
-  min-width:125px;
+  min-width:160px;
   float:right;
   position:relative;
 
@@ -561,10 +585,13 @@ div.comment-submitted {
   background:#eee;
 
   margin:0px;
-  padding:5px 5px 4px 40px;
+  padding:5px 5px 4px 5px;
   border-bottom:1px solid #ddd;
   height:30px;
   line-height:15px;
+
+  white-space:nowrap;
+  overflow:hidden;
   }
 
   div.comment-submitted {
@@ -574,8 +601,8 @@ div.comment-submitted {
 
   div.node-submitted div.picture,
   div.comment-submitted div.picture {
-    position:absolute;
-    left:5px;
+    float:left;
+    margin-right:5px;
     }
 
   div.node-submitted .username,
@@ -868,7 +895,7 @@ div.page-content div.view-atrium-shoutbox-shouts div.markup { font-size:13px; }
  */
 div.view-header,
 div.view-filters {
-  background: #f8f8f8 url(images/bleeds.png) 0% 100% repeat-x;
+  background: #f8f8f8;
   border:1px solid #ddd;
   margin:0px 0px 10px;
   }

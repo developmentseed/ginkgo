@@ -234,7 +234,12 @@ function ginkgo_more_link($url, $title) {
  */
 function ginkgo_breadcrumb($breadcrumb) {
   if (!empty($breadcrumb)) {
-    return '<div class="breadcrumb">'. implode("<span class='divider'>»</span>", $breadcrumb) .'</div>';
+    $i = 0;
+    foreach ($breadcrumb as $k => $link) {
+      $breadcrumb[$k] = "<span class='link link-{$i}'>{$link}</span>";
+      $i++;
+    }
+    return '<div class="breadcrumb">'. implode("<span class='divider'></span>", $breadcrumb) .'</div>';
   }
 }
 

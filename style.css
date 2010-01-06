@@ -12,21 +12,18 @@ div.limiter {
  * Default designkit colors ===========================================
  */
 #global,
-#branding,
-#navigation { background-color:#44aa55; }
+#navigation,
+div.pager li.pager-current { background-color:#44aa55; }
 
-#branding form input.form-text { border-color:#72bf7f; }
+body #space-tools h2.block-title { background-color:#2f773b; }
 
-#branding form input.form-text { background-color:#368844; }
+body #header div.block h2.block-title { background-color:#399048; }
 
-#header div.block-widget,
-#header div.toggle-blocks,
-#header h2.block-title { border-color:#368844; }
-
-#global,
-#header h2.block-title,
-#header div.block-widget a,
-#global div.breadcrumb a { color:#a1d4aa; }
+body div.page-region div.block h2.block-title {
+  background-color:#cce0cf;
+  border-color:#bed2c1;
+  border-bottom-color:#b0c5b4;
+  }
 
 /**
  * Global navbar  =====================================================
@@ -39,8 +36,6 @@ div.limiter {
   font-size:11px;
   }
 
-  #global a:hover { color:#fff; }
-
 #global a.logo {
   text-indent:-999px;
   overflow:hidden;
@@ -52,15 +47,6 @@ div.limiter {
   background-repeat:no-repeat;
   background-position:100% -440px;
   }
-
-#global h1.site-name {
-  float:right;
-  font-size:18px;
-  }
-
-#global div.breadcrumb { float:left; }
-#global div.breadcrumb a { font-weight:bold; }
-#global div.breadcrumb span.divider { padding:0px 10px; }
 
 /**
  * Header blocks ======================================================
@@ -79,6 +65,9 @@ div.limiter {
   padding:0px 10px;
   }
 
+  #header div.block-widget a,
+  #header h2.block-title a { color:#fff; }
+
   #header div.block-widget div.block-content { padding:0px; background:transparent; }
 
   #header div.block-widget a { font-weight:bold; }
@@ -91,8 +80,8 @@ div.limiter {
     }
 
   #header div.block-toggle h2.toggle-active {
-    background:#fff;
-    color:#333;
+    background-color:#fff !important;
+    color:#333 !important;
     -moz-border-radius:3px 3px 0px 0px;
     -webkit-border-radius:3px 3px 0px 0px;
     }
@@ -104,37 +93,23 @@ div.limiter {
     -webkit-border-radius:0px 5px 5px 5px;
     }
 
-/**
- * Help text
- */
-#header div.help {
-  padding:15px;
-  line-height:30px;
-  }
-
-#header div.help h1,
-#header div.help h2,
-#header div.help h3 {
-  color:#ccc;
-  padding:0px;
-  border:0px;
-  margin:0px 0px 15px;
-  }
-
-#header div.help a:hover { background:transparent; }
-
-#header div.help p { margin:0px 0px 15px; }
-
 /* Account block */
 body.logged-in #block-atrium_intranet-account h2.block-title {
   position:relative;
-  padding-left:40px;
+  padding-left:35px;
   }
 
 #block-atrium_intranet-account h2.block-title div.picture {
+  -moz-border-radius:3px 0px 0px 3px;
+  -webkit-border-radius:3px 0px 0px 3px;
   position:absolute;
   left:0px;
   }
+
+  #block-atrium_intranet-account h2.toggle-active div.picture {
+    -moz-border-radius:3px 0px 0px 0px;
+    -webkit-border-radius:3px 0px 0px 0px;
+    }
 
 #block-atrium_intranet-account div.user-info {
   line-height:60px;
@@ -150,75 +125,50 @@ body.logged-in #block-atrium_intranet-account h2.block-title {
   padding:0px 10px;
   }
 
-/**
- * Branding ===========================================================
- */
-#branding {
-  background-position:0px -120px;
-  background-repeat:repeat-x;
-  padding:5px 0px;
-  line-height:40px;
-  height:40px;
-  }
-
-#branding,
-#branding a,
-#branding input {
-  font-size:11px;
-  color:#fff;
-  }
-
-#branding ul.links {
-  line-height:20px;
-  padding:10px 0px 10px 20px;
+/* Breadcrumb */
+#global div.breadcrumb {
   float:left;
-  }
-
-  #branding ul.links a {
-    font-weight:bold;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
-    background:url(images/black40.png);
-    padding:0px 10px;
-    }
-
-#branding h1.space-title a {
-  font-size:20px;
-  font-weight:300;
-  float:left;
-  }
-
-#branding div.search {
-  padding:5px 0px;
+  padding:5px;
   line-height:30px;
-  height:30px;
-
-  overflow:hidden;
-  float:right;
-  position:relative;
+  font-size:20px;
+  font-weight:normal;
   }
 
-  #branding form * { display:inline; }
-
-  #branding form input.form-submit {
-    border:0px;
+  #global div.breadcrumb span,
+  #global div.breadcrumb span a {
     color:#fff;
-    text-shadow:none;
-    background-position:0px 100px;
-    background-repeat:no-repeat;
+    height:30px;
+    float:left;
     }
 
-  #branding form input.form-text,
-  #branding form input.form-text:focus {
-    width:150px;
-    padding:5px 5px 5px 25px;
+  #global div.breadcrumb span.link-0 a,
+  #global div.breadcrumb span.divider {
+    background:url(images/sprite_skin.png) -20px -410px no-repeat;
+    text-indent:-999px;
+    overflow:hidden;
+    width:20px;
+    }
 
-    background-color:transparent;
-    background-position:0px -372px;
+  #global div.breadcrumb span.link-0 a { background:url(images/sprite_skin.png) 0px -410px no-repeat; }
+
+/* Navigate */
+#header #block-atrium_intranet-navigate h2.block-title {
+  background-image:url(images/sprite_skin.png);
+  background-position:-335px -415px;
+  background-repeat:no-repeat;
+
+  text-indent:-999px;
+  overflow:hidden;
+  height:20px;
+  width:20px;
+  margin:5px 0px 0px;
+  padding:0px;
+  }
+
+  #header #block-atrium_intranet-navigate h2.toggle-active {
+    background-image:url(images/sprite_skin.png);
+    background-position:-305px -415px;
     background-repeat:no-repeat;
-
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
     }
 
 /**
@@ -268,13 +218,10 @@ body.logged-in #block-atrium_intranet-account h2.block-title {
 
   #space-tools div.block-widget a { font-weight:bold; }
 
-#space-tools h2.block-title {
-  background:url(images/black40.png);
-  color:#fff;
-  }
+#space-tools h2.block-title { color:#fff; }
 
   #space-tools h2.toggle-active {
-    background:#fff;
+    background-color:#fff !important;
     color:#333;
     }
 
@@ -378,7 +325,7 @@ body.logged-in #block-atrium_intranet-account h2.block-title {
   #features-menu li a.icon-calendar span.icon { background-position: -80px -40px; }
   #features-menu li a.icon-casetracker span.icon { background-position: -120px -40px; }
   #features-menu li a.icon-dashboard span.icon { background-position: -160px -40px; }
-  #features-menu li a.icon-groups span.icon { background-position: -200px -40px; }
+  #features-menu li a.icon-og span.icon { background-position: -200px -40px; }
   #features-menu li a.icon-home span.icon { background-position: -240px -40px; }
   #features-menu li a.icon-members span.icon { background-position: -280px -40px; }
   #features-menu li a.icon-profile span.icon { background-position: -280px -40px; }
@@ -408,8 +355,8 @@ span.feature-atrium_home { background-position:-120px 100%; }
 span.feature-atrium_members { background-position:-140px 100%; }
 span.feature-atrium_shoutbox { background-position:-160px 100%; }
 
-#block-atrium_intranet-spacelinks span.icon { background:url(images/sprite_icons.png) -20px -400px no-repeat; }
-#block-atrium_intranet-spacelinks h2.toggle-active span.icon { background-position:-20px -420px; }
+#block-atrium_intranet-admin_links span.icon { background:url(images/sprite_icons.png) -20px -400px no-repeat; }
+#block-atrium_intranet-admin_links h2.toggle-active span.icon { background-position:-20px -420px; }
 #block-atrium_intranet-create span.icon { background:url(images/sprite_icons.png) 0px -400px no-repeat; }
 #block-atrium_intranet-create h2.toggle-active span.icon { background-position:0px -420px; }
 

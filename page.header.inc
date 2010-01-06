@@ -13,8 +13,11 @@
 
   <div id='global' class='atrium-skin'><div class='limiter clear-block'>
     <?php if ($header): ?>
-      <div id='header' class='dropdown-blocks toggle-blocks clear-block'><?php print $header ?></div>
+      <div id='header' class='dropdown-blocks toggle-blocks clear-block'>
+        <?php print $header ?>
+      </div>
     <?php endif; ?>
+    <?php print $breadcrumb ?>
     <?php print $logo ?>
   </div></div>
 
