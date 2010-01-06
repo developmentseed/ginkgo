@@ -285,54 +285,96 @@ a.user-picture {
  * Page tools ========================================================
  */
 #page-tools {
-  background:url(images/sprite_skin.png) 0px -260px repeat-x;
-  padding:5px 0px 4px;
-  height:30px;
+  background:url(images/sprite_base.png) 0px -360px repeat-x;
+  height:39px;
   border-bottom:1px solid #ccc;
   /* IE7 z-index stacking: #navigation 2, #page-header 1, all others 0. */
   position:relative;
   z-index:1;
   }
 
-/**
- * Tabs, pagers =======================================================
- */
-div.pager,
-#page div.pager {
-  -moz-border-radius:3px;
-  -webkit-border-radius:3px;
+  #page-tools h2.page-title,
+  #page-tools div.tabs {
+    padding-top:5px;
+    float:left;
+    }
 
-  background:#fff;
-  line-height:18px;
-  border-width:1px;
-  border-style:solid;
-  border-color:#ccc #ddd #eee;
+  #page-tools div.context-links,
+  #page-tools div.dropdown-blocks { float:right; }
+
+#page-tools h2.page-title {
+  font-size:16px;
+  font-weight:normal;
+  line-height:30px;
+  text-shadow:#fff 0px 1px 0px;
   }
 
+  #page-tools h2.page-title a.username {
+    color:inherit;
+    font-size:inherit;
+    text-transform:none;
+    }
+
+#page-tools div.dropdown-blocks { height:39px; }
+
+  #page-tools div.dropdown-blocks div.block-toggle h2.block-title {
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+
+    border:0px;
+    border-left:1px solid #ccc;
+
+    text-shadow:#fff 0px 1px 0px;
+    padding:5px 10px;
+    line-height:30px;
+    background:transparent;
+    }
+
+    #page-tools div.dropdown-blocks div.block-toggle h2.toggle-active {
+      color:#fff;
+      text-shadow:#444 0px 1px 0px;
+      background:#666 url(images/sprite_base.png) 0px 100% repeat-x;
+      }
+
+#page-tools div.context-links {
+  border-left:1px solid #ccc;
+  padding:7px 0px 7px 5px;
+  height:25px;
+  line-height:15px;
+  overflow:hidden;
+  }
+
+  #page-tools div.context-links a {
+    font-size:11px;
+    font-weight:bold;
+    color:#fff;
+    background:#666 url(images/sprite_base.png) 0px -400px repeat-x;
+    text-shadow:#444 0px 1px 0px;
+
+    border:1px solid #555;
+    border-color:#555 #555 #333;
+
+    margin-left:5px;
+    padding:4px 9px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    }
+
+    #page-tools div.context-links a:active { background-position:0px 100%; }
+
+/**
+ * Tabs ===============================================================
+ */
 #page-tools div.tabs ul.links {
   height:35px;
   float:none;
   position:static;
   }
 
-#page-tools li { padding:0px; }
-
-div.pager a,
-div.pager li.pager-current {
-  color:#888;
-  font-weight:normal;
-  font-size:13px;
-  -moz-border-radius:0px;
-  -webkit-border-radius:0px;
-  padding:5px 15px;
-  border:0px;
-  background:transparent;
-  }
-
-#page-tools li a,
-#page-tools li a:hover,
-#page-tools li.active a,
-#page-tools li a.active {
+#page-tools div.tabs li a,
+#page-tools div.tabs li a:hover,
+#page-tools div.tabs li.active a,
+#page-tools div.tabs li a.active {
   color:#888;
   font-weight:bold;
   font-size:13px;
@@ -344,7 +386,7 @@ div.pager li.pager-current {
   background:transparent;
   }
 
-  #page-tools li a:hover {
+  #page-tools div.tabs li a:hover {
     color:#333;
     background:#ddd;
     padding:4px 14px;
@@ -352,91 +394,29 @@ div.pager li.pager-current {
     border-color:#ccc #ddd #fff;
     }
 
-    #page-tools li a:active {
+    #page-tools div.tabs li a:active {
       background:#ccc;
       border-color:#bbb #ccc #eee;
       }
 
-#page-tools li.active a,
-#page-tools li a.active {
-  color:#333;
-  -moz-border-radius:5px 5px 0px 0px;
-  -webkit-border-radius:5px 5px 0px 0px;
+  #page-tools div.tabs li.active a,
+  #page-tools div.tabs li a.active {
+    background:#fff;
+    color:#333;
+    -moz-border-radius:5px 5px 0px 0px;
+    -webkit-border-radius:5px 5px 0px 0px;
 
-  padding:4px 14px 10px;
-  border-width:1px 1px 0px;
-  border-color:#ccc #ddd;
-  border-style:solid;
-  }
-
-  div.pager a,
-  div.pager li.pager-current { padding:5px 10px; }
-
-#page div.pager a:hover {
-  background:#fff;
-  color:#333;
-  }
-
-  #page div.pager a:hover { background:#eee; }
-
-#page div.pager ul.pager-list li:first-child a,
-#page div.pager ul.pager-list li.pager-current:first-child {
-  -moz-border-radius:5px 0px 0px 5px;
-  -webkit-border-radius:5px 0px 0px 5px;
-  }
-
-#page div.pager ul.pager-links li:last-child a {
-  -moz-border-radius:0px 5px 5px 0px;
-  -webkit-border-radius:0px 5px 5px 0px;
-  }
-
-div.pager li.pager-current {
-  text-shadow:none;
-  background:#4a5;
-  color:#fff;
-  }
-
-#page-tools li.active a,
-#page-tools li a.active { background:#fff; }
-
-/**
- * Page-specific tools ================================================
- */
-#page-tools h2.page-title,
-#page-tools div.tabs { float:left; }
-
-  #page-header h2.page-title {
-    font-size:16px;
-    font-weight:normal;
-    line-height:30px;
-    text-shadow:#fff 0px 1px 0px;
+    padding:4px 14px 10px;
+    border-width:1px 1px 0px;
+    border-color:#ccc #ddd;
+    border-style:solid;
     }
-
-  #page-header h2.page-title a.username {
-    color:inherit;
-    font-size:inherit;
-    text-transform:none;
-    }
-
-#page-tools div.context-links,
-#page-tools div.dropdown-blocks { float:right; }
-
-#page-tools div.dropdown-blocks { padding-right:5px; }
-
-#page-tools div.context-links {
-  padding:0px 5px 0px 0px;
-  line-height:30px;
-  height:30px;
-  overflow:hidden;
-  }
-
-  #page-tools div.context-links a { margin-left:5px; }
 
 /**
  * Secondary tabs =====================================================
  */
 #secondary-tabs {
-  background:#fff url(images/sprite_skin.png) 0px -260px repeat-x;
+  background:#fff url(images/sprite_base.png) 0px -360px repeat-x;
   padding:5px 0px 4px;
   height:20px;
   border-bottom:1px solid #ccc;
@@ -451,13 +431,13 @@ div.pager li.pager-current {
 
   #secondary-tabs a:hover {
     color:#333;
-    background:#ddd url(images/sprite_skin.png) 0px -260px repeat-x;
+    background:#ddd url(images/sprite_base.png) 0px -360px repeat-x;
     }
 
   #secondary-tabs li.active a,
   #secondary-tabs a.active {
     color:#fff;
-    background:#999 url(images/sprite_skin.png) 0px -260px repeat-x;
+    background:#999 url(images/sprite_base.png) 0px -360px repeat-x;
     }
 
 /**
@@ -469,6 +449,56 @@ div.mission {
   padding:20px 20px 19px;
   border-bottom:1px solid #ddd;
   }
+
+/**
+ * Pager ==============================================================
+ */
+div.pager {
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+
+  background:#fff;
+  line-height:18px;
+  border-width:1px;
+  border-style:solid;
+  border-color:#ccc #ddd #eee;
+  }
+
+div.pager a,
+div.pager li.pager-current {
+  color:#888;
+  font-weight:normal;
+  font-size:13px;
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
+  padding:5px 10px;
+  border:0px;
+  background:transparent;
+  }
+
+  div.pager a:hover {
+    background:#fff;
+    color:#333;
+    }
+
+  div.pager a:hover { background:#eee; }
+
+  div.pager ul.pager-list li:first-child a,
+  div.pager ul.pager-list li.pager-current:first-child {
+    -moz-border-radius:5px 0px 0px 5px;
+    -webkit-border-radius:5px 0px 0px 5px;
+    }
+
+  div.pager ul.pager-links li:last-child a {
+    -moz-border-radius:0px 5px 5px 0px;
+    -webkit-border-radius:0px 5px 5px 0px;
+    }
+
+  div.pager li.pager-current {
+    text-shadow:none;
+    background:#4a5;
+    color:#fff;
+    }
 
 /*
  * Page layout ========================================================
@@ -517,7 +547,7 @@ div.mission {
     padding:4px 9px;
     border:1px solid #ddd;
     border-bottom-color:#ccc;
-    background:#eee url(images/sprite_skin.png) 0px -260px repeat-x;
+    background:#eee url(images/sprite_base.png) 0px -400px repeat-x;
     }
 
 #content {
