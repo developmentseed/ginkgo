@@ -1,15 +1,13 @@
 ; $Id$
 name = "Ginkgo"
 description = "Next gen ginkgo (aka 'coldbrew')."
-version = "0.1"
 core = "6.x"
 atrium = "1.x"
 engine = "phptemplate"
-base theme = "tao"
+base theme = "rubik"
 
-stylesheets[screen][] = "forms.css"
 stylesheets[screen][] = "style.css"
-stylesheets[screen][] = "theme.css"
+stylesheets[screen][] = "ginkgo.css"
 
 stylesheets[print][] = "print-custom.css"
 
@@ -23,6 +21,32 @@ regions[page_tools] = "Page tools"
 
 features[] = ""
 
+; Layout: Default
+layouts[default][name] = "Default"
+layouts[default][description] = "Simple two column page."
+layouts[default][template] = "page"
+
+; Layout: Wide
+layouts[wide][name] = "Wide"
+layouts[wide][description] = "Single one column wide page."
+layouts[wide][stylesheet] = "layout-wide.css"
+layouts[wide][template] = "layout-wide"
+layouts[wide][regions][] = "content"
+layouts[wide][regions][] = "header"
+layouts[wide][regions][] = "space_tools"
+layouts[wide][regions][] = "page_tools"
+
+; Layout: Login
+layouts[login][name] = "Login"
+layouts[login][description] = "Thin one column login page."
+layouts[login][stylesheet] = "layout-login.css"
+layouts[login][template] = "layout-login"
+layouts[login][regions][] = "content"
+layouts[login][regions][] = "header"
+layouts[login][regions][] = "space_tools"
+layouts[login][regions][] = "page_tools"
+
+; Designkit
 designkit[color][background][title] = "Background"
 designkit[color][background][description] = "Color for headers, other fills."
 designkit[color][background][default] = "#44aa55"

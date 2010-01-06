@@ -2,7 +2,13 @@
 #global,
 #branding,
 #navigation,
-#content h2.block-title { background-color:<?php print $background ?>; }
+div.pager li.pager-current { background-color:<?php print $background ?>; }
+
+div.page-region div.block h2.block-title {
+  background-color:<?php print designkit_colorshift($background, '#eeeeee', .8) ?>;
+  border-color:<?php print designkit_colorshift($background, '#dddddd', .8) ?>;
+  border-bottom-color:<?php print designkit_colorshift($background, '#cccccc', .8) ?>;
+  }
 
 #branding form input.form-text { border-color:<?php print designkit_colorshift($background, '#ffffff', .25) ?>; }
 

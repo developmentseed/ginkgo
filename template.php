@@ -1,21 +1,25 @@
 <?php
 
 /**
- * Implementation of hook_theme().
+ *  Implementation of hook_theme().
  */
-function ginkgo_theme($existing, $type, $theme, $path) {
-  return array(
-    'user_profile_form' => array(
-      'arguments' => array('form' => array()),
-      'template' => 'node_form',
-      'path' => drupal_get_path('theme', 'ginkgo') . "/templates",
-    ),
-    'node_form' => array(
-      'arguments' => array('form' => array()),
-      'template' => 'node_form',
-      'path' => drupal_get_path('theme', 'ginkgo') . "/templates",
+function ginkgo_theme() {
+  $items = array();
+
+  // Use simple form.
+  $items['comment_form'] =
+  $items['user_pass'] =
+  $items['user_login'] =
+  $items['user_register'] = array(
+    'arguments' => array('form' => array()),
+    'path' => drupal_get_path('theme', 'rubik') .'/templates',
+    'template' => 'form-simple',
+    'preprocess functions' => array(
+      'rubik_preprocess_form_buttons',
+      'rubik_preprocess_form_legacy'
     ),
   );
+  return $items;
 }
 
 /**
@@ -71,7 +75,7 @@ function ginkgo_preprocess_page(&$vars) {
   $settings = theme_get_settings('ginkgo');
 
   // Show site title/emblem ?
-  $vars['site_name'] = (isset($settings['emblem']) && !$settings['emblem']) ? '' : $vars['site_name'];
+  $vars['logo'] = !empty($vars['logo']) ? $vars['logo'] : l(check_plain(variable_get('site_name', 'Drupal')), '<front>', array('attributes' => array('class' => 'logo')));
 
   // Footer links
   $vars['footer_links'] = isset($vars['footer_links']) ? $vars['footer_links'] : array();
@@ -101,12 +105,14 @@ function ginkgo_preprocess_block(&$vars) {
  * Preprocessor for theme_node().
  */
 function ginkgo_preprocess_node(&$vars) {
-    $vars['submitted'] = !empty($vars['submitted']) ? theme('seed_byline', $vars['node']) : ''; 
+  $vars['submitted'] = !empty($vars['submitted']) ? theme('seed_byline', $vars['node']) : '';
   if (!empty($vars['terms'])) {
     $label = t('Tagged');
     $terms = "<div class='field terms clear-block'><span class='field-label'>{$label}:</span> {$vars['terms']}</div>";
     $vars['content'] =  $terms . $vars['content'];
   }
+  $vars['title'] = check_plain($vars['node']->title);
+  $vars['layout'] = FALSE;
 
   // Add node-page class.
   $vars['attr']['class'] .= $vars['node'] === menu_get_object() ? ' node-page' : '';
@@ -119,8 +125,13 @@ function ginkgo_preprocess_node(&$vars) {
  * Preprocessor for theme_comment().
  */
 function ginkgo_preprocess_comment(&$vars) {
-  // Only show subjects if enabled.
-  $vars['title'] = variable_get("comment_subject_field_{$vars['node']->type}", 1) ? $vars['title'] : '';
+  // If subject field not enabled, replace the title with a number.
+  if (!variable_get("comment_subject_field_{$vars['node']->type}", 1)) {
+    static $number;
+    $number = isset($number) ? $number: 1;
+    $vars['title'] = l("#{$number}", "node/{$vars['node']->nid}", array('fragment' => "comment-{$vars['id']}"));
+    $number++;
+  }
   $vars['submitted'] = theme('seed_byline', $vars['comment']);
 
   // We're totally previewing a comment... set a context so others can bail.
@@ -139,8 +150,8 @@ function ginkgo_preprocess_comment(&$vars) {
  * Better theming of spaces privacy messages on node forms.
  */
 function ginkgo_preprocess_node_form(&$vars) {
-  context_set('theme', 'layout', 'custom');
-  context_set('theme', 'body_classes', 'one-sidebar');
+  // context_set('theme', 'layout', 'custom');
+  // context_set('theme', 'body_classes', 'one-sidebar');
 
   if (!empty($vars['form']['spaces'])) {
     $spaces_info = $vars['form']['spaces'];
@@ -190,7 +201,7 @@ function ginkgo_designkit_image($name, $filepath) {
       $title = $space->title();
     }
     $url = imagecache_create_url("designkit-image-{$name}", $filepath);
-    $options = array('attributes' => array('class' => 'logo', 'style' => "background-image:url('{$url}')"));
+    $options = array('attributes' => array('class' => 'logo', 'style' => "background-position:50% 50%; background-image:url('{$url}')"));
     return l($space->title, '<front>', $options);
   }
   return theme_designkit_image($name, $filepath);
@@ -234,18 +245,6 @@ function ginkgo_help() {
   if ($help = menu_get_active_help()) {
     return '<div class="help prose">'. $help .'</div>';
   }
-}
-
-/**
- * Menu item theme override. Adds a child element to expanded/expandable
- * elements so that a spite icon can be added.
- */
-function ginkgo_menu_item($link, $has_children, $menu = '', $in_active_trail = FALSE, $extra_class = NULL) {
-  if ($has_children) {
-    $icon = "<span class='icon'></span>";
-    $link = "{$icon} $link";
-  }
-  return theme_menu_item($link, $has_children, $menu, $in_active_trail, $extra_class);
 }
 
 /**

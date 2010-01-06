@@ -1,0 +1,12 @@
+#page-header div.limiter { width:640px; }
+
+#page div.limiter { width:660px; }
+
+body #page { background:#f8f8f8 url(images/page.png) repeat-x; }
+
+body #content {
+  float:none;
+  width:auto;
+  }
+
+body #content div.page-region { padding:10px 0px; }

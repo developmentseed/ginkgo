@@ -29,21 +29,14 @@ Drupal.behaviors.coldbrew = function (context) {
     $(this).addClass('processed');
     $('h2.block-title', this).click(function() {
       var realm = $(this).parents('div.toggle-blocks');
-      var fixed = $(this).parents('#header').size();
 
       if (!$(this).is('.toggle-active')) {
         $('div.toggle-blocks h2.block-title').removeClass('toggle-active');
         $('div.toggle-blocks div.block-toggle div.block-content').hide();
         $(this).addClass('toggle-active').siblings('div.block-content').show();
-        if (fixed) {
-          $(document.body).addClass('header-fixed');
-        }
       }
       else {
         $(this).removeClass('toggle-active').siblings('div.block-content').hide();
-        if (fixed) {
-          $(document.body).removeClass('header-fixed');
-        }
       }
       return false;
     });

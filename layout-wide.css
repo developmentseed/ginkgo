@@ -1,0 +1,11 @@
+body #content {
+  float:none;
+  width:auto;
+  }
+
+body #page div.limiter {
+  padding:0px 10px;
+  background:transparent;
+  }
+
+body #content div.page-region { padding:20px 0px; }

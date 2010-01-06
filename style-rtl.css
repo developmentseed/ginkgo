@@ -1,139 +1,38 @@
-/* Float flips */
-div.view-atrium-profile li div.user-picture,
-div.view-atrium-profile li div.username,
-div.view-atrium-profile li div.mail,
-#views-bulk-operations-dropdown,
-#views-bulk-operations-submit,
-div.grouped div.grouped-meta,
-div.view-atrium-shoutbox-shouts .user-picture,
+/* Float swaps */
+#features-menu,
+#features-menu li a span.icon,
+#features-menu li.active a span.label,
+#features-menu li.active a:hover span.label,
 
-div.diff-inline-controls span.diff-inline-legend,
-div.more-link a,
-div.node-links ul li span,
-div.comment-links ul li span,
-div.node-links ul li a,
-div.comment-links ul li a,
+#branding a.spaces-logo,
+#branding h1.space-title a,
 
-div.node-submitted .username,
-div.comment-submitted .username,
-div.node-submitted div.picture,
-div.comment-submitted div.picture,
+#global div.breadcrumb,
 
-.dropdown-blocks h2.block-title span.icon,
-.dropdown-blocks div.block-toggle ul.links li a span,
-.dropdown-blocks div.block-toggle div.item-list li a span,
+#header div.block-toggle ul.links li,
+#header div.block-toggle div.item-list li,
 
-div.main h2.block-title,
-body.one-sidebar div#content,
-div.pager ul.pager-list,
-#page-header div.tabs ul.links { float:right; }
+#block-atrium_intranet-account h2.block-title div.picture,
+#block-atrium_intranet-account div.user-info a.username,
+#block-atrium_intranet-account div.user-info div.picture { float:right; }
 
-/* Float flips */
-div.messages span.close,
+#header,
+#branding div.search,
+#space-tools { float:left; }
 
-div.grouped div.grouped-content,
-
-.node a.new,
-.comment a.new,
-span.marker,
-div.view div.item-list .count,
-
-div.more-link a,
-div.node-links ul.links,
-div.comment-links ul.links,
-div.node-submitted span.date,
-div.comment-submitted span.date,
-
-#right,
-ul.menu span.icon,
-div.pager ul.pager-links,
-#page-tools { float:left; }
-
-/**
- * Swapped margins, borders
- */
-div.sidebar h2.block-title {
-  padding-left:8px;
-  padding-right:10px;
-  border-right:2px solid #e8e8e8;
-  border-left:0px;
-  }
-
-div.sidebar div.block-content {
-  padding-left:8px;
-  padding-right:10px;
-  border-right:2px solid #eee;
-  border-left:0px;
-  }
-
-div.main h2.block-title {
-  left:0px;
-  right:-20px;
-  }
-
-.dropdown-blocks div.block {
-  padding-left:0px;
-  padding-right:5px;
-  }
-
-.dropdown-blocks div.block-toggle div.block-content {
-  left:0px;
-  right:auto;
-  -moz-border-radius:0px 5px 5px 5px;
-  -webkit-border-top-right-radius:5px;
-  -webkit-border-top-left-radius:0px;
-  }
-
-.dropdown-blocks div.block-toggle ul.links li a,
-.dropdown-blocks div.block-toggle div.item-list li a {
-  padding-left:40px;
-  padding-right:10px;
-  }
-
-.dropdown-blocks h2.block-title span.icon,
-.dropdown-blocks div.block-toggle ul.links li a span,
-.dropdown-blocks div.block-toggle div.item-list li a span,
-div.view-atrium-shoutbox-shouts .user-picture,
-#page ul.secondary-tabs a {
+/* Margin swaps */
+#block-atrium_intranet-account h2.block-title div.picture,
+#global div.picture,
+#features-menu li {
   margin-right:0px;
   margin-left:5px;
   }
 
-#page-header div.tabs ul.links li a {
-  margin-left:1px;
-  margin-right:0px;
+/* Padding swaps */
+body.logged-in #block-atrium_intranet-account h2.block-title {
+  padding-right:5px;
+  padding-left:10px;
   }
 
-div.node-submitted,
-div.comment-submitted { padding:0px 0px 0px 5px; }
-
-div.node-submitted div.picture,
-div.comment-submitted div.picture {
-  margin-left:10px;
-  margin-right:0px;
-  }
-
-ul.menu a,
-ul.menu li li {
-  padding-left:0px;
-  padding-right:10px;
-  }
-
-div.view-atrium-profile li div label { right:0px; }
-div.view-atrium-profile li div .field-content { padding:5px 100px 5px 5px; }
-
-div.view div.grouped-meta div.views-field {
-  margin-right:0px;
-  margin-left:10px;
-  padding-right:0px;
-  padding-left:5px;
-  }
-
-/**
- * Remove letter-spacing hacks.
- */
-#content div.view-empty,
-#content div.spaces-empty,
-ul.multistep li span,
-ul.multistep li a,
-div.view-atrium-profile div.username { letter-spacing:0px; }
+/* Logo alignment */
+#branding a.spaces-logo { background-position:100% 50%; }
