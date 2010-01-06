@@ -282,9 +282,9 @@ a.user-picture {
   }
 
 /**
- * Page header ========================================================
+ * Page tools ========================================================
  */
-#page-header {
+#page-tools {
   background:url(images/sprite_skin.png) 0px -260px repeat-x;
   padding:5px 0px 4px;
   height:30px;
@@ -431,6 +431,34 @@ div.pager li.pager-current {
   }
 
   #page-tools div.context-links a { margin-left:5px; }
+
+/**
+ * Secondary tabs =====================================================
+ */
+#secondary-tabs {
+  background:#fff url(images/sprite_skin.png) 0px -260px repeat-x;
+  padding:5px 0px 4px;
+  height:20px;
+  border-bottom:1px solid #ccc;
+  }
+
+  #secondary-tabs a {
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    color:#999;
+    padding:0px 15px;
+    }
+
+  #secondary-tabs a:hover {
+    color:#333;
+    background:#ddd url(images/sprite_skin.png) 0px -260px repeat-x;
+    }
+
+  #secondary-tabs li.active a,
+  #secondary-tabs a.active {
+    color:#fff;
+    background:#999 url(images/sprite_skin.png) 0px -260px repeat-x;
+    }
 
 /**
  * Mission text =======================================================
