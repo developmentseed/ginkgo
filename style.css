@@ -359,6 +359,8 @@ span.feature-atrium_shoutbox { background-position:-160px 100%; }
 #block-atrium_intranet-admin_links h2.toggle-active span.icon { background-position:-20px -420px; }
 #block-atrium_intranet-create span.icon { background:url(images/sprite_icons.png) 0px -400px no-repeat; }
 #block-atrium_intranet-create h2.toggle-active span.icon { background-position:0px -420px; }
+#block-atrium_intranet-search span.icon { background:url(images/sprite_icons.png) -40px -400px no-repeat; }
+#block-atrium_intranet-search h2.toggle-active span.icon { background-position:-40px -420px; }
 
 /**
  * Error pages ========================================================
