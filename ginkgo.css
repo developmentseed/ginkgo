@@ -381,7 +381,7 @@ a.user-picture {
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
   text-shadow:#fff 0px 1px 0px;
-  padding:5px 15px;
+  padding:5px 10px;
   margin-right:1px;
   background:transparent;
   }
@@ -389,7 +389,7 @@ a.user-picture {
   #page-tools div.tabs li a:hover {
     color:#333;
     background:#ddd;
-    padding:4px 14px;
+    padding:4px 9px;
     border:1px solid #ccc;
     border-color:#ccc #ddd #fff;
     }
@@ -406,7 +406,7 @@ a.user-picture {
     -moz-border-radius:5px 5px 0px 0px;
     -webkit-border-radius:5px 5px 0px 0px;
 
-    padding:4px 14px 10px;
+    padding:4px 9px 10px;
     border-width:1px 1px 0px;
     border-color:#ccc #ddd;
     border-style:solid;
@@ -426,7 +426,7 @@ a.user-picture {
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
     color:#999;
-    padding:0px 15px;
+    padding:0px 10px;
     }
 
   #secondary-tabs a:hover {

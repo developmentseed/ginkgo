@@ -14,8 +14,6 @@ div.limiter {
 #global div.breadcrumb span.link-0 a,
 #global div.breadcrumb span.divider,
 #navigation,
-#header #block-atrium_intranet-navigate h2.block-title,
-#header #block-atrium_intranet-navigate h2.toggle-active,
 #features-menu li,
 #features-menu li a { background-image:url(images/sprite_skin.png); }
 
@@ -105,33 +103,33 @@ body div.page-region div.block h2.block-title {
     }
 
 /* Account block */
-body.logged-in #block-atrium_intranet-account h2.block-title {
+body.logged-in #block-atrium-account h2.block-title {
   position:relative;
   padding-left:35px;
   }
 
-#block-atrium_intranet-account h2.block-title div.picture {
+#block-atrium-account h2.block-title div.picture {
   -moz-border-radius:3px 0px 0px 3px;
   -webkit-border-radius:3px 0px 0px 3px;
   position:absolute;
   left:0px;
   }
 
-  #block-atrium_intranet-account h2.toggle-active div.picture {
+  #block-atrium-account h2.toggle-active div.picture {
     -moz-border-radius:3px 0px 0px 0px;
     -webkit-border-radius:3px 0px 0px 0px;
     }
 
-#block-atrium_intranet-account div.user-info {
+#block-atrium-account div.user-info {
   line-height:60px;
   padding:10px 10px 9px;
   margin:0px 0px 1px;
   }
 
-#block-atrium_intranet-account div.user-info a.username,
-#block-atrium_intranet-account div.user-info div.picture { float:left; }
+#block-atrium-account div.user-info a.username,
+#block-atrium-account div.user-info div.picture { float:left; }
 
-#block-atrium_intranet-account div.user-info a.username {
+#block-atrium-account div.user-info a.username {
   font-size:24px;
   padding:0px 10px;
   }
@@ -162,24 +160,6 @@ body.logged-in #block-atrium_intranet-account h2.block-title {
     }
 
   #global div.breadcrumb span.link-0 a { background-position:0px -410px; }
-
-/* Navigate */
-#header #block-atrium_intranet-navigate h2.block-title {
-  background-position:-335px -415px;
-  background-repeat:no-repeat;
-
-  text-indent:-999px;
-  overflow:hidden;
-  height:20px;
-  width:20px;
-  margin:5px 0px 0px;
-  padding:0px;
-  }
-
-  #header #block-atrium_intranet-navigate h2.toggle-active {
-    background-position:-305px -415px;
-    background-repeat:no-repeat;
-    }
 
 /**
  * Footer ==============================================================
@@ -365,12 +345,12 @@ span.feature-atrium_home { background-position:-120px 100%; }
 span.feature-atrium_members { background-position:-140px 100%; }
 span.feature-atrium_shoutbox { background-position:-160px 100%; }
 
-#block-atrium_intranet-admin_links span.icon { background:url(images/sprite_icons.png) -20px -400px no-repeat; }
-#block-atrium_intranet-admin_links h2.toggle-active span.icon { background-position:-20px -420px; }
-#block-atrium_intranet-create span.icon { background:url(images/sprite_icons.png) 0px -400px no-repeat; }
-#block-atrium_intranet-create h2.toggle-active span.icon { background-position:0px -420px; }
-#block-atrium_intranet-search span.icon { background:url(images/sprite_icons.png) -40px -400px no-repeat; }
-#block-atrium_intranet-search h2.toggle-active span.icon { background-position:-40px -420px; }
+#block-atrium-admin_links span.icon { background:url(images/sprite_icons.png) -20px -400px no-repeat; }
+#block-atrium-admin_links h2.toggle-active span.icon { background-position:-20px -420px; }
+#block-atrium-create span.icon { background:url(images/sprite_icons.png) 0px -400px no-repeat; }
+#block-atrium-create h2.toggle-active span.icon { background-position:0px -420px; }
+#block-atrium-search span.icon { background:url(images/sprite_icons.png) -40px -400px no-repeat; }
+#block-atrium-search h2.toggle-active span.icon { background-position:-40px -420px; }
 
 /**
  * Error pages ========================================================
