@@ -26,6 +26,21 @@ div.comment-links ul li a:hover {
   }
 
 /**
+ * Palette blocks =====================================================
+ */
+#palette {
+  position:fixed;
+  right:0px;
+  bottom:0px;
+  z-index:3000;
+  }
+
+  #palette div.block {
+    margin:5px 0px 0px;
+    display:none;
+    }
+
+/**
  * Togglable blocks ===================================================
  */
 .toggle-blocks div.context-block,
@@ -93,58 +108,45 @@ a.user-picture {
 /**
  * Growl-like messages ================================================
  */
-#growl {
-  position:fixed;
-  right:10px;
-  top:10px;
-  width:400px;
-  z-index:2000;
+div.messages {
+  font-size:16px;
+  padding:10px 20px 9px;
+  margin:0px;
+  border:0px;
   }
 
-  div.messages {
-    font-size:16px;
-    background:url(images/gray20.png);
-    color:#fff;
-    padding:20px 20px 19px;
-    margin:0px 0px 1px;
+  div.messages,
+  div.messages li { border-bottom:1px solid #cde; }
 
-    border-style:solid;
-    border-width:0px 0px 0px 10px;
-    border-color:#48c;
-    position:relative;
-    max-height:400px;
+  #growl div.warning,
+  #growl div.warning li { border-color:#fca; }
 
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
+  #growl div.error,
+  #growl div.error li { border-color:#fcc; }
+
+div.messages li {
+  padding-bottom:9px;
+  margin-bottom:10px;
+  }
+
+  div.messages li:last-child {
+    border:0px;
+    padding:0px;
+    margin:0px;
     }
 
-    #growl div.warning { border-color:#f90; }
-    #growl div.error { border-color:#b10; }
+div.messages span.close {
+  float:right;
 
-  div.messages li {
-    border-bottom:1px solid #666;
-    padding-bottom:9px;
-    margin-bottom:10px;
-    }
+  width:25px;
+  height:25px;
 
-    div.messages li:last-child {
-      border:0px;
-      padding:0px;
-      margin:0px;
-      }
+  overflow:hidden;
+  text-indent:-999px;
 
-  div.messages span.close {
-    float:right;
-
-    width:25px;
-    height:25px;
-
-    overflow:hidden;
-    text-indent:-999px;
-
-    cursor:pointer;
-    background:url(images/sprite_base.png) -105px 0px no-repeat;
-    }
+  cursor:pointer;
+  background:url(images/sprite_base.png) -105px 0px no-repeat;
+  }
 
 /**
  * Togglable blocks ===================================================
@@ -856,17 +858,18 @@ body table {
   font-size:13px;
   }
 
+body table th,
+body div.view table th { font-size:11px; }
+
 /**
  * Module: CASETRACKER ================================================
  */
-div.atrium-case-summary {
-  font-size:11px;
-  padding:0px;
-  border-top:1px solid #fff;
-  background:#f8f8f8;
-  }
+div.atrium-case-summary label { color:#999; }
 
-  div.atrium-case-summary div.primary div.status { font-size:20px; }
+div.atrium-case-summary div.status {
+  font-size:20px;
+  background:transparent;
+  }
 
   /* Closed */
   div.atrium-case-status-inactive {
@@ -874,16 +877,18 @@ div.atrium-case-summary {
     background:#fcfcfc;
     }
 
-  div.atrium-case-summary div.primary,
-  div.atrium-case-summary div.secondary { padding:10px; }
+div.atrium-case-summary div.primary {
+  border-right:1px solid #ddd;
+  width:40%;
+  margin-right:10px;
+  }
 
-  div.atrium-case-summary div.primary {
-    border-right:1px solid #fff;
-    width:40%;
-    margin-right:10px;
+  div.atrium-case-summary div.primary div,
+  div.atrium-case-summary div.secondary div {
+    padding:5px 0px;
+    height:20px;
+    background:url(images/hrule_dotted.png) 0% 100% repeat-x;
     }
-
-  div.atrium-case-summary label { color:#999; }
 
 /* Casetracker tables */
 table.cases tr.odd td.active,
@@ -1000,10 +1005,12 @@ div.view div.grouping-meta {
   }
 
 div.view div.grouped-meta {
+  position:relative;
+  margin-left:-120px; /* TODO: IE7? */
+  float:left;
+
   background:#fff;
   padding:5px;
-  position:absolute;
-  left:0px;
   width:100px;
   }
 

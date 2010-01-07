@@ -1,7 +1,6 @@
 <?php
-
 /**
- *  Implementation of hook_theme().
+ * Implementation of hook_theme().
  */
 function ginkgo_theme() {
   $items = array();
@@ -91,6 +90,15 @@ function ginkgo_preprocess_block(&$vars) {
     $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-widget' : ' block-toggle';
   }
   $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-notitle' : '';
+}
+
+/**
+ * Preprocessor for theme_context_block_editable_region().
+ */
+function ginkgo_preprocess_context_block_editable_region(&$vars) {
+  if (in_array($vars['region'], array('header', 'page_tools', 'space_tools', 'palette'))) {
+    $vars['editable'] = FALSE;
+  }
 }
 
 /**

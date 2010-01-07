@@ -9,8 +9,6 @@
   </head>
   <body <?php print drupal_attributes($attr) ?>>
 
-  <?php if ($messages): ?><div id='growl'><?php print $messages; ?></div><?php endif; ?>
-
   <div id='global'><div class='limiter clear-block'>
     <?php if ($header): ?>
       <div id='header' class='dropdown-blocks toggle-blocks clear-block'>
@@ -40,6 +38,8 @@
   <?php if ($tabs2): ?>
     <div id='secondary-tabs'><div class='limiter clear-block'><?php print $tabs2 ?></div></div>
   <?php endif; ?>
+
+  <?php if ($messages): ?><div id='growl'><?php print $messages; ?></div><?php endif; ?>
 
   <div id='page'><div class='limiter clear-block'>
     <?php if ($mission): ?><div class="mission"><?php print $mission ?></div><?php endif; ?>

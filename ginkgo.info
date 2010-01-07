@@ -1,4 +1,3 @@
-; $Id$
 name = "Ginkgo"
 description = "Next gen ginkgo (aka 'coldbrew')."
 core = "6.x"
@@ -11,13 +10,14 @@ stylesheets[screen][] = "ginkgo.css"
 
 stylesheets[print][] = "print-custom.css"
 
-scripts[] = "js/coldbrew.js"
+scripts[] = "js/ginkgo.js"
 
 regions[right] = "Right sidebar"
 regions[content] = "Content"
 regions[header] = "Header"
 regions[space_tools] = "Space tools"
 regions[page_tools] = "Page tools"
+regions[palette] = "Palette"
 
 features[] = ""
 
@@ -35,6 +35,7 @@ layouts[wide][regions][] = "content"
 layouts[wide][regions][] = "header"
 layouts[wide][regions][] = "space_tools"
 layouts[wide][regions][] = "page_tools"
+layouts[wide][regions][] = "palette"
 
 ; Layout: Login
 layouts[login][name] = "Login"
@@ -45,6 +46,7 @@ layouts[login][regions][] = "content"
 layouts[login][regions][] = "header"
 layouts[login][regions][] = "space_tools"
 layouts[login][regions][] = "page_tools"
+layouts[login][regions][] = "palette"
 
 ; Designkit
 designkit[color][background][title] = "Background"
