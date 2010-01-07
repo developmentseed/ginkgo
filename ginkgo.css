@@ -557,6 +557,20 @@ div.page-region { padding:20px 0px; }
 #right div.page-region { padding-right:10px; }
 
 /**
+ * Lists ==============================================================
+ */
+div.page-region div.block .item-list li {
+  padding:5px 0px 4px;
+  border-bottom:1px solid #ddd;
+  }
+
+  div.page-region div.block .item-list li:first-child,
+  div.page-region div.block .item-list li.views-row-first { padding-top:0px; }
+
+  div.page-region div.block .item-list li:last-child,
+  div.page-region div.block .item-list li.views-row-last { padding-bottom:0px; border:0px }
+
+/**
  * Menus ==============================================================
  */
 div.block ul.menu ul {
@@ -980,18 +994,23 @@ div.view .date {
 div.page-content div.view .markup { font-size:11px; }
 
 /* Grouped fields */
+div.view div.grouping-meta {
+  position:relative;
+  padding-left:120px;
+  }
+
 div.view div.grouped-meta {
-  float:left;
-  width:35%;
+  background:#fff;
+  padding:5px;
+  position:absolute;
+  left:0px;
+  width:100px;
   }
 
   div.view div.grouped-meta div.views-field {
     font-size:11px;
-    background:#fff;
+    line-height:15px;
     overflow:hidden;
-    padding-left:5px;
-    border-right:5px solid #fff;
-    margin-right:10px;
     white-space:nowrap;
     }
 
@@ -1007,12 +1026,6 @@ div.view div.grouped-admin a {
   float:left;
   background:#fff;
   padding:0px 5px;
-  }
-
-/* Slide over content if meta group is present */
-div.view div.grouping-meta div.grouped-content {
-  float:right;
-  width:65%;
   }
 
 /* VBO */
