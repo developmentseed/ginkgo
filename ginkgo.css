@@ -32,12 +32,76 @@ div.comment-links ul li a:hover {
   position:fixed;
   right:0px;
   bottom:0px;
-  z-index:3000;
+  z-index:500;
+  width:400px;
   }
 
+  #palette,
+  #palette select,
+  #palette input.form-text,
+  #palette input.form-submit { font-size:16px; }
+
   #palette div.block {
-    margin:5px 0px 0px;
+    -moz-box-shadow:#666 0px 0px 10px;
+    -webkit-box-shadow:#666 0px 0px 10px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+
+    border:0px;
+    margin:0px;
+    padding:0px;
+    background:transparent;
     display:none;
+    }
+
+  #palette div.block h2.block-title {
+    position:relative;
+    background:#ccc url(images/sprite_base.png) 0px -400px repeat-x;
+    color:#666;
+    text-shadow:#fff 0px 1px 0px;
+    font-size:16px;
+    padding:10px;
+    }
+
+  div.messages span.close,
+  #palette div.block h2.block-title span.close {
+    position:absolute;
+    right:10px;
+    top:10px;
+
+    display:block;
+    width:20px;
+    height:20px;
+    text-indent:-999px;
+    overflow:hidden;
+
+    cursor:pointer;
+    background:#666 url(images/sprite_base.png) -40px -30px no-repeat;
+
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    }
+
+  #palette div.block div.block-content { background:#eee; }
+
+  /* Context editor specific */
+  #palette div.context-editor-block-layouts div.form-item { display:inline; }
+
+  div.context-block-addable {
+    color:#666;
+    background:#fff;
+    border:5px solid #ddd;
+    padding:15px;
+    font-size:16px;
+
+    white-space:nowrap;
+    overflow:hidden;
+    }
+
+  #palette div.context-block-addable {
+    float:left;
+    width:149px;
+    margin:0px 1px 1px 0px;
     }
 
 /**
@@ -59,7 +123,7 @@ div.comment-links ul li a:hover {
   }
 
 .toggle-blocks div.block-toggle div.block-content {
-  z-index:1500;
+  z-index:499;
   position:absolute;
   display:none;
   }
@@ -109,8 +173,9 @@ a.user-picture {
  * Growl-like messages ================================================
  */
 div.messages {
+  position:relative;
   font-size:16px;
-  padding:10px 20px 9px;
+  padding:10px 40px 9px 20px;
   margin:0px;
   border:0px;
   }
@@ -134,19 +199,6 @@ div.messages li {
     padding:0px;
     margin:0px;
     }
-
-div.messages span.close {
-  float:right;
-
-  width:25px;
-  height:25px;
-
-  overflow:hidden;
-  text-indent:-999px;
-
-  cursor:pointer;
-  background:url(images/sprite_base.png) -105px 0px no-repeat;
-  }
 
 /**
  * Togglable blocks ===================================================
@@ -179,7 +231,7 @@ div.messages span.close {
   }
 
 .dropdown-blocks div.block-toggle div.block-content {
-  z-index:1250;
+  z-index:498;
   background:#f8f8f8;
   border:5px solid #fff;
   padding:0px;
@@ -256,10 +308,7 @@ div.messages span.close {
   }
 
 /* Forms */
-.dropdown-blocks div.block-toggle form {
-  width:200px;
-  padding:10px;
-  }
+.dropdown-blocks div.block-toggle form { padding:10px; }
 
 .dropdown-blocks div.block-toggle input.form-submit { margin:5px 0px 0px; }
 

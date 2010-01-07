@@ -1,4 +1,13 @@
 Drupal.behaviors.ginkgo = function (context) {
+  // Close handler for palette blocks.
+  $('#palette div.block h2.block-title span.close:not(.atrium-processed)')
+    .addClass('atrium-processed')
+    .each(function() {
+      $(this).click(function() {
+        $(this).parents('div.block').hide();
+      });
+    });
+
   // Click handler for toggling palette blocks.
   $('a.palette-toggle:not(.atrium-processed)')
     .addClass('atrium-processed')
@@ -12,7 +21,7 @@ Drupal.behaviors.ginkgo = function (context) {
           // this will activate context editing or menu item
           // reordering for example.
           var runonce = false;
-          $('a', target).each(function() {
+          $('a, input:submit', target).each(function() {
             var events = $(this).data('events');
             if ($(this).css('display') != 'none' && events.click && !runonce) {
               $(this).click();

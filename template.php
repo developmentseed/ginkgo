@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Implementation of hook_theme().
  */
@@ -88,6 +89,10 @@ function ginkgo_preprocess_block(&$vars) {
   // i.e. show its contents rather than a toggle trigger label.
   if (in_array($vars['block']->region, array('header', 'page_tools', 'space_tools'))) {
     $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-widget' : ' block-toggle';
+  }
+  // Add close button to palette region blocks.
+  if ($vars['block']->region === 'palette') {
+    $vars['title'] = "<span class='close'></span>{$vars['title']}";
   }
   $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-notitle' : '';
 }
