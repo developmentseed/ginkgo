@@ -1,24 +1,7 @@
 /**
- * Atrium base stylesheet.
- *
  * Provides styling for generic components and elements within the main
  * page canvas.
  */
-
-body.tao,
-input,
-textarea,
-select { font-family:Arial,Helvetica,sans-serif; }
-
-body.tao { background:#eee; }
-
-/**
- * Metrics ============================================================
- */
-a {
-  color:#48a;
-  text-decoration:none;
-  }
 
 /**
  * "Power" hover classes ==============================================
@@ -610,10 +593,23 @@ div.block ul.menu ul ul ul ul ul { background:#cce; }
  * The goal here is to get node and comment theming as reasonably
  * consistent as possible.
  */
+div.node {
+  padding:0px 0px 8px;
+  border-bottom:2px solid #ddd;
+  margin:0px 0px 10px;
+  }
+
+  div.node:last-child,
+  div.node-page {
+    padding:0px;
+    margin:0px;
+    border:0px;
+    }
+
 div.comment {
   background:#fff;
-  border:1px solid #eee;
-  border-color:#eee #eee #ccc;
+  border:1px solid #ddd;
+  border-color:#ddd #ddd #ccc;
   margin:0px 0px 10px;
   }
 
@@ -672,8 +668,8 @@ div.comment-submitted {
 
 div.node-links,
 div.comment-links {
-  border-top:1px solid #eee;
-  padding:4px 0px;
+  background:transparent url(images/hrule_dotted.png) 0% 0% repeat-x;
+  padding:5px 0px;
   }
 
 div.more-link a,
@@ -704,21 +700,20 @@ div.comment-links ul.links {
       background:transparent;
       }
 
+div.diff-inline-controls,
 div.node div.field {
+  background:transparent url(images/hrule_dotted.png) 0% 100% repeat-x;
+  padding:5px 0px;
   margin:0px;
-  padding:4px 5px 5px;
-
-  font-size:11px;
-  line-height:20px;
-
-  border:0px;
-  border-top:1px solid #fff;
-  background:#f8f8f8;
   }
 
   div.node .field .field-label,
   div.node .field .field-label-inline,
-  div.node .field .field-label-inline-first { font-weight:normal; }
+  div.node .field .field-label-inline-first {
+    font-size:11px;
+    font-weight:bold;
+    color:#666;
+    }
 
   div.node div.terms ul.links,
   div.node div.terms ul.links li,
@@ -734,6 +729,43 @@ div.node div.field {
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     }
+
+/**
+ * Module: DIFF =======================================================
+ */
+div.diff-inline-controls span.diff-inline-legend { float:left; }
+
+div.block-diff div.block-content {
+  max-height:200px;
+  overflow:auto;
+  }
+
+div.block-diff table.diff-inline-revisions tr,
+div.block-diff table.diff-inline-revisions tr:hover {
+  color:#999;
+  background:transparent;
+  border-top:1px solid #eee;
+  }
+
+div.block-diff table.diff-inline-revisions tr.active { color:#333; }
+
+span.diff-deleted { color:#ccc; }
+
+span.diff-added,
+span.diff-changed {
+  padding-top:5px;
+  padding-bottom:5px;
+  background:#ffc;
+  border-bottom:1px solid #fe9;
+
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  }
+
+span.diff-added {
+  background:#cfc;
+  border-color:#9c9;
+  }
 
 /**
  * Prose text formatting ==============================================
@@ -766,8 +798,8 @@ div.node div.field {
  * Comment threads ====================================================
  */
 div.box {
-  border:1px solid #eee;
-  border-color:#ddd #eee #eee;
+  border:1px solid #ddd;
+  border-color:#ccc #ddd #ddd;
   background:#f4f4f4;
   }
 
@@ -799,63 +831,6 @@ div.box {
 body table {
   line-height:20px;
   font-size:13px;
-  }
-
-/**
- * Module: DIFF =======================================================
- */
-div.diff-inline-controls {
-  background:#f8f8f8;
-  font-size:11px;
-
-  border-top:1px solid #fff;
-
-  height:29px;
-  padding:0px 10px;
-  margin:0px;
-  }
-
-  div.diff-inline-controls a.button {
-    margin-top:3px;
-    padding-top:0px;
-    padding-bottom:0px;
-    }
-
-  div.diff-inline-controls span.diff-inline-legend {
-    padding:4px 0px 5px;
-    float:left;
-    }
-
-  div.block-diff div.block-content {
-    max-height:200px;
-    overflow:auto;
-    }
-
-  div.block-diff table.diff-inline-revisions tr,
-  div.block-diff table.diff-inline-revisions tr:hover {
-    color:#999;
-    background:transparent;
-    border-top:1px solid #eee;
-    }
-
-  div.block-diff table.diff-inline-revisions tr.active { color:#333; }
-
-span.diff-deleted { color:#ccc; }
-
-span.diff-added,
-span.diff-changed {
-  padding-top:5px;
-  padding-bottom:5px;
-  background:#ffc;
-  border-bottom:1px solid #fe9;
-
-  -webkit-border-radius:3px;
-  -moz-border-radius:3px;
-  }
-
-span.diff-added {
-  background:#cfc;
-  border-color:#9c9;
   }
 
 /**

@@ -119,6 +119,9 @@ function ginkgo_preprocess_node(&$vars) {
 
   // Don't show the full node when a comment is being previewed.
   $vars = context_get('comment', 'preview') == TRUE ? array() : $vars;
+
+  // Clear out template file suggestions if we are the active theme.
+  $vars['template_files'] = array();
 }
 
 /**
@@ -127,10 +130,7 @@ function ginkgo_preprocess_node(&$vars) {
 function ginkgo_preprocess_comment(&$vars) {
   // If subject field not enabled, replace the title with a number.
   if (!variable_get("comment_subject_field_{$vars['node']->type}", 1)) {
-    static $number;
-    $number = isset($number) ? $number: 1;
-    $vars['title'] = l("#{$number}", "node/{$vars['node']->nid}", array('fragment' => "comment-{$vars['id']}"));
-    $number++;
+    $vars['title'] = l("#{$vars['id']}", "node/{$vars['node']->nid}", array('fragment' => "comment-{$vars['comment']->cid}"));
   }
   $vars['submitted'] = theme('seed_byline', $vars['comment']);
 
