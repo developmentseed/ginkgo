@@ -150,9 +150,6 @@ function ginkgo_preprocess_comment(&$vars) {
  * Better theming of spaces privacy messages on node forms.
  */
 function ginkgo_preprocess_node_form(&$vars) {
-  // context_set('theme', 'layout', 'custom');
-  // context_set('theme', 'body_classes', 'one-sidebar');
-
   if (!empty($vars['form']['spaces'])) {
     $spaces_info = $vars['form']['spaces'];
     switch ($vars['form']['#node']->og_public) {
@@ -176,14 +173,6 @@ function ginkgo_preprocess_node_form(&$vars) {
     $vars['sidebar']['archive'] = $vars['form']['archive'];
     unset($vars['form']['archive']);
   }
-}
-
-/**
- * Preprocessor for theme_user_profile_form().
- */
-function ginkgo_preprocess_user_profile_form(&$vars) {
-  context_set('theme', 'layout', 'custom');
-  context_set('theme', 'body_classes', 'one-sidebar');
 }
 
 /**
@@ -240,15 +229,6 @@ function ginkgo_breadcrumb($breadcrumb) {
       $i++;
     }
     return '<div class="breadcrumb">'. implode("<span class='divider'></span>", $breadcrumb) .'</div>';
-  }
-}
-
-/**
- * Override of theme_help().
- */
-function ginkgo_help() {
-  if ($help = menu_get_active_help()) {
-    return '<div class="help prose">'. $help .'</div>';
   }
 }
 

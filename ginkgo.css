@@ -231,7 +231,7 @@ a.user-picture {
 
 /* Panes */
 .dropdown-blocks div.block-toggle div.panes {
-  width:360px;
+  width:540px;
   background:url(images/vrule.png) 179px 0px repeat-y;
   }
 
@@ -240,6 +240,9 @@ a.user-picture {
     width:180px;
     float:left;
     }
+
+  .dropdown-blocks div.block-toggle div.pane-right { width:360px; }
+  .dropdown-blocks div.block-toggle div.pane-right li { float:left; width:50%; }
 
 /* Headings */
 .dropdown-blocks div.block-toggle div.block-content h1,
