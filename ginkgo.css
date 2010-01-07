@@ -522,6 +522,12 @@ div.pager li.pager-current {
     padding:9px;
     }
 
+    div.page-region div.block-notitle div.block-content {
+      border-top-color:#ddd;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      }
+
   div.page-region div.block h2.block-title {
     -moz-border-radius:5px 5px 0px 0px;
     -webkit-border-radius:5px 5px 0px 0px;

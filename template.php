@@ -56,12 +56,6 @@ function ginkgo_preprocess_page(&$vars) {
   // If tabs are active, the title is likely shown in them. Don't show twice.
   $vars['title'] = !empty($vars['tabs']) ? '' : $vars['title'];
 
-  // Respect anything people are requesting through context.
-  if (module_exists('context')) {
-    $vars['custom_layout'] = (context_get('theme', 'layout') == 'custom') ? TRUE : FALSE;
-    $vars['attr']['class'] .= context_isset('theme', 'body_classes') ? " ". context_get('theme', 'body_classes') : '';
-  }
-
   // Add a smarter body class than "not logged in" for determining whether
   // we are on a login/password/user registration related page.
   global $user;
@@ -71,10 +65,7 @@ function ginkgo_preprocess_page(&$vars) {
     $vars['mission'] = filter_xss_admin(variable_get('site_mission', ''));
   }
 
-  // Theme specific settings
-  $settings = theme_get_settings('ginkgo');
-
-  // Show site title/emblem ?
+  // Fallback logo.
   $vars['logo'] = !empty($vars['logo']) ? $vars['logo'] : l(check_plain(variable_get('site_name', 'Drupal')), '<front>', array('attributes' => array('class' => 'logo')));
 
   // Footer links
@@ -99,6 +90,7 @@ function ginkgo_preprocess_block(&$vars) {
   if (in_array($vars['block']->region, array('header', 'page_tools', 'space_tools'))) {
     $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-widget' : ' block-toggle';
   }
+  $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-notitle' : '';
 }
 
 /**
