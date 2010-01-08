@@ -85,7 +85,13 @@ div.comment-links ul li a:hover {
   #palette div.block div.block-content { background:#eee; }
 
   /* Context editor specific */
-  #palette div.context-editor-block-layouts div.form-item { display:inline; }
+  #palette div.context-editor-block-layouts div.form-item {
+    padding:0px;
+    display:inline;
+    }
+
+  #palette form.context-editor div.item-list { display:none; }
+  #palette form.context-editor div.buttons { display:block; }
 
   div.context-block-addable {
     color:#666;
