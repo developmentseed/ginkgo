@@ -335,7 +335,7 @@ function ginkgo_preprocess_views_view_fields(&$vars) {
     // Override arrays for grouping
     $view_id = "{$vars['view']->name}:{$vars['view']->current_display}";
     $overrides = array(
-      "atrium_profile:block_1" => array(),
+      "atrium_profile:page_1" => array(),
       "atrium_blog_comments:block_1" => array(
         'meta' => array('date', 'user-picture', 'username', 'author'),
       ),
@@ -426,7 +426,7 @@ function _ginkgo_get_views_field_class($handler) {
     }
   }
   // Fallback
-  if (!empty($handler->relationship)) {
+  if (!empty($handler->relationship) && ($handler->view->base_table !== 'users')) {
     return "related-{$handler->field}";
   }
   return $handler->field;

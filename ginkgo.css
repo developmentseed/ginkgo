@@ -1128,18 +1128,18 @@ div.view div.item-list .count {
 /* Profile view */
 div.view-atrium-profile li { padding:0px; }
 
-div.view-atrium-profile li div {
+div.view-atrium-profile div {
   clear:both;
   position:relative;
   }
 
-  div.view-atrium-profile li div .field-content {
+  div.view-atrium-profile div .field-content {
     display:block;
     border-top:1px solid #eee;
     padding:5px 5px 5px 100px;
     }
 
-  div.view-atrium-profile li div label {
+  div.view-atrium-profile div label {
     padding:5px 0px;
     position:absolute;
     left:0px;
@@ -1149,9 +1149,9 @@ div.view-atrium-profile li div {
     font-size:11px;
     }
 
-div.view-atrium-profile li div.user-picture,
-div.view-atrium-profile li div.username,
-div.view-atrium-profile li div.mail {
+div.view-atrium-profile div.user-picture,
+div.view-atrium-profile div.username,
+div.view-atrium-profile div.mail {
   padding:0px 0px 10px;
   border:0px;
   line-height:60px;
@@ -1166,13 +1166,6 @@ div.view-atrium-profile li div.mail {
       letter-spacing:-1px;
       text-transform:none;
       }
-
-  /**
-  * @TODO: ideally we have some logic that checks to see if both
-  * node title and username are populated. If so, it uses node title.
-  * For now, just hide one of the two.
-  */
-  div.view-atrium-profile div.title { display:none; }
 
 /* Archive block selector */
 div.view #edit-summary-wrapper select { width:75%; }
