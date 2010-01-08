@@ -4,7 +4,13 @@ Drupal.behaviors.ginkgo = function (context) {
     .addClass('atrium-processed')
     .each(function() {
       $(this).click(function() {
-        $(this).parents('div.block').hide();
+        var target = $(this).parents('div.block');
+        target.hide();
+
+        // If the block contains a pageEditor form, trigger its end handler.
+        if (jQuery().pageEditor && $('form', target).pageEditor) {
+          $('form', target).pageEditor('end');
+        }
       });
     });
 
@@ -17,17 +23,10 @@ Drupal.behaviors.ginkgo = function (context) {
         if (target.css('display') == 'none') {
           target.show();
 
-          // Trigger the first link with a click handler --
-          // this will activate context editing or menu item
-          // reordering for example.
-          var runonce = false;
-          $('a, input:submit', target).each(function() {
-            var events = $(this).data('events');
-            if ($(this).css('display') != 'none' && events.click && !runonce) {
-              $(this).click();
-              runonce = true;
-            }
-          });
+          // If the block contains a pageEditor form, trigger its start handler.
+          if (jQuery().pageEditor && $('form', target).pageEditor) {
+            $('form', target).pageEditor('start');
+          }
         }
         else {
           target.hide();
@@ -63,8 +62,6 @@ Drupal.behaviors.ginkgo = function (context) {
     .addClass('processed')
     .each(function() {
       $('h2.block-title', this).click(function() {
-        var realm = $(this).parents('div.toggle-blocks');
-
         if (!$(this).is('.toggle-active')) {
           $('div.toggle-blocks h2.block-title').removeClass('toggle-active');
           $('div.toggle-blocks div.block-toggle div.block-content').hide();
@@ -76,4 +73,4 @@ Drupal.behaviors.ginkgo = function (context) {
         return false;
       });
     });
-}
+};
