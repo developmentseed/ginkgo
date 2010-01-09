@@ -133,9 +133,13 @@ function ginkgo_preprocess_node(&$vars) {
  * Preprocessor for theme_comment().
  */
 function ginkgo_preprocess_comment(&$vars) {
+  // Add a time decay class.
+  $decay = _ginkgo_get_comment_decay($vars['node']->nid, $vars['comment']->timestamp);
+  $vars['attr']['class'] .= " decay-{$decay['decay']}";
+
   // If subject field not enabled, replace the title with a number.
   if (!variable_get("comment_subject_field_{$vars['node']->type}", 1)) {
-    $vars['title'] = l("#{$vars['id']}", "node/{$vars['node']->nid}", array('fragment' => "comment-{$vars['comment']->cid}"));
+    $vars['title'] = l("#{$decay['order']}", "node/{$vars['node']->nid}", array('fragment' => "comment-{$vars['comment']->cid}"));
   }
   $vars['submitted'] = theme('seed_byline', $vars['comment']);
 
@@ -190,12 +194,11 @@ function ginkgo_preprocess_node_form(&$vars) {
 function ginkgo_designkit_image($name, $filepath) {
   if ($name === 'logo') {
     $title = variable_get('site_name', '');
-    if (module_exists('spaces')) {
-      $space = spaces_get_space();
+    if (module_exists('spaces') && $space = spaces_get_space()) {
       $title = $space->title();
     }
     $url = imagecache_create_url("designkit-image-{$name}", $filepath);
-    $options = array('attributes' => array('class' => 'logo', 'style' => "background-position:50% 50%; background-image:url('{$url}')"));
+    $options = array('attributes' => array('class' => 'logo', 'style' => "background-position:100% 50%; background-image:url('{$url}')"));
     return l($space->title, '<front>', $options);
   }
   return theme_designkit_image($name, $filepath);
@@ -441,4 +444,28 @@ function _ginkgo_get_views_field_class($handler) {
     return "related-{$handler->field}";
   }
   return $handler->field;
+}
+
+/**
+ * Return both an order (e.g. #1 for oldest to #n for the nth comment)
+ * and a decay value (0 for newest, 10 for oldest) for a given comment.
+ */
+function _ginkgo_get_comment_decay($nid, $timestamp) {
+  static $timerange;
+  if (!isset($timerange[$nid])) {
+    $range = array();
+    $result = db_query("SELECT timestamp FROM {comments} WHERE nid = %d ORDER BY timestamp ASC", $nid);
+    $i = 1;
+    while ($row = db_fetch_object($result)) {
+      $timerange[$nid][$row->timestamp] = $i;
+      $i++;
+    }
+  }
+  if (!empty($timerange[$nid][$timestamp])) {
+    $decay = max(array_keys($timerange[$nid])) - min(array_keys($timerange[$nid]));
+    $decay = $decay > 0 ? ((max(array_keys($timerange[$nid])) - $timestamp) / $decay) : 0;
+    $decay = floor($decay * 10);
+    return array('order' => $timerange[$nid][$timestamp], 'decay' => $decay);
+  }
+  return array('order' => 1, 'decay' => 0);
 }

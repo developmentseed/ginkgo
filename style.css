@@ -48,6 +48,17 @@ body div.page-region div.block h2.block-title {
   border-bottom-color:#b0c5b4;
   }
 
+div.decay-10 h2.comment-title { border-color:#eeeeee; }
+div.decay-9 h2.comment-title { border-color:#dde7de; }
+div.decay-8 h2.comment-title { border-color:#cce0cf; }
+div.decay-7 h2.comment-title { border-color:#bbd9c0; }
+div.decay-6 h2.comment-title { border-color:#aad2b0; }
+div.decay-5 h2.comment-title { border-color:#99cca1; }
+div.decay-4 h2.comment-title { border-color:#88c592; }
+div.decay-3 h2.comment-title { border-color:#77be82; }
+div.decay-2 h2.comment-title { border-color:#66b773; }
+div.decay-1 h2.comment-title { border-color:#55b064; }
+div.decay-0 h2.comment-title { border-color:#44aa55; }
 /**
  * Global navbar  =====================================================
  */

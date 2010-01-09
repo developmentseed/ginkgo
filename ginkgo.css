@@ -11,7 +11,7 @@ ul.multistep li.active-step,
 .form-textarea:focus,
 .form-select:focus,
 .prose a:hover,
-table tr:hover,
+table tr:hover td,
 table td.active,
 div.block table tr.active,
 div.block ul.menu a:hover { background-color:#ecf4f8; }
@@ -145,7 +145,6 @@ div.comment-links ul li a:hover {
 span.username,
 a.username {
   font-weight:bold;
-  font-size:11px;
   vertical-align:baseline;
   color:#666;
   }
@@ -706,6 +705,16 @@ div.block ul.menu ul ul ul ul { background:#fea; }
 div.block ul.menu ul ul ul ul ul { background:#cce; }
 
 /**
+ * Forms in blocks ====================================================
+ */
+div.block div.views-exposed-form input.form-text,
+div.block div.views-exposed-form textarea,
+div.block div.views-exposed-form select,
+div.block input.form-text,
+div.block textarea,
+div.block select { width:90%; }
+
+/**
  * Nodes, comments ====================================================
  * The goal here is to get node and comment theming as reasonably
  * consistent as possible.
@@ -738,7 +747,11 @@ h2.node-title {
   font-weight:300;
   }
 
-  h2.comment-title,
+  h2.comment-title {
+    border-top:3px solid #4a5;
+    padding: 6px 10px 10px;
+    }
+
   div.comment-content { padding:10px; }
 
 div.node-submitted,
@@ -959,6 +972,7 @@ body div.view table th { font-size:11px; }
 div.atrium-case-summary label { color:#999; }
 
 div.atrium-case-summary div.status {
+  color:#333;
   font-size:20px;
   background:transparent;
   }
@@ -1081,7 +1095,6 @@ div.view li p {
 
 div.view .views-field label,
 div.view .related-title,
-div.view .username,
 div.view .type,
 div.view .date {
   color:#666;
@@ -1240,10 +1253,28 @@ div.views-exposed-form select { width:auto; }
 /* Views block filter */
 div.block div.views-exposed-form div.views-exposed-widget {
   float:none;
-  padding:5px 0px;
+  position:relative;
+  padding:5px 0px 4px 100px;
+  border-bottom:1px solid #ddd;
   }
 
-  div.block div.views-exposed-form div.views-exposed-widget input.form-submit { margin:0px; }
+  div.block div.views-exposed-form div.views-exposed-widget:last-child {
+    border:0px;
+    padding-bottom:0px;
+    }
+
+div.block div.views-exposed-form div.views-exposed-widget label {
+  position:absolute;
+  width:100px;
+  overflow:hidden;
+  white-space:nowrap;
+  left:0px;
+  line-height:25px; /* Compensate for borders on the accompanying form elements. */
+  }
+
+div.block div.views-exposed-form div.views-exposed-widget label.option { position:static; }
+div.block div.views-exposed-form div.views-exposed-widget div.form-item { padding:0px; }
+div.block div.views-exposed-form div.views-exposed-widget input.form-submit { margin:0px; }
 
 /**
  * LITECAL ============================================================
