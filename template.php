@@ -287,6 +287,17 @@ function ginkgo_pager($tags = array(), $limit = 10, $element = 0, $parameters = 
 }
 
 /**
+ * Override of theme_views_mini_pager().
+ * Wrappers, tao handles the rest.
+ */
+function ginkgo_views_mini_pager($tags = array(), $limit = 10, $element = 0, $parameters = array(), $quantity = 9) {
+  $tags[1] = t('Prev');
+  $tags[3] = t('Next');
+  $minipager = tao_views_mini_pager($tags, $limit, $element, $parameters, $quantity);
+  return "<div class='pager minipager clear-block'>{$minipager}</div>";
+}
+
+/**
  * Override of theme_node_preview().
  * We remove the teaser check / view here ... for nearly all use cases
  * this is more confusing and overbearing than anything else. We also

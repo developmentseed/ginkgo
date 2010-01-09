@@ -543,6 +543,43 @@ div.pager li.pager-current {
     color:#fff;
     }
 
+/* Minipager */
+div.block { position:relative; }
+div.block div.minipager {
+  background:#fff;
+  width:120px;
+  height:18px;
+  line-height:18px;
+  position:absolute;
+  top:5px;
+  right:5px;
+  }
+
+div.block div.minipager li,
+div.block div.minipager li a {
+  font-size:11px;
+  display:block;
+  padding:0px;
+  width:35px;
+  height:18px;
+  text-align:center;
+  }
+
+div.block div.minipager li.pager-current,
+div.block div.minipager li.pager-next,
+div.block div.minipager li.pager-previous {
+  color:#666;
+  background:transparent;
+  float:none;
+  overflow:hidden;
+  position:absolute;
+  top:0px;
+  }
+
+  div.block div.minipager li.pager-previous { left:0px; }
+  div.block div.minipager li.pager-current { left:35px; width:50px; }
+  div.block div.minipager li.pager-next { right:0px; }
+
 /*
  * Page layout ========================================================
  */
