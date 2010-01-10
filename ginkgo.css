@@ -327,7 +327,7 @@ div.messages li {
  * Page tools ========================================================
  */
 #page-tools {
-  background:url(images/sprite_base.png) 0px -360px repeat-x;
+  background:#eee url(images/sprite_base.png) 0px -360px repeat-x;
   height:39px;
   border-bottom:1px solid #ccc;
   /* IE7 z-index stacking: #navigation 2, #page-header 1, all others 0. */
@@ -587,8 +587,6 @@ div.block div.minipager li.pager-previous {
 /*
  * Page layout ========================================================
  */
-#page { background:#f8f8f8 url(images/page.png) repeat-x; }
-
 #page div.limiter {
   padding:0px 0px;
   background:url(images/vrule.png) 65% 0% repeat-y;
@@ -932,6 +930,8 @@ span.diff-added {
   font-size:9px;
   }
 
+.prose img { max-width:100%; }
+
 /**
  * Comment threads ====================================================
  */
@@ -1146,10 +1146,15 @@ div.view div.grouped-meta {
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
   border-bottom:1px solid #ddd;
-  background:#fff;
+  background:#eee;
   padding:5px 5px 4px;
-  width:100px;
+  width:160px;
   }
+
+  div.block div.view div.grouped-meta {
+    background:#fff;
+    width:100px;
+    }
 
   div.view div.grouped-meta div.views-field {
     font-size:11px;
