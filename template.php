@@ -297,7 +297,7 @@ function ginkgo_views_mini_pager($tags = array(), $limit = 10, $element = 0, $pa
   $tags[1] = t('Prev');
   $tags[3] = t('Next');
   $minipager = tao_views_mini_pager($tags, $limit, $element, $parameters, $quantity);
-  return "<div class='pager minipager clear-block'>{$minipager}</div>";
+  return $minipager ? "<div class='pager minipager clear-block'>{$minipager}</div>" : '';
 }
 
 /**
