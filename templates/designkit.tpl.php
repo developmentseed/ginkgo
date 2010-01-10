@@ -13,6 +13,12 @@ body div.page-region div.block h2.block-title {
   border-bottom-color:<?php print designkit_colorshift($background, '#cccccc', .8) ?>;
   }
 
+div.drilldown span.trail a {
+  border-top-color:<?php print designkit_colorshift($background, '#ffffff', .95) ?>;
+  border-bottom-color:<?php print designkit_colorshift($background, '#dddddd', .95) ?>;
+  background:<?php print designkit_colorshift($background, '#eeeeee', .95) ?>;
+  }
+
 div.decay-10 h2.comment-title { border-color:<?php print designkit_colorshift($background, '#eeeeee', 1) ?>; }
 div.decay-9 h2.comment-title { border-color:<?php print designkit_colorshift($background, '#eeeeee', .9) ?>; }
 div.decay-8 h2.comment-title { border-color:<?php print designkit_colorshift($background, '#eeeeee', .8) ?>; }

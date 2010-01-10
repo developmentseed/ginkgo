@@ -17,12 +17,11 @@ div.block table tr.active,
 div.block ul.menu a:hover { background-color:#ecf4f8; }
 
 div.pager li.pager-current,
-div.block ul.menu a.active,
 div.more-link a:hover,
 div.node-links ul li a:hover,
 div.comment-links ul li a:hover {
   color:#fff;
-  background:url(images/sprite_base.png) 0px -400px repeat-x;
+  background:url(images/sprite_bleeds.png) 0px -400px repeat-x;
   }
 
 /**
@@ -56,7 +55,7 @@ div.comment-links ul li a:hover {
 
   #palette div.block h2.block-title {
     position:relative;
-    background:#ccc url(images/sprite_base.png) 0px -400px repeat-x;
+    background:#ccc url(images/sprite_bleeds.png) 0px -400px repeat-x;
     color:#666;
     text-shadow:#fff 0px 1px 0px;
     font-size:16px;
@@ -327,7 +326,7 @@ div.messages li {
  * Page tools ========================================================
  */
 #page-tools {
-  background:#eee url(images/sprite_base.png) 0px -360px repeat-x;
+  background:#eee url(images/sprite_bleeds.png) 0px -360px repeat-x;
   height:39px;
   border-bottom:1px solid #ccc;
   /* IE7 z-index stacking: #navigation 2, #page-header 1, all others 0. */
@@ -377,7 +376,7 @@ div.messages li {
     #page-tools div.dropdown-blocks div.block-toggle h2.toggle-active {
       color:#fff;
       text-shadow:#444 0px 1px 0px;
-      background:#666 url(images/sprite_base.png) 0px 100% repeat-x;
+      background:#666 url(images/sprite_bleeds.png) 0px 100% repeat-x;
       }
 
 #page-tools div.context-links {
@@ -392,7 +391,7 @@ div.messages li {
     font-size:11px;
     font-weight:bold;
     color:#fff;
-    background:#666 url(images/sprite_base.png) 0px -400px repeat-x;
+    background:#666 url(images/sprite_bleeds.png) 0px -400px repeat-x;
     text-shadow:#444 0px 1px 0px;
 
     border:1px solid #555;
@@ -460,7 +459,7 @@ div.messages li {
  * Secondary tabs =====================================================
  */
 #secondary-tabs {
-  background:#fff url(images/sprite_base.png) 0px -360px repeat-x;
+  background:#fff url(images/sprite_bleeds.png) 0px -360px repeat-x;
   padding:5px 0px 4px;
   height:20px;
   border-bottom:1px solid #ccc;
@@ -475,13 +474,13 @@ div.messages li {
 
   #secondary-tabs a:hover {
     color:#333;
-    background:#ddd url(images/sprite_base.png) 0px -360px repeat-x;
+    background:#ddd url(images/sprite_bleeds.png) 0px -360px repeat-x;
     }
 
   #secondary-tabs li.active a,
   #secondary-tabs a.active {
     color:#fff;
-    background:#999 url(images/sprite_base.png) 0px -360px repeat-x;
+    background:#999 url(images/sprite_bleeds.png) 0px -360px repeat-x;
     }
 
 /**
@@ -635,7 +634,7 @@ div.block div.minipager li.pager-previous {
     padding:4px 9px;
     border:1px solid #ddd;
     border-bottom-color:#ccc;
-    background:#eee url(images/sprite_base.png) 0px -400px repeat-x;
+    background:#eee url(images/sprite_bleeds.png) 0px -400px repeat-x;
     }
 
     div.page-region div.block h2.block-title a { color:#333; }
@@ -671,43 +670,105 @@ div.page-region div.block .item-list li {
 /**
  * Menus ==============================================================
  */
-div.block ul.menu ul {
-  padding-left:9px;
-  border-left:1px solid #fff;
-  }
-
-div.block ul.menu li {
+#block-atrium-book div.block-content,
+#block-atrium-book_all div.block-content,
+div.page-region div.drilldown div.block-content {
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
   padding:0px;
-  position:relative;
-  }
-
-div.block ul.menu span.icon {
-  position:absolute;
-  right:0px;
-  top:0px;
-
-  width:24px;
-  height:24px;
-  background:url(images/sprite_base.png) -80px 0px no-repeat;
-  }
-
-div.block ul.menu a {
+  border-top:0px;
   background:#fff;
+  }
+
+div.page-region div.drilldown h2.block-title {
+  padding:0px;
+  border-bottom:0px;
+  }
+
+div.drilldown span.trail a {
+  line-height:15px;
+  padding:3px 9px 5px;
+  border-top:1px solid #fff;
+  border-bottom:1px solid #ddd;
+  background:#eee;
+  display:block;
+  }
+
+  div.drilldown span.trail a.depth-0 {
+    padding:4px 9px 5px;
+    background:transparent;
+    border:0px;
+    }
+
+  div.drilldown span.trail a.depth-1 { padding-left:25px; }
+  div.drilldown span.trail a.depth-2 { padding-left:50px; }
+  div.drilldown span.trail a.depth-3 { padding-left:75px; }
+  div.drilldown span.trail a.depth-4 { padding-left:100px; }
+  div.drilldown span.trail a.depth-5 { padding-left:125px; }
+  div.drilldown span.trail a.depth-6 { padding-left:150px; }
+  div.drilldown span.trail a.depth-7 { padding-left:175px; }
+
+/* Legacy block menu */
+div.block-atrium ul.menu ul,
+div.block-atrium ul.menu li {
+  padding:0px;
+  border:0px;
+  }
+
+  div.block-atrium ul.menu ul {
+    border-left:24px solid #f8f8f8;
+    padding-left:1px;
+    }
+
+    div.block-atrium ul.menu ul ul { border-color:#f4f4f4; }
+    div.block-atrium ul.menu ul ul ul { border-color:#eee; }
+    div.block-atrium ul.menu ul ul ul ul { border-color:#e8e8e8; }
+
+  div.block-atrium ul.menu li.collapsed,
+  div.block-atrium ul.menu li.expanded {
+    cursor:pointer;
+    background:url(images/sprite_base.png) -335px -60px no-repeat;
+    }
+
+/* RESET, now do it again */
+div.drilldown ul.menu ul,
+div.drilldown ul.menu li {
+  padding:0px;
+  border:0px;
+  }
+
+  div.drilldown ul.menu ul ul {
+    border-left:24px solid #f8f8f8;
+    padding-left:1px;
+    }
+
+    div.drilldown ul.menu ul ul ul { border-color:#f4f4f4;}
+    div.drilldown ul.menu ul ul ul ul { border-color:#eee;}
+    div.drilldown ul.menu ul ul ul ul ul { border-color:#e8e8e8;}
+
+  div.drilldown ul.menu li.collapsed,
+  div.drilldown ul.menu li.expanded { background:transparent; }
+
+  div.drilldown ul.drilldown-active-menu li.expanded {
+    cursor:pointer;
+    background:url(images/sprite_base.png) -335px -60px no-repeat;
+    }
+
+div.block-atrium ul.menu a,
+div.drilldown ul.menu a {
   display:block;
   line-height:15px;
+  border:0px;
+  padding:4px 10px 5px 0px;
   border-bottom:1px solid #eee;
-  padding:5px 10px 4px;
+  margin-left:25px;
   }
 
-  ul.menu ul a { font-weight:normal; }
-
-/* Thread colors */
-div.block ul.menu { background:#fff; }
-div.block ul.menu ul { background:#cde; }
-div.block ul.menu ul ul { background:#ecc; }
-div.block ul.menu ul ul ul { background:#cec; }
-div.block ul.menu ul ul ul ul { background:#fea; }
-div.block ul.menu ul ul ul ul ul { background:#cce; }
+  div.block-atrium ul.menu a.active,
+  div.drilldown ul.menu a.active {
+    font-weight:bold;
+    color:#333;
+    }
 
 /**
  * Forms in blocks ====================================================
@@ -931,6 +992,11 @@ span.diff-added {
   }
 
 .prose img { max-width:100%; }
+
+.prose div.codeblock {
+  border:1px solid #ddd;
+  background:#fff;
+  }
 
 /**
  * Comment threads ====================================================
@@ -1359,4 +1425,5 @@ div.block div.spaces-empty {
   -webkit-border-radius:3px;
   line-height:20px; height:20px;
   }
+
 .view-atrium-casetracker .crayon-swatch { height:15px; line-height:15px; }
