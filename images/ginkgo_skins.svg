@@ -6430,7 +6430,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Bleeds"
-     style="display:none">
+     style="display:inline">
     <g
        transform="matrix(5.9999996,0,0,-0.6666663,-3599.9997,679.99989)"
        id="g4197"
@@ -6501,7 +6501,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Base"
-     style="display:inline">
+     style="display:none">
     <rect
        ry="3"
        y="67"
