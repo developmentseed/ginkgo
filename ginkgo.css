@@ -359,6 +359,8 @@ div.messages li {
 
 #page-tools div.dropdown-blocks { height:39px; }
 
+  #page-tools div.dropdown-blocks div.block { padding:0px; }
+
   #page-tools div.dropdown-blocks div.block-toggle h2.block-title {
     -moz-border-radius:0px;
     -webkit-border-radius:0px;
@@ -543,15 +545,18 @@ div.pager li.pager-current {
     }
 
 /* Minipager */
-div.block { position:relative; }
+div.page-region div.block { position:relative; }
+div.page-region div.block div.minipager {
+  position:absolute;
+  top:5px;
+  right:5px;
+  }
+
 div.block div.minipager {
   background:#fff;
   width:120px;
   height:18px;
   line-height:18px;
-  position:absolute;
-  top:5px;
-  right:5px;
   }
 
 div.block div.minipager li,
@@ -634,6 +639,8 @@ div.block div.minipager li.pager-previous {
     border-bottom-color:#ccc;
     background:#eee url(images/sprite_base.png) 0px -400px repeat-x;
     }
+
+    div.page-region div.block h2.block-title a { color:#333; }
 
 #content {
   float:left;
@@ -736,7 +743,6 @@ div.comment {
   background:#fff;
   border:1px solid #ddd;
   border-color:#ddd #ddd #ccc;
-  margin:0px 0px 10px;
   }
 
 h2.comment-title,
@@ -777,6 +783,8 @@ div.comment-submitted {
   white-space:nowrap;
   overflow:hidden;
   }
+
+  div.block div.node-submitted { background:#fff; }
 
   div.comment-submitted {
     -moz-border-radius:0px 0px 0px 5px;
@@ -941,19 +949,34 @@ div.box {
 
   div.box-content { padding:10px 9px 9px; }
 
+#comments { border-top:1px solid #ddd; }
 #comments div.box,
-#comments div.comment { margin:0px 0px 10px; }
+#comments div.comment {
+  border-top:0px;
+  margin:0px;
+  }
 
 #comments div.indented {
   margin-left:0px;
-  border-left:2px solid #cde;
-  padding-left:8px;
+  border-left:1px solid #ccc;
+  padding-left:9px;
+  background:#ddd;
   }
 
-  #comments div.indented div.indented { border-color:#ecc }
-  #comments div.indented div.indented div.indented { border-color:#cec }
-  #comments div.indented div.indented div.indented div.indented { border-color:#fea; }
-  #comments div.indented div.indented div.indented div.indented div.indented { border-color:#cce; }
+  #comments div.indented div.indented {
+    border-color:#ccc;
+    background-color:#eee;
+    }
+
+  #comments div.indented div.indented div.indented {
+    border-color:#ddd;
+    background-color:#f8f8f8;
+    }
+
+  #comments div.indented div.indented div.indented div.indented {
+    border-color:#eee;
+    background-color:#fff;
+    }
 
 /*
  * TABLES ==============================================================
@@ -1101,21 +1124,30 @@ div.view .date {
   font-size:11px;
   }
 
+div.view a.atrium-activity-download {
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+
+  background:#eee;
+  color:#666;
+
+  float:right;
+  font-size:11px;
+  padding:0px 5px;
+  }
+
 div.page-content div.view .markup { font-size:11px; }
 
 /* Grouped fields */
-div.view div.grouping-meta {
-  position:relative;
-  padding-left:120px;
-  }
-
 div.view div.grouped-meta {
-  position:relative;
-  margin-left:-120px; /* TODO: IE7? */
-  float:left;
+  float:right;
+  margin-left:10px;
 
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-bottom:1px solid #ddd;
   background:#fff;
-  padding:5px;
+  padding:5px 5px 4px;
   width:100px;
   }
 
@@ -1200,8 +1232,7 @@ div.view-atrium-profile div {
     }
 
 div.view-atrium-profile div.user-picture,
-div.view-atrium-profile div.username,
-div.view-atrium-profile div.mail {
+div.view-atrium-profile div.username {
   padding:0px 0px 10px;
   border:0px;
   line-height:60px;
@@ -1227,15 +1258,14 @@ table .count,
 table .date,
 table .type { white-space:nowrap; }
 
-/* Dashboard views */
-div.view-atrium-dashboard .filename,
-div.view-atrium-dashboard .title    { width:75%; }
-div.view-atrium-dashboard .filemime { width:100px; }
-div.view-atrium-dashboard .group    { width:20px; }
-div.view-atrium-dashboard .feature  { width:15px; }
-div.view-atrium-dashboard .username { width:25%; }
-
-td.views-field-filename div.views-field-filename { font-weight:bold; }
+/* Fixable tables */
+div.view-atrium-book table,
+div.view-atrium-intranet table { table-layout:fixed; }
+div.view td.group    { width:40px; }
+div.view td.feature  { width:30px; }
+div.view-atrium-intranet td.date { width:60px; }
+div.view-atrium-book td.date,
+#block-views-atrium_intranet-block_2 td.date { width:140px; }
 
 /* OG faces, Member directory */
 table.views-view-grid .username {
@@ -1288,44 +1318,6 @@ div.litecal .litecal-header .litecal-label { text-align:center; }
 div.litecal .date { color:inherit; }
 
 /**
- * MULTISTEP ==========================================================
- */
-ul.multistep {
-  border:10px solid #f8f8f8;
-  margin:0px 0px 20px;
-  line-height:46px;
-  padding:2px;
-
-  background:#fff;
-  -moz-border-radius:10px;
-  -webkit-border-radius:10px;
-  }
-
-  ul.multistep-2 li { width:50%; }
-  ul.multistep-3 li { width:33%; }
-  ul.multistep-4 li { width:25%; }
-  ul.multistep-5 li { width:20%; }
-
-ul.multistep li span,
-ul.multistep li a {
-  border-right:1px solid #eee;
-
-  letter-spacing:-1px;
-  font-size:18px;
-  color:#999;
-
-  display:block;
-  float:none;
-  padding:0px 10px;
-  }
-
-  ul.multistep li.last span,
-  ul.multistep li.last a { border-right:0px; }
-
-  ul.multistep li.active-step a,
-  ul.multistep li.active-step span { color:#333; }
-
-/**
  * CATCHALL ===========================================================
  */
 #content div.view-empty,
@@ -1357,28 +1349,9 @@ div.block div.spaces-empty {
   }
 
 /* Swatches */
-.crayon-swatch { line-height:20px; height:20px; }
-.view-atrium-casetracker .crayon-swatch { height:15px; line-height:15px; }
-
-/**
- * Markup free clearing ===============================================
- *
- * Consider adding your own selectors to this instead of finding ways
- * to sneak the clear-block class into Drupal's markup.
- * From http://www.positioniseverything.net/easyclearing.html
- */
-div.form-checkboxes:after{
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+.crayon-swatch {
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  line-height:20px; height:20px;
   }
-
-div.form-checkboxes { display: inline-block; }
-
-/* Hides from IE-mac \*/
-* html div.form-checkboxes { height: 1%; }
-
-div.form-checkboxes { display: block; }
-/* End hide from IE-mac */
+.view-atrium-casetracker .crayon-swatch { height:15px; line-height:15px; }
