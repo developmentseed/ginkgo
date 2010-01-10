@@ -695,7 +695,7 @@ div.drilldown span.trail a {
   }
 
   div.drilldown span.trail a.depth-0 {
-    padding:4px 9px 5px;
+    padding:6px 9px 8px;
     background:transparent;
     border:0px;
     }
