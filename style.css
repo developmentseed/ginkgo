@@ -40,6 +40,7 @@ div.pager li.pager-current { background-color:#44aa55; }
 
 body #space-tools h2.block-title { background-color:#2f773b; }
 
+body #header div.block-widget,
 body #header div.block h2.block-title { background-color:#399048; }
 
 body div.page-region div.block h2.block-title {
@@ -89,10 +90,13 @@ div.decay-0 h2.comment-title { border-color:#44aa55; }
   float:left;
   }
 
+#header div.block { padding:0px 5px 0px 0px; }
+
 #header div.block-widget,
 #header h2.block-title {
   background:transparent;
   color:#fff;
+  font-size:11px;
   line-height:30px;
   margin:0px;
   padding:0px 10px;
@@ -104,7 +108,6 @@ div.decay-0 h2.comment-title { border-color:#44aa55; }
   #header div.block-widget div.block-content { padding:0px; background:transparent; }
 
   #header div.block-widget a { font-weight:bold; }
-  #header div.block { padding:0px 5px 0px 0px; }
 
   #header div.block-toggle h2.block-title {
     -moz-border-radius:3px;
@@ -143,20 +146,6 @@ body.logged-in #block-atrium-account h2.block-title {
     -moz-border-radius:3px 0px 0px 0px;
     -webkit-border-radius:3px 0px 0px 0px;
     }
-
-#block-atrium-account div.user-info {
-  line-height:60px;
-  padding:10px 10px 9px;
-  margin:0px 0px 1px;
-  }
-
-#block-atrium-account div.user-info a.username,
-#block-atrium-account div.user-info div.picture { float:left; }
-
-#block-atrium-account div.user-info a.username {
-  font-size:24px;
-  padding:0px 10px;
-  }
 
 /* Breadcrumb */
 #global div.breadcrumb {
