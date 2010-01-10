@@ -6,7 +6,6 @@ Drupal.behaviors.ginkgo = function (context) {
       $(this).click(function() {
         var target = $(this).parents('div.block');
         target.hide();
-
         // If the block contains a pageEditor form, trigger its end handler.
         if (jQuery().pageEditor && $('form', target).pageEditor) {
           $('form', target).pageEditor('end');
@@ -22,7 +21,6 @@ Drupal.behaviors.ginkgo = function (context) {
         var target = $('div#' + $(this).attr('href').split('#')[1]);
         if (target.css('display') == 'none') {
           target.show();
-
           // If the block contains a pageEditor form, trigger its start handler.
           if (jQuery().pageEditor && $('form', target).pageEditor) {
             $('form', target).pageEditor('start');
@@ -30,6 +28,10 @@ Drupal.behaviors.ginkgo = function (context) {
         }
         else {
           target.hide();
+          // If the block contains a pageEditor form, trigger its end handler.
+          if (jQuery().pageEditor && $('form', target).pageEditor) {
+            $('form', target).pageEditor('end');
+          }
         }
         return false;
       });
