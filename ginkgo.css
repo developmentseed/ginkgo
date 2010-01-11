@@ -508,10 +508,8 @@ div.messages li {
  * Mission text =======================================================
  */
 div.mission {
-  background:#fff;
   color:#666;
-  padding:20px 20px 19px;
-  border-bottom:1px solid #ddd;
+  padding:20px;
   }
 
 /**
@@ -1210,6 +1208,8 @@ div.view a.atrium-activity-download {
   color:#666;
 
   float:right;
+  position:relative;
+  z-index:1;
   font-size:11px;
   padding:0px 5px;
   }
@@ -1349,11 +1349,19 @@ table .type { white-space:nowrap; }
 /* Fixable tables */
 div.view-atrium-book table,
 div.view-atrium-intranet table { table-layout:fixed; }
+
+div.view-atrium-book table td,
+div.view-atrium-intranet table td {
+  white-space:nowrap;
+  overflow:hidden;
+  }
+
 div.view td.group    { width:40px; }
 div.view td.feature  { width:30px; }
+div.view td.new      { width:30px; }
 div.view-atrium-intranet td.date { width:60px; }
 div.view-atrium-book td.date,
-#block-views-atrium_intranet-block_2 td.date { width:140px; }
+#block-views-atrium_intranet-block_2 td.date { width:120px; }
 
 /* OG faces, Member directory */
 table.views-view-grid .username {

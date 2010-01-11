@@ -1,6 +1,9 @@
 #page-header div.limiter { width:640px; }
 
-#page div.limiter { width:660px; }
+body #page div.limiter {
+  width:660px;
+  background:transparent;
+  }
 
 body #page { background:#f8f8f8 url(images/page.png) repeat-x; }
 

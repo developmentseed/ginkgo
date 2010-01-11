@@ -411,6 +411,8 @@ function _ginkgo_get_views_field_class($handler) {
     'priority' => 'priority',
     'status' => 'status',
 
+    'history_user' => 'new',
+
     'date' => 'date',
     'timestamp' => 'date',
 

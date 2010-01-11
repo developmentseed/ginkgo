@@ -1,0 +1,13 @@
+body #content,
+body #right {
+  float:left;
+  width:49.99%;
+  }
+
+body #page div.limiter {
+  padding:0px 10px;
+  background-position:50% 0%;
+  }
+
+body #content div.page-region,
+body #right div.page-region { padding:20px 0px; }
