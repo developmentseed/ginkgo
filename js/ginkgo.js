@@ -1,14 +1,22 @@
 Drupal.behaviors.ginkgo = function (context) {
   // Close handler for palette blocks.
-  $('#palette div.block h2.block-title span.close:not(.atrium-processed)')
+  $('#palette div.block:not(.atrium-processed)')
     .addClass('atrium-processed')
     .each(function() {
-      $(this).click(function() {
-        var target = $(this).parents('div.block');
+      var target = $(this);
+
+      // If the end event is triggered from within a pageEditor form,
+      // hide the palette block as well.
+      if (jQuery().pageEditor && $('form', target).pageEditor) {
+        var editor = $('form', target);
+        editor.bind('end.pageEditor', function() { target.hide(); });
+      }
+
+      // Add a click handler for closing the block.
+      $('h2.block-title span.close', this).click(function() {
         target.hide();
-        // If the block contains a pageEditor form, trigger its end handler.
-        if (jQuery().pageEditor && $('form', target).pageEditor) {
-          $('form', target).pageEditor('end');
+        if (editor) {
+          editor.pageEditor('end');
         }
       });
     });
