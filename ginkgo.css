@@ -109,6 +109,21 @@ div.comment-links ul li a:hover {
     margin:0px 1px 1px 0px;
     }
 
+  /* Help block */
+  #help-text {
+    display:block;
+    background:transparent;
+    border:0px;
+    padding:5px 0px 5px 50px;
+    position:relative;
+    }
+
+  #help-text span.icon {
+    position:absolute;
+    top:0px;
+    left:5px;
+    }
+
 /**
  * Togglable blocks ===================================================
  */
@@ -187,11 +202,11 @@ div.messages {
   div.messages,
   div.messages li { border-bottom:1px solid #cde; }
 
-  #growl div.warning,
-  #growl div.warning li { border-color:#fca; }
+  #messages div.warning,
+  #messages div.warning li { border-color:#fca; }
 
-  #growl div.error,
-  #growl div.error li { border-color:#fcc; }
+  #messages div.error,
+  #messages div.error li { border-color:#fcc; }
 
 div.messages li {
   padding-bottom:9px;
@@ -404,6 +419,12 @@ div.messages li {
     }
 
     #page-tools div.context-links a:active { background-position:0px 100%; }
+
+#page-tools #help-toggler {
+  margin: 10px 0px 0px 10px;
+  position:static;
+  float:right;
+  }
 
 /**
  * Tabs ===============================================================

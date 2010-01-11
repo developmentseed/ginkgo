@@ -79,6 +79,9 @@ function ginkgo_preprocess_page(&$vars) {
   // @TODO: Implement IE styles key in tao.
   $ie = base_path() . path_to_theme() .'/ie.css';
   $vars['ie'] = "<!--[if lte IE 8]><style type='text/css' media='screen'>@import '{$ie}';</style><![endif]-->";
+
+  // Help text toggler link.
+  $vars['help_toggler'] = !empty($vars['help']) ? l(t('Help'), $_GET['q'], array('fragment' => 'block-atrium-help', 'attributes' => array('id' => 'help-toggler', 'class' => 'palette-toggle'))) : '';
 }
 
 /**
@@ -104,6 +107,14 @@ function ginkgo_preprocess_context_block_editable_region(&$vars) {
   if (in_array($vars['region'], array('header', 'page_tools', 'space_tools', 'palette'))) {
     $vars['editable'] = FALSE;
   }
+}
+
+/**
+ * Preprocessor for theme_help().
+ */
+function ginkgo_preprocess_help(&$vars) {
+  $vars['layout'] = FALSE;
+  $vars['links'] = '';
 }
 
 /**
@@ -202,21 +213,6 @@ function ginkgo_designkit_image($name, $filepath) {
     return l($space->title, '<front>', $options);
   }
   return theme_designkit_image($name, $filepath);
-}
-
-/**
- * Marker theming override.
- */
-function ginkgo_mark($type = MARK_NEW) {
-  global $user;
-  if ($user->uid) {
-    if ($type == MARK_NEW) {
-      return ' <span class="marker"><span>'. t('new') .'</span></span>';
-    }
-    else if ($type == MARK_UPDATED) {
-      return ' <span class="marker"><span>'. t('updated') .'</span></span>';
-    }
-  }
 }
 
 /**
