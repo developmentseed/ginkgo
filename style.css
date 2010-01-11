@@ -75,8 +75,10 @@ div.decay-0 h2.comment-title { border-color:#44aa55; }
 #global {
   background-position:0px 0px;
   background-repeat:repeat-x;
-  position:relative;
   height:40px;
+  position:relative;
+  /* IE7 z-index stacking: #global 3, #navigation 2, #page-tools 1, all others 0. */
+  z-index:3;
   }
 
 #global a.logo {
@@ -106,6 +108,7 @@ div.decay-0 h2.comment-title { border-color:#44aa55; }
   background:transparent;
   color:#fff;
   font-size:11px;
+  height:30px;
   line-height:30px;
   margin:0px;
   padding:0px 10px;
@@ -149,6 +152,7 @@ body.logged-in #block-atrium-account h2.block-title {
   -webkit-border-radius:3px 0px 0px 3px;
   position:absolute;
   left:0px;
+  top:0px;
   }
 
   #block-atrium-account h2.toggle-active div.picture {
@@ -160,9 +164,11 @@ body.logged-in #block-atrium-account h2.block-title {
 #global div.breadcrumb {
   float:left;
   padding:5px;
+  height:30px;
   line-height:30px;
   font-size:20px;
   font-weight:normal;
+  overflow:hidden;
   }
 
   #global div.breadcrumb span,
@@ -215,7 +221,6 @@ body.logged-in #block-atrium-account h2.block-title {
   background-position:0px -40px;
   background-repeat:repeat-x;
   padding:20px 0px 0px;
-  /* IE7 z-index stacking: #navigation 2, #page-header 1, all others 0. */
   position:relative;
   z-index:2;
   }

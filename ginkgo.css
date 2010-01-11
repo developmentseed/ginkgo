@@ -279,8 +279,10 @@ div.messages li {
 .dropdown-blocks div.block-toggle ul.links li,
 .dropdown-blocks div.block-toggle div.item-list li {
   float:none;
+  overflow:hidden;
   white-space:nowrap;
   padding:0px;
+  width:100%;
   margin:0px;
   border:0px;
   }
@@ -288,8 +290,9 @@ div.messages li {
 .dropdown-blocks div.block-toggle ul.links li a,
 .dropdown-blocks div.block-toggle div.item-list li a {
   float:none;
+  width:auto;
+  position:static;
   display:block;
-  overflow:hidden;
   padding:2px 40px 2px 10px;
   border-bottom:1px solid #eee;
   }
@@ -345,7 +348,6 @@ div.messages li {
   background:#eee url(images/sprite_bleeds.png) 0px -360px repeat-x;
   height:39px;
   border-bottom:1px solid #ccc;
-  /* IE7 z-index stacking: #navigation 2, #page-header 1, all others 0. */
   position:relative;
   z-index:1;
   }
@@ -617,9 +619,7 @@ div.block div.minipager li.pager-previous {
   }
 
   div.page-region div.content-wrapper,
-  div.page-region div.block {
-    margin:0px 10px 10px;
-    }
+  div.page-region div.block { margin:0px 0px 10px; }
 
   div.page-region div.block {
     border:0px;
@@ -669,9 +669,9 @@ div.block div.minipager li.pager-previous {
   width:34.99%;
   }
 
-div.page-region { padding:20px 0px; }
-#content div.page-region { padding-left:10px; }
-#right div.page-region { padding-right:10px; }
+div.page-region { padding:20px 10px; }
+#content div.page-region { padding-left:20px; }
+#right div.page-region { padding-right:20px; }
 
 /**
  * Lists ==============================================================
@@ -1184,7 +1184,7 @@ table caption {
   font-weight:bold;
   }
 
-  table caption { text-align:inherit; }
+  table caption { text-align:left; }
 
 /* Views fields */
 div.view li p {
