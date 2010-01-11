@@ -16,12 +16,16 @@ table td.active,
 div.block table tr.active,
 div.block ul.menu a:hover { background-color:#ecf4f8; }
 
+.dropdown-blocks div.block-toggle ul.links li a:hover,
+.dropdown-blocks div.block-toggle div.item-list li a:hover,
 div.pager li.pager-current,
 div.more-link a:hover,
 div.node-links ul li a:hover,
 div.comment-links ul li a:hover {
   color:#fff;
-  background:url(images/sprite_bleeds.png) 0px -400px repeat-x;
+  background-image:url(images/sprite_bleeds.png);
+  background-position:0px -400px;
+  background-repeat:repeat-x;
   }
 
 /**
@@ -291,10 +295,7 @@ div.messages li {
   }
 
   .dropdown-blocks div.block-toggle ul.links li a:hover,
-  .dropdown-blocks div.block-toggle div.item-list li a:hover {
-    background:#999;
-    color:#fff;
-    }
+  .dropdown-blocks div.block-toggle div.item-list li a:hover { color:#fff; }
 
   .dropdown-blocks div.block-toggle ul.links li a span,
   .dropdown-blocks div.block-toggle div.item-list li a span {
@@ -904,8 +905,7 @@ div.comment-links ul.links {
   div.node-links ul li a,
   div.comment-links ul li a {
     float:left;
-    padding:0px 10px 0px 9px;
-    border-left:
+    padding:0px 10px;
     }
 
     div.node-links ul li span a,
@@ -1356,7 +1356,7 @@ div.view-atrium-intranet table td {
   overflow:hidden;
   }
 
-div.view td.group    { width:40px; }
+div.view td.group    { width:40px; overflow:visible; }
 div.view td.feature  { width:30px; }
 div.view td.new      { width:30px; }
 div.view-atrium-intranet td.date { width:60px; }

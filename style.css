@@ -37,9 +37,14 @@ div.limiter {
 /**
  * Default designkit colors ===========================================
  */
+.dropdown-blocks div.block-toggle ul.links li a:hover,
+.dropdown-blocks div.block-toggle div.item-list li a:hover,
+div.pager li.pager-current,
+div.more-link a:hover,
+div.node-links ul li a:hover,
+div.comment-links ul li a:hover,
 #global,
-#navigation,
-div.pager li.pager-current { background-color:#44aa55; }
+#navigation { background-color:#44aa55; }
 
 body #space-tools h2.block-title { background-color:#2f773b; }
 
@@ -63,6 +68,7 @@ div.decay-3 h2.comment-title { border-color:#77be82; }
 div.decay-2 h2.comment-title { border-color:#66b773; }
 div.decay-1 h2.comment-title { border-color:#55b064; }
 div.decay-0 h2.comment-title { border-color:#44aa55; }
+
 /**
  * Global navbar  =====================================================
  */

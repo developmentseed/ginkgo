@@ -1,7 +1,12 @@
 <style type='text/css'>
+.dropdown-blocks div.block-toggle ul.links li a:hover,
+.dropdown-blocks div.block-toggle div.item-list li a:hover,
+div.pager li.pager-current,
+div.more-link a:hover,
+div.node-links ul li a:hover,
+div.comment-links ul li a:hover,
 #global,
-#navigation,
-div.pager li.pager-current { background-color:<?php print $background ?>; }
+#navigation { background-color:<?php print $background ?>; }
 
 body #space-tools h2.block-title { background-color:<?php print designkit_colorshift($background, '#000000', .3) ?>; }
 
