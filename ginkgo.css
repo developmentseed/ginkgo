@@ -1143,29 +1143,20 @@ table.case_changes td { padding:5px; }
 /**
  * Module: SHOUTBOX ===================================================
  */
-div.shoutform div.shoutbox-input {
-  padding:10px 10px 9px;
-  border-bottom:1px solid #eee;
+div.shoutbox-input {
+  padding:0px 100px 10px 0px;
+  position:relative;
   }
 
-/* Page view */
-div.view-atrium-shoutbox-shouts div.user-picture {
-  margin-right:5px;
-  float:left;
-  }
-
-div.page-content div.view-atrium-shoutbox-shouts div.markup { font-size:13px; }
-
-#right div.block-messaging_shoutbox form { padding:0px; }
-
-  #right div.block-messaging_shoutbox div.item-list li.views-row-first { padding-top:10px; }
-
-  #right div.block-messaging_shoutbox div.view { padding-bottom:30px; }
-
-  #right div.block-messaging_shoutbox div.views-mini-pager {
-    top:auto;
-    bottom:5px;
+  div.shoutbox-input div.form-item { padding:0px; }
+  div.shoutbox-input input.form-submit {
+    width:90px;
+    position:absolute;
+    right:0px;
+    top:0px;
     }
+
+  div.shoutform div.view div.markup { font-size:13px; }
 
 /**
  * Views ==============================================================
@@ -1238,10 +1229,15 @@ div.view div.grouped-meta {
   width:160px;
   }
 
-  div.block div.view div.grouped-meta {
-    background:#fff;
-    width:100px;
+  div.block div.view div.grouped-meta { background:#fff; }
+  #right div.view div.grouped-meta { width:100px; }
+
+  div.view div.grouped-meta div.user-picture {
+    float:left;
+    margin-right:5px;
     }
+
+    #right div.view div.grouped-meta div.user-picture { display:none; }
 
   div.view div.grouped-meta div.views-field {
     font-size:11px;
