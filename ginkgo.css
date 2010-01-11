@@ -1351,10 +1351,12 @@ table .type { white-space:nowrap; }
 
 /* Fixable tables */
 div.view-atrium-book table,
-div.view-atrium-intranet table { table-layout:fixed; }
+div.view-atrium-intranet table,
+div.view-atrium-profile-blocks table { table-layout:fixed; }
 
 div.view-atrium-book table td,
-div.view-atrium-intranet table td {
+div.view-atrium-intranet table td,
+div.view-atrium-profile-blocks table td {
   white-space:nowrap;
   overflow:hidden;
   }
@@ -1364,6 +1366,7 @@ div.view td.feature  { width:30px; }
 div.view td.new      { width:30px; }
 div.view-atrium-intranet td.date { width:60px; }
 div.view-atrium-book td.date,
+div.view-atrium-profile-blocks td.date,
 #block-views-atrium_intranet-block_2 td.date { width:120px; }
 
 /* OG faces, Member directory */
