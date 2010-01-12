@@ -1,1 +1,0 @@
-<div class='views-field-filename'><?php print $output ?></div>
