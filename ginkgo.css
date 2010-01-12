@@ -843,6 +843,9 @@ h2.node-title {
     padding: 6px 10px 10px;
     }
 
+  div.node-content,
+  div.comment-content { clear:both; }
+
   div.comment-content { padding:10px; }
 
 div.node-submitted,
