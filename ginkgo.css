@@ -408,6 +408,7 @@ div.messages li {
   overflow:hidden;
   }
 
+  div.buttons a,
   #page-tools div.context-links a {
     font-size:11px;
     font-weight:bold;
@@ -424,6 +425,7 @@ div.messages li {
     -webkit-border-radius:5px;
     }
 
+    div.buttons a:active,
     #page-tools div.context-links a:active { background-position:0px 100%; }
 
 #page-tools #help-toggler {
@@ -1420,35 +1422,31 @@ div.litecal .litecal-header .litecal-label { text-align:center; }
 div.litecal .date { color:inherit; }
 
 /**
- * CATCHALL ===========================================================
+ * Empty text =========================================================
  */
-#content div.view-empty,
-#content div.spaces-empty {
-  background:#f4f4f4;
-  border:5px solid #eee;
+div.view-empty,
+div.spaces-empty {
   color:#999;
-  font-size:24px;
-  font-weight:300;
-  letter-spacing:-1px;
-  text-align:center;
-  line-height:40px;
-  padding:15px;
-  }
-
-  #content div.view-empty *,
-  #content div.spaces-empty * { text-align:inherit; }
-
-  #content div.view-empty a.button,
-  #content div.spaces-empty a.button { font-size:16px; }
-
-div.block div.view-empty,
-div.block div.spaces-empty {
-  font-weight:bold;
   font-size:20px;
-  color:#ccc;
   text-align:center;
+  line-height:30px;
   padding:20px;
   }
+
+  div.view-empty *,
+  div.spaces-empty * { text-align:inherit; }
+
+  div.view-empty div.buttons { margin-top:10px; }
+
+  div.view-empty div.buttons ul.links li,
+  div.view-empty div.buttons ul.links a {
+    float:none;
+    display:inline;
+    margin:0px;
+    }
+
+  div.view-empty div.buttons a,
+  div.spaces-empty div.buttons a { font-size:16px; }
 
 /* Swatches */
 .crayon-swatch {
