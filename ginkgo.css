@@ -614,6 +614,7 @@ div.block div.minipager li.pager-previous {
  * Page layout ========================================================
  */
 #page div.limiter {
+  min-height:300px;
   padding:0px 0px;
   background:url(images/vrule.png) 65% 0% repeat-y;
   }
