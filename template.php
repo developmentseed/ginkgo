@@ -50,20 +50,24 @@ function ginkgo_icon_links(&$links) {
  * Preprocessor for theme_page().
  */
 function ginkgo_preprocess_page(&$vars) {
+  // Switch layout for 404/403 pages.
+  $headers = drupal_get_headers();
+  if ((strpos($headers, 'HTTP/1.1 403 Forbidden') !== FALSE) || strpos($headers, 'HTTP/1.1 404 Not Found') !== FALSE) {
+    $vars['template_files'][] = 'layout-wide';
+  }
+
+  // Add body class for layout.
+  $vars['attr']['class'] .= !empty($vars['template_files']) ? ' '. end($vars['template_files']) : '';
+
   // Add icon markup to main menu
   ginkgo_icon_links($vars['primary_links']);
 
   // If tabs are active, the title is likely shown in them. Don't show twice.
   $vars['title'] = !empty($vars['tabs']) ? '' : $vars['title'];
 
-  // Add a smarter body class than "not logged in" for determining whether
-  // we are on a login/password/user registration related page.
+  // Show mission text on login page for anonymous users.
   global $user;
-  $vars['mission'] = '';
-  if (!$user->uid && arg(0) == 'user') {
-    $vars['attr']['class'] .= ' anonymous-login';
-    $vars['mission'] = filter_xss_admin(variable_get('site_mission', ''));
-  }
+  $vars['mission'] = (!$user->uid && arg(0) == 'user') ? filter_xss_admin(variable_get('site_mission', '')) : '';
 
   // Fallback logo.
   $vars['logo'] = !empty($vars['logo']) ? $vars['logo'] : l(check_plain(variable_get('site_name', 'Drupal')), '<front>', array('attributes' => array('class' => 'logo')));

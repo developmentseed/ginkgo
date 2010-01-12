@@ -1,0 +1,69 @@
+/**
+ * Wide ===============================================================
+ */
+body.layout-wide #content {
+  float:none;
+  width:auto;
+  }
+
+body.layout-wide #page div.limiter {
+  padding:0px 10px;
+  background:transparent;
+  }
+
+body.layout-wide #content div.page-region { padding:20px 10px; }
+
+/**
+ * Login ==============================================================
+ */
+body.layout-login #page-header div.limiter { width:640px; }
+
+body.layout-login #page { background:#f8f8f8 url(images/page.png) repeat-x; }
+
+body.layout-login #page div.limiter {
+  width:660px;
+  background:transparent;
+  }
+
+body.layout-login #content {
+  float:none;
+  width:auto;
+  }
+
+body.layout-login #content div.page-region { padding:20px 10px; }
+
+/**
+ * Split ==============================================================
+ */
+body.layout-split #content,
+body.layout-split #right {
+  float:left;
+  width:49.99%;
+  }
+
+body.layout-split #page div.limiter {
+  padding:0px 10px;
+  background-position:50% 0%;
+  }
+
+body.layout-split #content div.page-region,
+body.layout-split #right div.page-region { padding:20px 10px; }
+
+/**
+ * Columns ============================================================
+ */
+body.layout-columns #left,
+body.layout-columns #content,
+body.layout-columns #right {
+  float:left;
+  width:33.33%;
+  }
+
+body.layout-columns #page div.limiter {
+  padding:0px 10px;
+  background:transparent;
+  }
+
+body.layout-columns #left div.page-region,
+body.layout-columns #content div.page-region,
+body.layout-columns #right div.page-region { padding:20px 10px; }
