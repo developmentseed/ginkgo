@@ -50,6 +50,11 @@ function ginkgo_icon_links(&$links) {
  * Preprocessor for theme_page().
  */
 function ginkgo_preprocess_page(&$vars) {
+  // Include module-level javascript if possible.
+  module_exists('admin') ? drupal_add_js(drupal_get_path('module', 'admin') .'/includes/jquery.cookie.js') : '';
+  module_exists('jquery_ui') ? jquery_ui_add(array('ui.draggable')) : '';
+  module_exists('context_ui') ? drupal_add_js(drupal_get_path('module', 'context_ui') .'/json2.js') : '';
+
   // Switch layout for 404/403 pages.
   $headers = drupal_get_headers();
   if ((strpos($headers, 'HTTP/1.1 403 Forbidden') !== FALSE) || strpos($headers, 'HTTP/1.1 404 Not Found') !== FALSE) {

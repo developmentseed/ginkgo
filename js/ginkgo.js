@@ -5,6 +5,33 @@ Drupal.behaviors.ginkgo = function (context) {
     .each(function() {
       var target = $(this);
 
+      // Grr... jQuery.cookie() is registered solely under the $.
+      // Retrieve initial position of each block and set them.
+      if (jQuery().draggable && $.cookie) {
+        var initial = {};
+        try { initial = JSON.parse($.cookie('DrupalGinkgo')); } catch (error) { }
+        initial = initial ? initial : {};
+        var id = target.attr('id');
+        if (initial[id]) {
+          target.css('left', initial[id].left);
+          target.css('top', initial[id].top);
+        }
+
+        // Make block draggable and set position of each block on drag end.
+        var options = {
+          handle: 'h2.block-title',
+          containment: 'window',
+          stop: function(event, ui) {
+            var state = {};
+            try { state = JSON.parse($.cookie('DrupalGinkgo')); } catch (error) { }
+            state = state ? state : {};
+            state[$(ui.helper).attr('id')] = ui.position;
+            $.cookie('DrupalGinkgo', JSON.stringify(state), {expires: 14, path: '/'});
+          }
+        };
+        target.draggable(options);
+      }
+
       // If the end event is triggered from within a pageEditor form,
       // hide the palette block as well.
       if (jQuery().pageEditor && $('form', target).pageEditor) {
