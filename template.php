@@ -145,8 +145,13 @@ function ginkgo_preprocess_node(&$vars) {
   // Don't show the full node when a comment is being previewed.
   $vars = context_get('comment', 'preview') == TRUE ? array() : $vars;
 
-  // Clear out template file suggestions if we are the active theme.
-  $vars['template_files'] = array();
+  // Clear out catchall template file suggestions like those made by og.
+  // TODO refactor
+  foreach ($vars['template_files'] as $k => $f) {
+    if (strpos($f, 'node-'.$vars['type']) === FALSE) {
+      unset($vars['template_files'][$k]);
+    }
+  }
 }
 
 /**
