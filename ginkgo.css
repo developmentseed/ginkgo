@@ -523,6 +523,7 @@ div.mission {
 /**
  * Pager ==============================================================
  */
+div.block div.boxes-box-controls,
 div.pager {
   -moz-border-radius:3px;
   -webkit-border-radius:3px;
@@ -546,11 +547,13 @@ div.pager li.pager-current {
   background:transparent;
   }
 
+  div.page-region div.block div.boxes-box-controls a,
   div.pager a:hover {
     background:#fff;
     color:#333;
     }
 
+  div.page-region div.block div.boxes-box-controls a:hover,
   div.pager a:hover { background:#eee; }
 
   div.pager ul.pager-list li:first-child a,
@@ -570,8 +573,10 @@ div.pager li.pager-current {
     color:#fff;
     }
 
-/* Minipager */
+/* Minipager, boxes editing */
 div.page-region div.block { position:relative; }
+
+div.page-region div.block div.boxes-box-controls,
 div.page-region div.block div.minipager {
   position:absolute;
   top:5px;
@@ -585,6 +590,7 @@ div.block div.minipager {
   line-height:18px;
   }
 
+div.page-region div.block div.boxes-box-controls a,
 div.block div.minipager li,
 div.block div.minipager li a {
   font-size:11px;
@@ -594,6 +600,8 @@ div.block div.minipager li a {
   height:18px;
   text-align:center;
   }
+
+  div.page-region div.block div.boxes-box-controls a { width:50px; }
 
 div.block div.minipager li.pager-current,
 div.block div.minipager li.pager-next,
@@ -799,12 +807,13 @@ div.drilldown ul.menu a {
 /**
  * Forms in blocks ====================================================
  */
-div.block div.views-exposed-form input.form-text,
-div.block div.views-exposed-form textarea,
-div.block div.views-exposed-form select,
 div.block input.form-text,
 div.block textarea,
-div.block select { width:90%; }
+div.block select { max-width:90%; }
+
+div.block div.views-exposed-form input.form-text,
+div.block div.views-exposed-form textarea,
+div.block div.views-exposed-form select { width:90%; }
 
 /**
  * Nodes, comments ====================================================
@@ -1460,3 +1469,16 @@ div.spaces-empty {
   }
 
 .view-atrium-casetracker .crayon-swatch { height:15px; line-height:15px; }
+
+/**
+ * Google gadgets, other embedded content =============================
+ */
+div.block table.gadget { max-width:100% !important; }
+
+div.block table.gadget tr,
+div.block table.gadget td {
+  padding:0px;
+  border:0px;
+  }
+
+
