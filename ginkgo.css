@@ -304,17 +304,15 @@ div.messages li {
   min-width:180px;
   }
 
-.dropdown-blocks div.block-toggle ul.links li,
-.dropdown-blocks div.block-toggle div.item-list li {
+.dropdown-blocks div.block-toggle li {
   float:none;
   padding:0px;
   margin:0px;
   border:0px;
   }
 
-.dropdown-blocks div.block-toggle ul.links li a,
-.dropdown-blocks div.block-toggle div.more-link a,
-.dropdown-blocks div.block-toggle div.item-list li a {
+.dropdown-blocks div.block-toggle li a,
+.dropdown-blocks div.block-toggle div.more-link a {
   float:none;
   width:130px;
   height:20px;
@@ -328,11 +326,9 @@ div.messages li {
   border-bottom:1px solid #eee;
   }
 
-  .dropdown-blocks div.block-toggle ul.links li a:hover,
-  .dropdown-blocks div.block-toggle div.item-list li a:hover { color:#fff; }
+  .dropdown-blocks div.block-toggle li a:hover { color:#fff; }
 
-  .dropdown-blocks div.block-toggle ul.links li a span,
-  .dropdown-blocks div.block-toggle div.item-list li a span {
+  .dropdown-blocks div.block-toggle li a span {
     float:left;
     margin-right:10px;
     }
@@ -603,6 +599,12 @@ div.pager li.pager-current {
 
 /* Minipager, boxes editing */
 div.page-region div.block { position:relative; }
+
+div.dropdown-blocks div.block div.minipager {
+  clear:both;
+  margin:5px auto;
+  position:relative;
+  }
 
 div.page-region div.block div.boxes-box-controls,
 div.page-region div.block div.minipager {
