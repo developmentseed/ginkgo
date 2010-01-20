@@ -12,9 +12,14 @@ Drupal.behaviors.ginkgo = function (context) {
         try { initial = JSON.parse($.cookie('DrupalGinkgo')); } catch (error) { }
         initial = initial ? initial : {};
         var id = target.attr('id');
+        // Check that coordinates are in the window viewport before setting.
         if (initial[id]) {
-          target.css('left', initial[id].left);
-          target.css('top', initial[id].top);
+          if (initial[id].left >= 0 && initial[id].left < $(window).width()) {
+            target.css('left', initial[id].left);
+          }
+          if (initial[id].top >= 0 && initial[id].top < $(window).height()) {
+            target.css('top', initial[id].top);
+          }
         }
 
         // Make block draggable and set position of each block on drag end.

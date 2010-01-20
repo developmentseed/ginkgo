@@ -94,6 +94,13 @@ div.comment-links ul li a:hover {
 
   #palette div.block div.block-content { background:#eee; }
 
+  #palette div.buttons {
+    background:transparent;
+    margin:0px;
+    border:0px;
+    padding:0px;
+    }
+
   /* Context editor specific */
   #palette div.context-editor-block-layouts div.form-item {
     padding:0px;
@@ -103,21 +110,35 @@ div.comment-links ul li a:hover {
   #palette form.context-editor div.item-list { display:none; }
   #palette form.context-editor div.buttons { display:block; }
 
-  div.context-block-addable {
+  #palette div.context-editable { padding:0px; }
+
+  #palette div.context-block-addable {
     color:#666;
     background:#fff;
-    border:5px solid #ddd;
-    padding:15px;
+    border:0px;
+    margin:0px 5px 5px 0px;
+    padding:10px;
     font-size:16px;
 
     white-space:nowrap;
     overflow:hidden;
     }
 
+
   #palette div.context-block-addable {
     float:left;
-    width:149px;
-    margin:0px 1px 1px 0px;
+    width:157px;
+    margin:0px 5px 5px 0px;
+    }
+
+  #palette div.context-block-browser div.category { padding:5px 0px 0px 5px; }
+
+  #palette div.context-block-browser {
+    margin:5px 0px;
+    padding:5px;
+    background:#ddd;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
     }
 
   /* Help block */
