@@ -642,6 +642,7 @@ div.block div.minipager li.pager-previous {
   overflow:hidden;
   position:absolute;
   top:0px;
+  width: auto;
   }
 
   div.block div.minipager li.pager-previous { left:0px; }
