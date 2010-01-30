@@ -338,7 +338,7 @@ body.logged-in #block-atrium-account h2.block-title {
       }
 
   #features-menu li a.icon-blog span.icon { background-position: 0px -40px; }
-  #features-menu li a.icon-documents span.icon { background-position: -40px -40px; }
+  #features-menu li a.icon-notebook span.icon { background-position: -40px -40px; }
   #features-menu li a.icon-calendar span.icon { background-position: -80px -40px; }
   #features-menu li a.icon-casetracker span.icon { background-position: -120px -40px; }
   #features-menu li a.icon-dashboard span.icon { background-position: -160px -40px; }
