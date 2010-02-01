@@ -264,7 +264,6 @@ function ginkgo_preprocess_user_picture(&$vars) {
     }
     else if ($view = views_get_current_view()) {
       switch ($view->name) {
-        case 'og_members_faces':
         case 'atrium_members':
         case 'atrium_profile':
           $preset = 'user-m';

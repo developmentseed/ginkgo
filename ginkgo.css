@@ -1416,13 +1416,11 @@ div.view-atrium-profile-blocks td.date,
 #block-views-atrium_intranet-block_2 td.date { width:120px; }
 
 /* OG faces, Member directory */
-table.views-view-grid .username {
-  float:none;
-  display:block;
-  text-align:center;
+table.views-view-grid .username { font-size:16px; }
+table.views-view-grid div.picture {
+  float:left;
+  margin-right:10px;
   }
-
-  table.views-view-grid td div.picture { margin:0px auto; }
 
 /* Views filter */
 div.views-exposed-form input.form-text,
