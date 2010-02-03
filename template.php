@@ -265,6 +265,9 @@ function ginkgo_preprocess_user_picture(&$vars) {
     else if ($view = views_get_current_view()) {
       switch ($view->name) {
         case 'atrium_members':
+          if ($view->style_plugin->definition['handler'] !== 'views_plugin_style_grid') {
+            break;
+          }
         case 'atrium_profile':
           $preset = 'user-m';
           break;

@@ -1396,6 +1396,7 @@ table .date,
 table .type { white-space:nowrap; }
 
 /* Fixable tables */
+div.view-atrium-members table,
 div.view-atrium-book table,
 div.view-atrium-intranet table,
 div.view-atrium-profile-blocks table { table-layout:fixed; }
@@ -1407,13 +1408,34 @@ div.view-atrium-profile-blocks table td {
   overflow:hidden;
   }
 
+/* Atrium activity views */
+div.view th.group,
 div.view td.group    { width:40px; overflow:visible; }
+
+div.view th.feature,
 div.view td.feature  { width:30px; }
+
+div.view th.new,
 div.view td.new      { width:30px; }
+
+div.view-atrium-intranet th.date,
 div.view-atrium-intranet td.date { width:60px; }
+
 div.view-atrium-book td.date,
 div.view-atrium-profile-blocks td.date,
 #block-views-atrium_intranet-block_2 td.date { width:120px; }
+
+/* Atrium members */
+div.view-atrium-members td.username { line-height:15px; }
+div.view-atrium-members small.label { display:block; font-size:11px; }
+
+div.view th.user-picture,
+div.view td.user-picture { width:40px; }
+
+div.view-atrium-members th.rid,
+div.view-atrium-members td.rid,
+div.view-atrium-members th.groups,
+div.view-atrium-members td.groups { width:160px; }
 
 /* OG faces, Member directory */
 table.views-view-grid .username { font-size:16px; }
