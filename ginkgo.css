@@ -382,7 +382,8 @@ div.messages li {
   #page-tools h2.page-title,
   #page-tools div.tabs {
     padding-top:5px;
-    float:left;
+    position:absolute;
+    left:20px;
     }
 
   #page-tools div.context-links,

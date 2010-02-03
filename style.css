@@ -218,6 +218,7 @@ body.logged-in #block-atrium-account h2.block-title {
  * Navigation =========================================================
  */
 #navigation {
+  height:50px;
   background-position:0px -40px;
   background-repeat:repeat-x;
   padding:20px 0px 0px;
@@ -225,7 +226,11 @@ body.logged-in #block-atrium-account h2.block-title {
   z-index:2;
   }
 
-#space-tools { float:right; }
+#space-tools {
+  position:absolute;
+  right:20px;
+  top:20px;
+  }
 
 #space-tools div.block-widget,
 #space-tools div.block-widget a {
@@ -247,8 +252,9 @@ body.logged-in #block-atrium-account h2.block-title {
  * Arguably the most complex portion of the theme.
  */
 #features-menu {
+  position:absolute;
+  left:20px;
   height:50px;
-  float:left;
   }
 
 #features-menu li {
