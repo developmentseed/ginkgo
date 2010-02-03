@@ -22,7 +22,7 @@ body div.page-region div.block h2.block-title {
 div.drilldown span.trail a {
   border-top-color:<?php print designkit_colorshift($background, '#ffffff', .95) ?>;
   border-bottom-color:<?php print designkit_colorshift($background, '#dddddd', .95) ?>;
-  background:<?php print designkit_colorshift($background, '#eeeeee', .95) ?>;
+  background-color:<?php print designkit_colorshift($background, '#eeeeee', .95) ?>;
   }
 
 div.decay-10 h2.comment-title { border-color:<?php print designkit_colorshift($background, '#eeeeee', 1) ?>; }

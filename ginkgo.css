@@ -756,7 +756,7 @@ div.drilldown span.trail a {
   padding:3px 9px 5px;
   border-top:1px solid #fff;
   border-bottom:1px solid #ddd;
-  background:#eee;
+  background:#eee url(images/sprite_base.png) 5px -70px no-repeat;
   display:block;
   }
 
@@ -767,12 +767,36 @@ div.drilldown span.trail a {
     }
 
   div.drilldown span.trail a.depth-1 { padding-left:25px; }
-  div.drilldown span.trail a.depth-2 { padding-left:50px; }
-  div.drilldown span.trail a.depth-3 { padding-left:75px; }
-  div.drilldown span.trail a.depth-4 { padding-left:100px; }
-  div.drilldown span.trail a.depth-5 { padding-left:125px; }
-  div.drilldown span.trail a.depth-6 { padding-left:150px; }
-  div.drilldown span.trail a.depth-7 { padding-left:175px; }
+
+  div.drilldown span.trail a.depth-2 {
+    padding-left:50px;
+    background-position:30px -70px;
+    }
+
+  div.drilldown span.trail a.depth-3 {
+    padding-left:75px;
+    background-position:55px -70px;
+    }
+
+  div.drilldown span.trail a.depth-4 {
+    padding-left:100px;
+    background-position:80px -70px;
+    }
+
+  div.drilldown span.trail a.depth-5 {
+    padding-left:125px;
+    background-position:105px -70px;
+    }
+
+  div.drilldown span.trail a.depth-6 {
+    padding-left:150px;
+    background-position:130px -70px;
+    }
+
+  div.drilldown span.trail a.depth-7 {
+    padding-left:175px;
+    background-position:155px -70px;
+    }
 
 /* Legacy block menu */
 div.block-atrium ul.menu ul,

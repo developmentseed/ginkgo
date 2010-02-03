@@ -17,12 +17,24 @@
    version="1.0"
    sodipodi:docname="ginkgo_skins.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="/home/yh/www/atrium/profiles/openatrium/themes/ginkgo/images/sprite_bleeds.png"
+   inkscape:export-filename="/home/yh/www/atrium/profiles/openatrium/themes/ginkgo/images/sprite_base.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    style="display:inline">
   <defs
      id="defs2604">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4183">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.50196081"
+         offset="0"
+         id="stop4185" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop4187" />
+    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient4215">
@@ -4001,6 +4013,16 @@
        y1="360"
        x2="660"
        y2="300" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4183"
+       id="linearGradient4190"
+       x1="356"
+       y1="100"
+       x2="346"
+       y2="90"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-340,-15)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -4012,9 +4034,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="290.77548"
-     inkscape:cy="264.97333"
+     inkscape:zoom="3.0517578"
+     inkscape:cx="41.808852"
+     inkscape:cy="448.37853"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -6430,7 +6452,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Bleeds"
-     style="display:inline">
+     style="display:none">
     <g
        transform="matrix(5.9999996,0,0,-0.6666663,-3599.9997,679.99989)"
        id="g4197"
@@ -6501,7 +6523,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Base"
-     style="display:none">
+     style="display:inline">
     <rect
        ry="3"
        y="67"
@@ -6987,6 +7009,11 @@
        id="rect4161"
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        transform="matrix(0,1,-1,0,0,0)" />
+    <path
+       style="opacity:1;fill:url(#linearGradient4190);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 6.5,75 C 6.223,75 6,75.223 6,75.5 L 6,82.5 C 6,82.777 6.223,83 6.5,83 L 13,83 L 13,85 L 16,81.5 L 13,78 L 13,80 L 9,80 L 9,75.5 C 9,75.223 8.777,75 8.5,75 L 6.5,75 z"
+       id="rect4172"
+       sodipodi:nodetypes="ccccccccccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
