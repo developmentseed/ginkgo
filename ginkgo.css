@@ -1241,6 +1241,8 @@ div.view li p {
   padding:0px;
   }
 
+div.view .rid,
+div.view .groups,
 div.view .views-field label,
 div.view .related-title,
 div.view .type,
@@ -1426,6 +1428,8 @@ div.view-atrium-profile-blocks td.date,
 #block-views-atrium_intranet-block_2 td.date { width:120px; }
 
 /* Atrium members */
+div.view-atrium-members td.rid,
+div.view-atrium-members td.groups,
 div.view-atrium-members td.username { line-height:15px; }
 div.view-atrium-members small.label { display:block; font-size:11px; }
 
