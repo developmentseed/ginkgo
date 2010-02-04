@@ -78,7 +78,7 @@ Drupal.behaviors.ginkgo = function (context) {
     });
 
   // Growl-style system messages
-  $('#growl > div.messages:not(.processed)')
+  $('#messages > div.messages:not(.processed)')
     .addClass('processed')
     .each(function() {
       // If a message meets these criteria, we don't autoclose
