@@ -1,14 +1,4 @@
 Drupal.behaviors.ginkgo = function (context) {
-  // Count handler for Features links.
-  $('#features-menu li a:not(.ginkgo-counter):contains("(")')
-    .addClass('ginkgo-counter')
-    .each(function() {
-      var split = $(this).text().split('(');
-      var linktext = split[0];
-      var linkcount = split[1].split(')')[0];
-      $('.label', this).html(linktext + "<span class='count'>"+linkcount+"</span>");
-    });
-
   // Close handler for palette blocks.
   $('#palette div.block:not(.gingko-palette-block)')
     .addClass('gingko-palette-block')

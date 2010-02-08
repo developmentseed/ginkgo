@@ -35,6 +35,14 @@ function ginkgo_icon_links(&$links) {
         $v['attributes']['class'] = '';
       }
       $v['attributes']['class'] .= ' icon-'. seed_id_safe(drupal_get_path_alias($v['href']));
+
+      // Detect and replace counter occurrences with markup.
+      $start = strpos($v['title'], '(');
+      $end = strpos($v['title'], ')');
+      if ($start !== FALSE && $end !== FALSE && $start < $end) {
+        $v['title'] = strtr($v['title'], array('(' => "<span class='count'>", ')' => "</span>"));
+      }
+
       $v['title'] = "<span class='icon'></span><span class='label'>". $v['title'] ."</span>";
       $v['html'] = true;
       $links[$k] = $v;
