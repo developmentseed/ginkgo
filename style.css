@@ -283,6 +283,7 @@ body.logged-in #block-atrium-account h2.block-title {
   width:40px;
   height:40px;
   padding:5px 10px;
+  overflow:hidden;
 
   background-position:0px -110px;
   background-repeat:no-repeat;
@@ -294,6 +295,7 @@ body.logged-in #block-atrium-account h2.block-title {
   }
 
   #features-menu li a:hover {
+    overflow:visible;
     background-position:0px -160px;
     background-repeat:no-repeat;
     }
@@ -314,11 +316,27 @@ body.logged-in #block-atrium-account h2.block-title {
 
     font-size:11px;
     font-weight:bold;
-
-    display:none;
+    display:block;
     }
 
-    #features-menu li a:hover span.label { display:block; }
+    #features-menu li a span.label span.count {
+      display:block;
+      position:absolute;
+      left:25px;
+      top:25px;
+
+      background:#d42;
+      padding:0px 5px;
+      line-height:15px;
+
+      font-size:9px;
+      font-weight:bold;
+      color:#fff;
+      text-shadow:none;
+
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      }
 
   #features-menu li.active a span.label,
   #features-menu li.active a:hover span.label {
@@ -335,13 +353,15 @@ body.logged-in #block-atrium-account h2.block-title {
     text-shadow:#fff 0px 1px 0px;
     }
 
-    #features-menu li a span.icon {
-      background:url(images/sprite_icons.png) 0px 0px no-repeat;
-      display:block;
-      height:40px;
-      width:40px;
-      float:left;
-      }
+    #features-menu li.active a span.label span.count { left:5px; top:5px; }
+
+  #features-menu li a span.icon {
+    background:url(images/sprite_icons.png) 0px 0px no-repeat;
+    display:block;
+    height:40px;
+    width:40px;
+    float:left;
+    }
 
   #features-menu li a.icon-blog span.icon { background-position: 0px -40px; }
   #features-menu li a.icon-notebook span.icon { background-position: -40px -40px; }
