@@ -101,6 +101,8 @@ div.comment-links ul li a:hover {
     padding:0px;
     }
 
+  #palette div.more-link { float:right; }
+
   /* Context editor specific */
   #palette div.context-editor-block-layouts div.form-item {
     padding:0px;
@@ -607,12 +609,15 @@ div.dropdown-blocks div.block div.minipager {
   position:relative;
   }
 
+#palette div.block div.minipager,
 div.page-region div.block div.boxes-box-controls,
 div.page-region div.block div.minipager {
   position:absolute;
   top:5px;
   right:5px;
   }
+
+  #palette div.block div.minipager { right:30px; }
 
 div.block div.minipager {
   background:#fff;
@@ -1306,6 +1311,8 @@ div.view div.grouped-meta {
   }
 
   div.block div.view div.grouped-meta { background:#fff; }
+
+  #palette div.view div.grouped-meta,
   #right div.view div.grouped-meta { width:100px; }
 
   div.view div.grouped-meta div.user-picture {
