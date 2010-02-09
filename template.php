@@ -72,8 +72,14 @@ function ginkgo_preprocess_page(&$vars) {
   // Add body class for layout.
   $vars['attr']['class'] .= !empty($vars['template_files']) ? ' '. end($vars['template_files']) : '';
 
-  // Add icon markup to main menu
-  ginkgo_icon_links($vars['primary_links']);
+  // Don't show the navigation in the admin section.
+  // Otherwise add icon markup to main menu.
+  if (arg(0) === 'admin') {
+    $vars['primary_links'] = '';
+  }
+  else {
+    ginkgo_icon_links($vars['primary_links']);
+  }
 
   // If tabs are active, the title is likely shown in them. Don't show twice.
   $vars['title'] = !empty($vars['tabs']) ? '' : $vars['title'];
