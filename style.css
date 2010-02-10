@@ -308,11 +308,13 @@ body.logged-in #block-atrium-account h2.block-title {
 
   #features-menu li a span.label {
     width:100px;
-    text-align:center;
     position:absolute;
     top:-20px;
     left:-20px;
     line-height:20px;
+
+    white-space:nowrap;
+    text-align:center;
 
     font-size:11px;
     font-weight:bold;
