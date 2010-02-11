@@ -335,10 +335,14 @@ function ginkgo_views_mini_pager($tags = array(), $limit = 10, $element = 0, $pa
 function ginkgo_node_preview($node = NULL, $show = FALSE) {
   static $output;
   if (!isset($output) && $node) {
-    $output = '<div class="preview node-preview">';
-    $output .= '<h2 class="preview-title">'. t('Preview') .'</h2>';
-    $output .= '<div class="preview-content clear-block">'. node_view($node, 0, FALSE, 0) .'</div>';
-    $output .= "</div>";
+    $element = array(
+      '#title' => t('Preview'),
+      '#children' => node_view($node, 0, FALSE, 0),
+      '#collapsed' => FALSE,
+      '#collapsible' => TRUE,
+      '#attributes' => array('class' => 'node-preview'),
+    );
+    $output = theme('fieldset', $element);
   }
   return $show ? $output : '';
 }

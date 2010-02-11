@@ -1025,6 +1025,12 @@ div.node div.field {
     -webkit-border-radius:3px;
     }
 
+/* Node preview */
+div.node-preview div.node {
+  overflow:auto;
+  max-height:240px;
+  }
+
 /**
  * Module: DIFF =======================================================
  */
