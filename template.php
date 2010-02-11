@@ -82,7 +82,7 @@ function ginkgo_preprocess_page(&$vars) {
   }
 
   // If tabs are active, the title is likely shown in them. Don't show twice.
-  $vars['title'] = !empty($vars['tabs']) ? '' : $vars['title'];
+  $vars['title'] = (!empty($vars['tabs']) || menu_get_object()) ? '' : $vars['title'];
 
   // Show mission text on login page for anonymous users.
   global $user;
