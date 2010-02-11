@@ -1151,7 +1151,11 @@ body table {
   }
 
 body table th,
-body div.view table th { font-size:11px; }
+body div.view table th {
+  font-size:11px;
+  white-space:nowrap;
+  overflow:hidden;
+  }
 
 /**
  * Module: CASETRACKER ================================================
