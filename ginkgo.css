@@ -86,7 +86,7 @@ div.comment-links ul li a:hover {
     overflow:hidden;
 
     cursor:pointer;
-    background:#666 url(images/sprite_base.png) -40px -30px no-repeat;
+    background:#666 url(images/sprite_base.png) -20px -30px no-repeat;
 
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
@@ -456,10 +456,19 @@ div.messages li {
     #page-tools div.context-links a:active { background-position:0px 100%; }
 
 #page-tools #help-toggler {
+  background:url(images/sprite_base.png) 0px -30px no-repeat;
+  height:20px;
+  width:20px;
+
+  text-indent:-999px;
+  overflow:hidden;
+
   margin: 10px 0px 0px 10px;
   position:static;
   float:right;
   }
+
+  #page-tools #help-toggler.toggle-active { background-position:-20px -30px; }
 
 /**
  * Tabs ===============================================================

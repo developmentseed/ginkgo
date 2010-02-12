@@ -33,7 +33,6 @@
 
 .dropdown-blocks div.block-toggle div.pane-right li { float:right; }
 
-
 /**
  * Page tools ========================================================
  */
@@ -62,6 +61,11 @@
     margin-left:0px;
     margin-right:5px;
     }
+
+#page-tools #help-toggler {
+  float:left;
+  margin: 10px 10px 0px 0px;
+  }
 
 /**
  * Page layout ========================================================
@@ -176,6 +180,14 @@ div.messages span.close,
 #palette div.block h2.block-title span.close {
   left:5px;
   right:auto;
+  }
+
+/* Help block */
+#help-text { padding:5px 50px 5px 0px; }
+
+#help-text span.icon {
+  left:auto;
+  right:5px;
   }
 
 /**
