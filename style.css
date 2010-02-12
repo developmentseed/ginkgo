@@ -30,6 +30,7 @@ div.limiter {
 #global a.logo,
 #global div.breadcrumb span.link-0 a,
 #global div.breadcrumb span.divider,
+#global div.breadcrumb span.space a,
 #navigation,
 #features-menu li,
 #features-menu li a { background-image:url(images/sprite_skin.png); }
@@ -178,16 +179,22 @@ body.logged-in #block-atrium-account h2.block-title {
     float:left;
     }
 
+  #global div.breadcrumb span.space a,
   #global div.breadcrumb span.link-0 a,
   #global div.breadcrumb span.divider {
-    background-position:-20px -410px;
+    background-position:-20px -265px;
     background-repeat:no-repeat;
     text-indent:-999px;
     overflow:hidden;
     width:20px;
     }
 
-  #global div.breadcrumb span.link-0 a { background-position:0px -410px; }
+  #global div.breadcrumb span.link-0 a { background-position:0px -265px; }
+
+  #global div.breadcrumb span.space { padding-left:5px; }
+  #global div.breadcrumb span.space a.private { background-position:-40px -265px; }
+  #global div.breadcrumb span.space a.public { background-position:-60px -265px; }
+
 
 /**
  * Footer ==============================================================

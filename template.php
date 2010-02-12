@@ -195,24 +195,8 @@ function ginkgo_preprocess_comment(&$vars) {
 
 /**
  * Preprocessor for theme_node_form().
- * Better theming of spaces privacy messages on node forms.
  */
 function ginkgo_preprocess_node_form(&$vars) {
-  if (!empty($vars['form']['spaces'])) {
-    $spaces_info = $vars['form']['spaces'];
-    switch ($vars['form']['#node']->og_public) {
-      case OG_VISIBLE_GROUPONLY:
-        $class = 'form-message-private';
-        break;
-      case OG_VISIBLE_BOTH:
-        $class = 'form-message-public';
-        break;
-    }
-    $form_message = "<div class='form-message $class'><span class='icon'></span>{$spaces_info['#description']}</div>";
-    $vars['form_message'] = $form_message;
-    unset($vars['form']['spaces']);
-  }
-
   // Add node preview to top of the form if present
   $preview = theme('node_preview', NULL, TRUE);
   $vars['form']['preview'] = array('#type' => 'markup', '#weight' => -1000, '#value' => $preview);
@@ -260,7 +244,19 @@ function ginkgo_breadcrumb($breadcrumb) {
     $breadcrumb[$k] = "<span class='link link-{$i}'>{$link}</span>";
     $i++;
   }
-  return '<div class="breadcrumb">'. implode("<span class='divider'></span>", $breadcrumb) .'</div>';
+  $breadcrumb = implode("<span class='divider'></span>", $breadcrumb);
+
+  // Marker for this group as public or private.
+  $space = spaces_get_space();
+  if ($space && $space->type === 'og') {
+    $attr = $space->group->og_private ?
+      array('title' => t('Private'), 'class' => 'private') :
+      array('title' => t('Public'), 'class' => 'public');
+    $link = l($text, $_GET['q'], array('attributes' => $attr));
+    $breadcrumb .= "<span class='space'>{$link}</span>";
+  }
+
+  return "<div class='breadcrumb'>{$breadcrumb}</div>";
 }
 
 /**
