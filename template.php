@@ -58,11 +58,6 @@ function ginkgo_icon_links(&$links) {
  * Preprocessor for theme_page().
  */
 function ginkgo_preprocess_page(&$vars) {
-  // Include module-level javascript if possible.
-  module_exists('admin') ? drupal_add_js(drupal_get_path('module', 'admin') .'/includes/jquery.cookie.js') : '';
-  module_exists('jquery_ui') ? jquery_ui_add(array('ui.draggable')) : '';
-  module_exists('context_ui') ? drupal_add_js(drupal_get_path('module', 'context_ui') .'/json2.js') : '';
-
   // Switch layout for 404/403 pages.
   $headers = drupal_get_headers();
   if ((strpos($headers, 'HTTP/1.1 403 Forbidden') !== FALSE) || strpos($headers, 'HTTP/1.1 404 Not Found') !== FALSE) {
@@ -116,8 +111,15 @@ function ginkgo_preprocess_block(&$vars) {
   if (in_array($vars['block']->region, array('header', 'page_tools', 'space_tools'))) {
     $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-widget' : ' block-toggle';
   }
-  // Add close button to palette region blocks.
   if ($vars['block']->region === 'palette') {
+    // Palette region requires module-level jQuery UI, Cookie, JSON includes.
+    // Note that drupal_add_js() only works here because blocks are rendered
+    // prior to the retrieval of javascript files in template_preprocess_page().
+    module_exists('admin') ? drupal_add_js(drupal_get_path('module', 'admin') .'/includes/jquery.cookie.js') : '';
+    module_exists('jquery_ui') ? jquery_ui_add(array('ui.draggable')) : '';
+    module_exists('context_ui') ? drupal_add_js(drupal_get_path('module', 'context_ui') .'/json2.js') : '';
+
+    // Add close button to palette region blocks.
     $vars['title'] = "<span class='close'></span>{$vars['title']}";
   }
   $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-notitle' : '';
