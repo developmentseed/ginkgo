@@ -225,13 +225,16 @@ body.logged-in #block-atrium-account h2.block-title {
  * Navigation =========================================================
  */
 #navigation {
-  height:50px;
   background-position:0px -40px;
   background-repeat:repeat-x;
-  padding:20px 0px 0px;
   position:relative;
   z-index:2;
   }
+
+  #navigation div.limiter {
+    padding-top:20px;
+    height:50px;
+    }
 
 #space-tools {
   position:absolute;
