@@ -71,6 +71,68 @@ div.decay-1 h2.comment-title { border-color:#55b064; }
 div.decay-0 h2.comment-title { border-color:#44aa55; }
 
 /**
+ * "Rounded" elements =================================================
+ */
+.block,
+.item-list,
+.help-items ul,
+.fieldset,
+.form-item,
+.admin-list,
+.node-type-list,
+.admin-panel,
+.box-title,
+div.compact-link a,
+form.confirmation ul,
+form div.buttons,
+input.teaser-button,
+input.form-submit {
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  }
+
+.item-list h3,
+.block .block-title,
+.admin-panel h3,
+.fieldset-title,
+.collapsible .fieldset-title a {
+  -moz-border-radius:2px 2px 0px 0px;
+  -webkit-border-radius-top-left:2px;
+  -webkit-border-radius-top-right:2px;
+  }
+
+.collapsible .fieldset-title {
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
+  }
+
+.collapsed .fieldset-title a {
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  }
+
+.block .block-content,
+.fieldset-content {
+  -moz-border-radius:0px 0px 2px 2px;
+  -webkit-border-radius-bottom-left:2px;
+  -webkit-border-radius-bottom-right:2px;
+  }
+
+/**
+ * "Popped" elements ==================================================
+ */
+input.teaser-button,
+input.form-submit {
+  -moz-box-shadow:#ddd 0px 1px 1px;
+  -webkit-box-shadow:#ddd 0px 1px 1px;
+  }
+
+/**
+ * "Embossed" elements ================================================
+ */
+table th { text-shadow:#fff 0px 1px 0px; }
+
+/**
  * Global navbar  =====================================================
  */
 #global {

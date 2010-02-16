@@ -673,11 +673,6 @@ div.block div.minipager li.pager-previous {
   background:url(images/vrule.png) 65% 0% repeat-y;
   }
 
-#page * {
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  }
-
   div.page-region div.content-wrapper,
   div.page-region div.block { margin:0px 0px 10px; }
 
