@@ -765,7 +765,7 @@ div.drilldown span.trail a {
   padding:3px 9px 5px;
   border-top:1px solid #fff;
   border-bottom:1px solid #ddd;
-  background:#eee url(images/sprite_base.png) 5px -110px no-repeat;
+  background:#eee url(images/sprite_base.png) 5px -160px no-repeat;
   display:block;
   }
 
@@ -779,32 +779,32 @@ div.drilldown span.trail a {
 
   div.drilldown span.trail a.depth-2 {
     padding-left:50px;
-    background-position:30px -150px;
+    background-position:30px -160px;
     }
 
   div.drilldown span.trail a.depth-3 {
     padding-left:75px;
-    background-position:55px -150px;
+    background-position:55px -160px;
     }
 
   div.drilldown span.trail a.depth-4 {
     padding-left:100px;
-    background-position:80px -150px;
+    background-position:80px -160px;
     }
 
   div.drilldown span.trail a.depth-5 {
     padding-left:125px;
-    background-position:105px -150px;
+    background-position:105px -160px;
     }
 
   div.drilldown span.trail a.depth-6 {
     padding-left:150px;
-    background-position:130px -150px;
+    background-position:130px -160px;
     }
 
   div.drilldown span.trail a.depth-7 {
     padding-left:175px;
-    background-position:155px -150px;
+    background-position:155px -160px;
     }
 
 /* Legacy block menu */
@@ -826,7 +826,7 @@ div.block-atrium ul.menu li {
   div.block-atrium ul.menu li.collapsed,
   div.block-atrium ul.menu li.expanded { background:url(images/sprite_base.png) 0px -60px no-repeat; }
 
-  div.block-atrium ul.menu li.leaf { background:url(images/sprite_base.png) 0px -85px no-repeat; }
+  div.block-atrium ul.menu li.leaf { background:url(images/sprite_base.png) 0px -110px no-repeat; }
 
 /* RESET, now do it again */
 div.drilldown ul.menu ul,
@@ -1369,7 +1369,7 @@ div.view div.grouped-admin a {
 span.marker {
   display:block;
   float:right;
-  background:url(images/sprite_base.png) 0px -140px no-repeat;
+  background:url(images/sprite_base.png) -40px -30px no-repeat;
   width:20px;
   height:20px;
   text-indent:-999px;

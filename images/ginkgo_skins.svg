@@ -17,12 +17,19 @@
    version="1.0"
    sodipodi:docname="ginkgo_skins.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="/home/devseed/atrium/profiles/openatrium/themes/ginkgo/images/sprite_base.png"
+   inkscape:export-filename="/home/devseed/community/profiles/openatrium/themes/ginkgo/images/sprite_base-rtl.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    style="display:inline">
   <defs
      id="defs2604">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 240 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="360 : 240 : 1"
+       inkscape:persp3d-origin="180 : 160 : 1"
+       id="perspective732" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient4183">
@@ -1532,9 +1539,9 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4183"
-       id="linearGradient4507"
+       id="linearGradient3155"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-338,25)"
+       gradientTransform="translate(-341,75)"
        x1="356"
        y1="100"
        x2="346"
@@ -1551,10 +1558,10 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="9.6243431"
-     inkscape:cy="438.44901"
+     inkscape:cx="379.9769"
+     inkscape:cy="310.39958"
      inkscape:document-units="px"
-     inkscape:current-layer="svg2602"
+     inkscape:current-layer="layer5"
      showgrid="false"
      inkscape:snap-bbox="true"
      showguides="true"
@@ -4115,8 +4122,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Bleeds"
-     style="display:none"
-     sodipodi:insensitive="true">
+     style="display:none">
     <g
        transform="matrix(5.9999996,0,0,-0.6666663,-3599.9997,679.99989)"
        id="g4197"
@@ -4187,8 +4193,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Base"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:none">
     <g
        id="g3739"
        style="fill:#589bc8;fill-opacity:1;display:inline" />
@@ -4597,12 +4602,12 @@
     </g>
     <path
        style="fill:#4488aa;fill-opacity:1;stroke:none;stroke-width:3.12842727;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 6.5312512,146.13419 L 8.0468758,148.83387 L 5,148.90497 L 5,150.9497 L 8.0468756,151.16613 L 6.5312505,153.86581 L 8.4531252,155 L 10,152.30032 L 11.546875,155 L 13.46875,153.86581 L 11.953125,151.16613 L 15,150.9497 L 15,148.90497 L 11.953125,148.83387 L 13.468751,146.13419 L 11.546876,145 L 10.000001,147.69968 L 8.4531261,145 L 6.5312512,146.13419 z"
+       d="M 46.531251,36.13419 L 48.046876,38.83387 L 45,38.90497 L 45,40.9497 L 48.046876,41.16613 L 46.531251,43.86581 L 48.453125,45 L 50,42.30032 L 51.546875,45 L 53.46875,43.86581 L 51.953125,41.16613 L 55,40.9497 L 55,38.90497 L 51.953125,38.83387 L 53.468751,36.13419 L 51.546876,35 L 50.000001,37.69968 L 48.453126,35 L 46.531251,36.13419 z"
        id="path4204"
        sodipodi:nodetypes="ccccccccccccccccccc" />
     <path
-       style="opacity:1;fill:url(#linearGradient4507);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="M 8.5,115 C 8.223,115 8,115.223 8,115.5 L 8,122.5 C 8,122.777 8.223,123 8.5,123 L 15,123 L 15,125 L 18,121.5 L 15,118 L 15,120 L 11,120 L 11,115.5 C 11,115.223 10.777,115 10.5,115 L 8.5,115 z"
+       style="opacity:1;fill:url(#linearGradient3155);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 5.5,165 C 5.223,165 5,165.223 5,165.5 L 5,172.5 C 5,172.777 5.223,173 5.5,173 L 12,173 L 12,175 L 15,171.5 L 12,168 L 12,170 L 8,170 L 8,165.5 C 8,165.223 7.777,165 7.5,165 L 5.5,165 z"
        id="rect4172"
        sodipodi:nodetypes="ccccccccccccc" />
     <g
@@ -4639,7 +4644,8 @@
          ry="0.5" />
     </g>
     <g
-       id="g4192">
+       id="g4192"
+       transform="translate(0,25)">
       <path
          id="rect3390"
          d="M 9,92 C 8.448,92 8,92.448 8,93 L 8,102 C 8,102.552 8.448,103 9,103 L 16,103 C 16.552,103 17,102.552 17,102 L 17,95 L 14,95 L 14,92 L 9,92 z"
@@ -4680,13 +4686,33 @@
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="M 26.5,35 L 25,36.5 L 28.5,40 L 25,43.5 L 26.5,45 L 30,41.5 L 33.5,45 L 35,43.5 L 31.5,40 L 35,36.5 L 33.5,35 L 30,38.5 L 26.5,35 z"
        id="path4343" />
+    <rect
+       style="opacity:1;fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3121"
+       width="5"
+       height="50"
+       x="-5"
+       y="60" />
+    <rect
+       y="110"
+       x="-10"
+       height="50"
+       width="5"
+       id="rect3996"
+       style="opacity:1;fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <rect
+       style="opacity:1;fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3998"
+       width="5"
+       height="50"
+       x="-5"
+       y="160" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Base.RTL"
-     style="display:none"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <use
        style="display:inline"
        x="0"
