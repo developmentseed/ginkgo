@@ -824,9 +824,9 @@ div.block-atrium ul.menu li {
     div.block-atrium ul.menu ul ul ul ul { border-color:#e8e8e8; }
 
   div.block-atrium ul.menu li.collapsed,
-  div.block-atrium ul.menu li.expanded { background:url(images/sprite_base.png) 0px -60px no-repeat; }
+  div.block-atrium ul.menu li.expanded { background:#fff url(images/sprite_base.png) 0px -60px no-repeat; }
 
-  div.block-atrium ul.menu li.leaf { background:url(images/sprite_base.png) 0px -110px no-repeat; }
+  div.block-atrium ul.menu li.leaf { background:#fff url(images/sprite_base.png) 0px -110px no-repeat; }
 
 /* RESET, now do it again */
 div.drilldown ul.menu ul,
