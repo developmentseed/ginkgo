@@ -594,13 +594,13 @@ div.pager li.pager-current {
 
   div.pager ul.pager-list li:first-child a,
   div.pager ul.pager-list li.pager-current:first-child {
-    -moz-border-radius:5px 0px 0px 5px;
-    -webkit-border-radius:5px 0px 0px 5px;
+    -moz-border-radius:2px 0px 0px 2px;
+    -webkit-border-radius:2px 0px 0px 2px;
     }
 
   div.pager ul.pager-links li:last-child a {
-    -moz-border-radius:0px 5px 5px 0px;
-    -webkit-border-radius:0px 5px 5px 0px;
+    -moz-border-radius:0px 2px 2px 0px;
+    -webkit-border-radius:0px 2px 2px 0px;
     }
 
   div.pager li.pager-current {
