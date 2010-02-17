@@ -254,3 +254,13 @@ div.block div.views-exposed-form div.views-exposed-widget label {
   right:0px;
   left:auto;
   }
+
+/**
+ * Pager ==============================================================
+ */
+#palette div.block div.minipager,
+div.page-region div.block div.boxes-box-controls,
+div.page-region div.block div.minipager {
+  right:auto;
+  left:5px;
+  }
