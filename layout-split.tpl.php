@@ -7,7 +7,7 @@
   <?php print $content_region ?>
 </div></div>
 <div id='right'><div class='page-region'>
-  <? if ($right) print $right ?>
+  <?php if ($right) print $right ?>
 </div></div>
 
 <?php include 'page.footer.inc'; ?>
