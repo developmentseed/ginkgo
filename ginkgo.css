@@ -1589,13 +1589,9 @@ div.block table.gadget td {
  */
 .atrium-welcome { overflow:hidden; }
 
-.atrium-welcome object {
-  padding:4px;
+.atrium-welcome embed {
+  display: block;
   margin:0px auto 10px;
-  border:1px solid #ddd;
-  background:#fff;
-  -moz-border-radius:3px;
-  -webkit-border-radius:3px;
   }
 
 .atrium-welcome-links {
