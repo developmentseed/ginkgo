@@ -25,6 +25,15 @@
   -webkit-border-top-left-radius:0px;
   }
 
+.dropdown-blocks div.block-toggle li a,
+.dropdown-blocks div.block-toggle div.more-link a { padding:2px 10px 2px 40px; }
+
+.dropdown-blocks div.block-toggle li a span {
+  float:right;
+  margin-right:0px;
+  margin-left:10px;
+  }
+
 /* Panes */
 .dropdown-blocks div.block-toggle div.panes { background-position:359px 0px; }
 
@@ -263,4 +272,15 @@ div.page-region div.block div.boxes-box-controls,
 div.page-region div.block div.minipager {
   right:auto;
   left:5px;
+  }
+
+/**
+ * Atrium welcome blocks ==============================================
+ */
+.atrium-welcome-links .column { float:right; }
+
+.atrium-welcome-links a span.spaces-feature {
+  float:right;
+  margin-right:0px;
+  margin-left:10px;
   }

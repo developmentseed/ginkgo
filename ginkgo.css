@@ -3,6 +3,11 @@
  * page canvas.
  */
 
+object {
+  display:block;
+  margin:0px auto;
+  }
+
 /**
  * "Power" hover classes ==============================================
  */
@@ -322,8 +327,6 @@ div.messages li {
 
   overflow:hidden;
   white-space:nowrap;
-  text-align:left;
-
   padding:2px 40px 2px 10px;
   border-bottom:1px solid #eee;
   }
@@ -1581,4 +1584,50 @@ div.block table.gadget td {
   border:0px;
   }
 
+/**
+ * Atrium welcome blocks ==============================================
+ */
+.atrium-welcome { overflow:hidden; }
 
+.atrium-welcome object {
+  padding:4px;
+  margin:0px auto 10px;
+  border:1px solid #ddd;
+  background:#fff;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  }
+
+.atrium-welcome-links {
+  background:#ddd;
+  padding:5px;
+  margin:0px 0px 10px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  }
+
+.atrium-welcome-links .column {
+  float:left;
+  width:49.99%;
+  }
+
+.atrium-welcome-links a {
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+
+  display:block;
+  margin:0px 1px 1px 0px;
+  padding:10px 10px 9px;
+
+  font-size:16px;
+  font-weight:bold;
+  white-space:nowrap;
+  background:#fff;
+  }
+
+  .atrium-welcome-links a:hover { color:#fff; }
+
+  .atrium-welcome-links a span.spaces-feature {
+    float:left;
+    margin-right:10px;
+    }

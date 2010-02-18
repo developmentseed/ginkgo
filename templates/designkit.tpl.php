@@ -1,4 +1,5 @@
 <style type='text/css'>
+.atrium-welcome-links a:hover,
 .dropdown-blocks div.block-toggle ul.links li a:hover,
 .dropdown-blocks div.block-toggle div.item-list li a:hover,
 div.pager li.pager-current,
