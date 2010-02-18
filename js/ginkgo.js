@@ -25,7 +25,7 @@ Drupal.behaviors.ginkgo = function (context) {
         // Make block draggable and set position of each block on drag end.
         var options = {
           handle: 'h2.block-title',
-          containment: 'window',
+          containment: 'document',
           stop: function(event, ui) {
             var state = {};
             try { state = JSON.parse($.cookie('DrupalGinkgo')); } catch (error) { }
