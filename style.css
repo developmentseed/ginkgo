@@ -18,10 +18,9 @@ a {
   text-decoration:none;
   }
 
-div.limiter {
-  max-width:1280px;
-  padding:0px 20px;
-  }
+div.limiter { padding:0px 20px; }
+
+#page div.limiter { max-width:1280px; }
 
 /**
  * Skinnable elements =================================================
