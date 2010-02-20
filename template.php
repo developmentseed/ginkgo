@@ -163,9 +163,11 @@ function ginkgo_preprocess_node(&$vars) {
 
   // Clear out catchall template file suggestions like those made by og.
   // TODO refactor
-  foreach ($vars['template_files'] as $k => $f) {
-    if (strpos($f, 'node-'.$vars['type']) === FALSE) {
-      unset($vars['template_files'][$k]);
+  if (!empty($vars['template_files'])) {
+    foreach ($vars['template_files'] as $k => $f) {
+      if (strpos($f, 'node-'.$vars['type']) === FALSE) {
+        unset($vars['template_files'][$k]);
+      }
     }
   }
 }
