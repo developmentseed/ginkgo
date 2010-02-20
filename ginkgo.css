@@ -3,6 +3,8 @@
  * page canvas.
  */
 
+textarea { resize:none; }
+
 object {
   display:block;
   margin:0px auto;
