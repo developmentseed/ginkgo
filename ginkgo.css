@@ -1480,7 +1480,8 @@ div.view-atrium-profile-blocks td.date,
 /* Atrium members */
 div.view-atrium-members td.rid,
 div.view-atrium-members td.groups,
-div.view-atrium-members td.username { line-height:15px; }
+div.view-atrium-members td.username,
+div.view-atrium-members td.managelink { line-height:15px; }
 div.view-atrium-members small.label { display:block; font-size:11px; }
 
 div.view th.user-picture,
