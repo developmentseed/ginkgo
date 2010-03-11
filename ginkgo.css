@@ -1277,11 +1277,16 @@ div.item-list h3,
 table caption {
   padding:10px 0px;
   color:#666;
+  background:transparent;
   font-size:16px;
   font-weight:bold;
   }
 
   table caption { text-align:left; }
+
+  #right div.view h3,
+  #right div.item-list h3,
+  #right table caption { padding:5px 0px 4px; }
 
 /* Views fields */
 div.view li p {
