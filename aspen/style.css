@@ -1,0 +1,555 @@
+body.tao,
+input,
+textarea,
+select { font-family:Arial,Helvetica,sans-serif; }
+
+body.tao {
+  background:#eee url(../images/page.png) 0% 0% repeat-x fixed;
+  color:#222;
+  }
+
+a {
+  color:#48a;
+  text-decoration:none;
+  }
+
+div.limiter { padding:0px 20px; }
+
+#page div.limiter { max-width:1280px; }
+
+/**
+ * Skinnable elements =================================================
+ */
+#global,
+#global a.logo,
+#global div.breadcrumb span.link-0 a,
+#global div.breadcrumb span.divider,
+#global div.breadcrumb span.space a,
+#header div.block-widget,
+#header h2.block-title,
+#navigation,
+#features-menu li a,
+body.tao #page-tools div.tabs li.active a,
+body.tao #page-tools div.tabs li a.active { background-image:url(sprite_skin.png); }
+
+/**
+ * Default designkit colors ===========================================
+ */
+#global,
+.atrium-welcome-links a:hover,
+.dropdown-blocks div.block-toggle ul.links li a:hover,
+.dropdown-blocks div.block-toggle div.item-list li a:hover,
+div.pager li.pager-current,
+div.more-link a:hover,
+div.node-links ul li a:hover,
+div.comment-links ul li a:hover { background-color:#44aa55; }
+
+body.tao .page-region .block { border-color:#44aa55; }
+
+div.decay-10 h2.comment-title { border-color:#eeeeee; }
+div.decay-9 h2.comment-title { border-color:#dde7de; }
+div.decay-8 h2.comment-title { border-color:#cce0cf; }
+div.decay-7 h2.comment-title { border-color:#bbd9c0; }
+div.decay-6 h2.comment-title { border-color:#aad2b0; }
+div.decay-5 h2.comment-title { border-color:#99cca1; }
+div.decay-4 h2.comment-title { border-color:#88c592; }
+div.decay-3 h2.comment-title { border-color:#77be82; }
+div.decay-2 h2.comment-title { border-color:#66b773; }
+div.decay-1 h2.comment-title { border-color:#55b064; }
+div.decay-0 h2.comment-title { border-color:#44aa55; }
+
+/**
+ * "Rounded" elements =================================================
+ */
+.block,
+.item-list,
+.help-items ul,
+.fieldset,
+.form-item,
+.admin-list,
+.node-type-list,
+.admin-panel,
+.box-title,
+div.compact-link a,
+form.confirmation ul,
+form div.buttons,
+input.teaser-button,
+input.form-submit {
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  }
+
+.item-list h3,
+.block .block-title,
+.admin-panel h3,
+.fieldset-title,
+.collapsible .fieldset-title a {
+  -moz-border-radius:2px 2px 0px 0px;
+  -webkit-border-radius-top-left:2px;
+  -webkit-border-radius-top-right:2px;
+  }
+
+.collapsible .fieldset-title {
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
+  }
+
+.collapsed .fieldset-title a {
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  }
+
+.block .block-content,
+.fieldset-content {
+  -moz-border-radius:0px 0px 2px 2px;
+  -webkit-border-radius-bottom-left:2px;
+  -webkit-border-radius-bottom-right:2px;
+  }
+
+/**
+ * "Popped" elements ==================================================
+ */
+input.teaser-button,
+input.form-submit {
+  -moz-box-shadow:#ddd 0px 1px 1px;
+  -webkit-box-shadow:#ddd 0px 1px 1px;
+  }
+
+/**
+ * "Embossed" elements ================================================
+ */
+table th { text-shadow:#fff 0px 1px 0px; }
+
+/**
+ * Global navbar  =====================================================
+ */
+#global {
+  background-position:0px 0px;
+  background-repeat:repeat-x;
+  height:40px;
+  padding:7px 0px 3px;
+  position:relative;
+  /* IE7 z-index stacking: #global 3, #navigation 2, #page-tools 1, all others 0. */
+  z-index:3;
+  }
+
+#global a.logo {
+  text-indent:-999px;
+  overflow:hidden;
+
+  position:absolute;
+  right:20px;
+  height:40px;
+  width:300px;
+  background-repeat:no-repeat;
+  background-position:100% -440px;
+  }
+
+/**
+ * Header blocks ======================================================
+ */
+#header {
+  padding:5px 0px;
+  float:left;
+  }
+
+#header div.block { padding:0px 5px 0px 0px; }
+
+#header div.block-widget,
+#header h2.block-title {
+  background-position:0px -230px;
+  background-repeat:repeat-x;
+
+  font-size:11px;
+  margin:0px;
+  padding:4px 9px;
+  border:1px solid #eee;
+  border-bottom-color:#ccc;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  }
+
+  #header div.block-widget div.block-content { padding:0px; background:transparent; }
+
+  #header div.block-widget a { font-weight:bold; }
+
+  #header div.block-toggle h2.toggle-active {
+    background:#fff;
+    border-bottom:0px;
+    padding-bottom:5px;
+    -moz-border-radius:3px 3px 0px 0px;
+    -webkit-border-radius:3px 3px 0px 0px;
+    }
+
+  #header div.block-toggle div.block-content {
+    left:0px;
+    right:auto;
+    -moz-border-radius:0px 5px 5px 5px;
+    -webkit-border-radius:0px 5px 5px 5px;
+    }
+
+/* Account block */
+body.logged-in #block-atrium-account h2.block-title {
+  position:relative;
+  padding-left:35px;
+  }
+
+#block-atrium-account h2.block-title div.picture {
+  -moz-border-radius:3px 0px 0px 3px;
+  -webkit-border-radius:3px 0px 0px 3px;
+  position:absolute;
+  left:-1px;
+  top:-1px;
+  }
+
+  #block-atrium-account h2.toggle-active div.picture {
+    -moz-border-radius:3px 0px 0px 0px;
+    -webkit-border-radius:3px 0px 0px 0px;
+    }
+
+/* Breadcrumb */
+#global div.breadcrumb {
+  float:left;
+  padding:5px;
+  height:30px;
+  line-height:30px;
+  font-size:16px;
+  font-weight:normal;
+  overflow:hidden;
+  }
+
+  #global div.breadcrumb span,
+  #global div.breadcrumb span a {
+    color:#333;
+    height:30px;
+    float:left;
+    }
+
+  #global div.breadcrumb span.space a,
+  #global div.breadcrumb span.link-0 a,
+  #global div.breadcrumb span.divider {
+    background-position:-20px -265px;
+    background-repeat:no-repeat;
+    text-indent:-999px;
+    overflow:hidden;
+    width:20px;
+    }
+
+  #global div.breadcrumb span.link-0 a { background-position:0px -265px; }
+
+  #global div.breadcrumb span.space { padding-left:5px; }
+  #global div.breadcrumb span.space a.private { background-position:-40px -265px; }
+  #global div.breadcrumb span.space a.public { background-position:-60px -265px; }
+
+
+/**
+ * Footer ==============================================================
+ */
+#footer {
+  border-top:1px solid #ccc;
+  font-weight:normal;
+  font-size:11px;
+  padding:19px 0px 20px;
+  color:#999;
+  }
+
+  #footer a { color:#666; }
+
+#footer div.footer-message { float:left; }
+
+#footer ul.links { float:right; }
+
+#footer ul.links a {
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  padding:0px 10px;
+  }
+
+  #footer ul.links a:hover { background:#fff; }
+
+/**
+ * Navigation =========================================================
+ */
+#navigation {
+  background-position:0px -50px;
+  background-repeat:repeat-x;
+  position:relative;
+  z-index:2;
+  }
+
+  #navigation div.limiter {
+    padding:10px 0px;
+    height:40px;
+    }
+
+#space-tools {
+  position:absolute;
+  right:20px;
+  top:15px;
+  }
+
+#space-tools div.block-widget,
+#space-tools div.block-widget a {
+  font-size:11px;
+  color:#fff;
+  }
+
+  #space-tools div.block-widget a { font-weight:bold; }
+
+#space-tools .block-toggle h2.block-title {
+  padding:4px 10px;
+  height:20px;
+  width:20px;
+  overflow:hidden;
+  text-indent:-999px;
+
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #fff;
+  }
+
+  #space-tools .block-toggle h2.toggle-active {
+    border-color:#fff;
+    background-color:#fff;
+    }
+
+  #block-atrium-admin_links span.icon { background:url(../images/sprite_icons.png) -20px -420px no-repeat; }
+  #block-atrium-create span.icon { background:url(../images/sprite_icons.png) 0px -420px no-repeat; }
+  #block-atrium-search span.icon { background:url(../images/sprite_icons.png) -40px -420px no-repeat; }
+
+/**
+ * Features menu ======================================================
+ */
+#features-menu {
+  position:absolute;
+  left:20px;
+  height:40px;
+  }
+
+#features-menu li {
+  padding:5px;
+  }
+
+#features-menu li a {
+  position:relative;
+  padding:5px;
+  overflow:hidden;
+
+  color:#999;
+  font-weight:bold;
+  text-shadow:#fff 0px 1px 0px;
+
+  background-position:0px -110px;
+  background-repeat:no-repeat;
+
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  }
+
+  #features-menu a:hover {
+    padding:4px;
+    border:1px solid #fff;
+    background-position:0px -160px;
+    color:#333;
+
+    -moz-box-shadow:#eee 0px 0px 3px;
+    -webkit-box-shadow:#eee 0px 0px 3px;
+    }
+
+  #features-menu li.active { padding:0px; }
+
+  #features-menu li.active a:hover,
+  #features-menu li.active a {
+    padding:9px;
+    border-width:1px;
+    border-style:solid;
+    border-color:#ccc #ddd #ddd;
+
+    background-position:0px -210px;
+    color:#333;
+
+    -moz-box-shadow:#fff 0px 1px 0px;
+    -webkit-box-shadow:#fff 0px 1px 0px;
+    }
+
+
+    #features-menu li a span.label span.count {
+      display:block;
+      position:absolute;
+      left:25px;
+      top:25px;
+
+      background:#d42;
+      padding:0px 5px;
+      line-height:15px;
+
+      font-size:9px;
+      font-weight:bold;
+      color:#fff;
+      text-shadow:none;
+
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      }
+
+    #features-menu li.active a span.label span.count { left:5px; top:5px; }
+
+  #features-menu li a span.icon {
+    background:url(../images/sprite_icons.png) 0px 0px no-repeat;
+    display:block;
+    height:20px;
+    width:20px;
+    float:left;
+    margin-right:5px;
+    }
+
+  #features-menu .icon-blog span.icon { background-position:0px 100%; }
+  #features-menu .icon-notebook span.icon { background-position:-20px 100%; }
+  #features-menu .icon-calendar span.icon { background-position:-40px 100%; }
+  #features-menu .icon-casetracker span.icon { background-position:-60px 100%; }
+  #features-menu .icon-dashboard span.icon { background-position:-80px 100%; }
+  #features-menu .icon-og span.icon { background-position:-100px 100%; }
+  #features-menu .icon-home span.icon { background-position:-120px 100%; }
+  #features-menu .icon-members span.icon { background-position:-140px 100%; }
+  #features-menu .icon-shoutbox span.icon { background-position:-160px 100%; }
+
+/**
+ * Feature mini-icons =================================================
+ */
+span.spaces-feature {
+  width:20px;
+  height:20px;
+  display:block;
+
+  text-indent: -999px;
+  overflow:hidden;
+
+  background:url(../images/sprite_icons.png) 20px 20px no-repeat;
+  }
+
+span.feature-atrium_blog { background-position:0px 100%; }
+span.feature-atrium_book { background-position:-20px 100%; }
+span.feature-atrium_calendar { background-position:-40px 100%; }
+span.feature-atrium_casetracker { background-position:-60px 100%; }
+span.feature-atrium_dashboard { background-position:-80px 100%; }
+span.feature-atrium_groups { background-position:-100px 100%; }
+span.feature-atrium_home { background-position:-120px 100%; }
+span.feature-atrium_members { background-position:-140px 100%; }
+span.feature-atrium_shoutbox { background-position:-160px 100%; }
+
+/**
+ * Error pages ========================================================
+ */
+body.page-access-denied #page-header div.limiter,
+body.page-not-found #page-header div.limiter { display:none; }
+
+body.page-access-denied div.access-denied,
+body.page-not-found div.not-found {
+  font-size:32px;
+  font-weight:300;
+
+  padding:140px 480px 140px 50px;
+  letter-spacing:-1px;
+  line-height:40px;
+  min-height:80px;
+
+  background:url(../images/404.png) 100% 50% no-repeat;
+  }
+
+body.page-access-denied div.access-denied { background-image:url(../images/403.png); }
+
+/**
+ * Override of page tools =============================================
+ */
+body.tao #page-tools {
+  background:#eee;
+  border-top:1px solid #fff;
+  }
+
+body.tao #page-tools div.dropdown-blocks div.block-toggle h2.block-title,
+body.tao #page-tools div.context-links { border-color:#ddd; }
+
+body.tao #page-tools div.tabs li a,
+body.tao #page-tools div.tabs li a:hover,
+body.tao #page-tools div.tabs li.active a,
+body.tao #page-tools div.tabs li a.active {
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  margin-right:5px;
+  }
+
+body.tao #page-tools div.tabs li.active a,
+body.tao #page-tools div.tabs li a.active {
+  background-position:0px -210px;
+  -moz-border-radius:3px 3px 0px 0px;
+  -webkit-border-radius:3px 3px 0px 0px;
+  }
+
+/**
+ * Override of dropdown blocks ========================================
+ */
+body.tao .dropdown-blocks div.block-toggle h2.toggle-active {
+  z-index:499;
+  position:relative;
+  }
+
+body.tao .dropdown-blocks div.block-toggle div.block-content {
+  -moz-box-shadow:0px 0px 3px #ccc;
+  -webkit-box-shadow:0px 0px 3px #ccc;
+  }
+
+body.tao .page-region .block,
+body.tao .page-region .block .block-title,
+body.tao .page-region .block .block-content {
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
+  }
+
+body.tao .page-region .block { border-top:3px solid #ccc; }
+
+body.tao .page-region .block .block-title {
+  border-top:0px;
+  border-width:0px 1px 1px;
+  border-color:#ddd;
+  border-style:solid;
+  padding:8px 9px;
+
+  background:#f8f8f8;
+  font-size:16px;
+  color:#666;
+
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
+  }
+
+body.tao .page-region .block .block-content {
+  border-top:0px;
+  padding:10px 9px 9px;
+  }
+
+body.tao div.page-region div.block div.boxes-box-controls,
+body.tao div.page-region div.block div.minipager { top:8px; }
+
+body.tao div.page-region div.drilldown h2.block-title {
+  padding:0px;
+  }
+
+/**
+ * Book drilldown.
+ */
+body.tao div.drilldown span.trail a {
+  border-top:1px solid #ddd;
+  border-bottom:0px;
+  padding-top:4px;
+  padding-bottom:5px;
+
+  background-color:#eee;
+  font-size:13px;
+  }
+
+  body.tao div.drilldown span.trail a.depth-0 {
+    font-size:16px;
+    line-height:20px;
+    padding:8px 9px;
+    background:transparent;
+    border:0px;
+    }
