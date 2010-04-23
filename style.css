@@ -9,7 +9,7 @@ textarea,
 select { font-family:Arial,Helvetica,sans-serif; }
 
 body.tao {
-  background:#eee url(images/page.png) 0% 0%repeat-x fixed;
+  background:#eee url(images/page.png) 0% 0% repeat-x fixed;
   color:#222;
   }
 
