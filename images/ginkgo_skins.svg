@@ -17,12 +17,35 @@
    version="1.0"
    sodipodi:docname="ginkgo_skins.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="aspen/sprite_skin-rtl.png"
+   inkscape:export-filename="/home/devseed/atrium/profiles/openatrium/themes/ginkgo/aspen/sprite_skin-rtl.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    style="display:inline">
   <defs
      id="defs2604">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4069">
+      <stop
+         style="stop-color:#eeeeee;stop-opacity:1;"
+         offset="0"
+         id="stop4071" />
+      <stop
+         style="stop-color:#e4e4e4;stop-opacity:1"
+         offset="1"
+         id="stop4073" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4061">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.50196081"
+         offset="0"
+         id="stop4063" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="1"
+         id="stop4065" />
+    </linearGradient>
     <linearGradient
        id="linearGradient39020"
        inkscape:collect="always">
@@ -69,28 +92,6 @@
        y2="4"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-645,0)" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient33225">
-      <stop
-         style="stop-color:#eeeeee;stop-opacity:1"
-         offset="0"
-         id="stop33227" />
-      <stop
-         style="stop-color:#f8f8f8;stop-opacity:1"
-         offset="1"
-         id="stop33229" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient33225"
-       id="linearGradient33345"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(3e-2,0,0,1,360,9.9999992)"
-       x1="1000"
-       y1="100"
-       x2="1000"
-       y2="70" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
        inkscape:vp_x="0 : 240 : 1"
@@ -1644,6 +1645,24 @@
        y1="324.00003"
        x2="660"
        y2="360" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4061"
+       id="linearGradient4067"
+       x1="360"
+       y1="50"
+       x2="360"
+       y2="80"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4069"
+       id="linearGradient4382"
+       gradientUnits="userSpaceOnUse"
+       x1="360"
+       y1="80"
+       x2="360"
+       y2="50" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1656,10 +1675,10 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="174.11521"
-     inkscape:cy="192.77542"
+     inkscape:cx="273.52793"
+     inkscape:cy="174.00948"
      inkscape:document-units="px"
-     inkscape:current-layer="layer10"
+     inkscape:current-layer="layer9"
      showgrid="false"
      inkscape:snap-bbox="true"
      showguides="true"
@@ -3963,7 +3982,7 @@
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="SkinAspen"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -4001,7 +4020,7 @@
        height="60"
        width="360"
        id="rect33343"
-       style="opacity:1;fill:url(#linearGradient33345);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="opacity:1;fill:url(#linearGradient4382);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        inkscape:export-filename="/home/devseed/atrium/profiles/openatrium/themes/ginkgo/aspen/sprite_skin.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
@@ -4143,10 +4162,10 @@
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
        inkscape:export-filename="/home/devseed/atrium/profiles/openatrium/themes/ginkgo/aspen/sprite_skin.png"
-       style="opacity:1;fill:#eeeeee;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect39280"
        width="360"
-       height="1.5"
+       height="1"
        x="0"
        y="50" />
   </g>
@@ -4154,7 +4173,7 @@
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="SkinAspen.RTL"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <use
        style="display:inline"

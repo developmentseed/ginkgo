@@ -288,12 +288,6 @@ body.logged-in #block-atrium-account h2.block-title {
   top:15px;
   }
 
-#space-tools div.block-widget,
-#space-tools div.block-widget a {
-  font-size:11px;
-  color:#fff;
-  }
-
   #space-tools div.block-widget a { font-weight:bold; }
 
 #space-tools .block-toggle h2.block-title {
@@ -303,6 +297,7 @@ body.logged-in #block-atrium-account h2.block-title {
   overflow:hidden;
   text-indent:-999px;
 
+  background:#ddd;
   border-top:1px solid #ccc;
   border-bottom:1px solid #fff;
   }
