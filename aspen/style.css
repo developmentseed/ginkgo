@@ -350,6 +350,11 @@ body.logged-in #block-atrium-account h2.block-title {
     -webkit-box-shadow:#eee 0px 0px 3px;
     }
 
+  #features-menu a:active {
+    border-color:#ccc #ddd #fff;
+    background:#ddd;
+    }
+
   #features-menu li.active { padding:0px; }
 
   #features-menu li.active a:hover,
