@@ -410,6 +410,7 @@ function ginkgo_preprocess_views_view_fields(&$vars) {
     // If the listing doesn't have any fields that will be grouped
     // fallback to default (non-grouped) formatting.
     $enable_grouping = count($grouped) <= 1 ? FALSE : TRUE;
+    $vars['classes'] = isset($vars['classes']) ? $vars['classes'] : '';
     foreach (array_keys($grouped) as $group) {
       $vars['classes'] .= " grouping-{$group}";
     }
