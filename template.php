@@ -256,7 +256,7 @@ function ginkgo_breadcrumb($breadcrumb) {
     $attr = $space->group->og_private ?
       array('title' => t('Private'), 'class' => 'private') :
       array('title' => t('Public'), 'class' => 'public');
-    $link = l($text, $_GET['q'], array('attributes' => $attr));
+    $link = l('', $_GET['q'], array('attributes' => $attr));
     $breadcrumb .= "<span class='space'>{$link}</span>";
   }
 
