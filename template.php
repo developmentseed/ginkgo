@@ -43,8 +43,8 @@ function ginkgo_icon_links(&$links) {
         $v['title'] = strtr($v['title'], array('(' => "<span class='count'>", ')' => "</span>"));
       }
 
-      $v['title'] = "<span class='icon'></span><span class='label'>". $v['title'] ."</span>";
-      $v['html'] = true;
+      $v['title'] = filter_xss_admin("<span class='icon'></span><span class='label'>". $v['title'] ."</span>");
+      $v['html'] = TRUE;
       $links[$k] = $v;
     }
   }
