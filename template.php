@@ -277,11 +277,11 @@ function ginkgo_preprocess_user_picture(&$vars) {
     }
     else if ($view = views_get_current_view()) {
       switch ($view->name) {
-        case 'atrium_members':
+        case 'members_listing':
           if ($view->style_plugin->definition['handler'] !== 'views_plugin_style_grid') {
             break;
           }
-        case 'atrium_profile':
+        case 'profile_display':
           $preset = 'user-m';
           break;
       }
@@ -378,8 +378,8 @@ function ginkgo_preprocess_views_view_fields(&$vars) {
     // Override arrays for grouping
     $view_id = "{$vars['view']->name}:{$vars['view']->current_display}";
     $overrides = array(
-      "atrium_profile:page_1" => array(),
-      "atrium_blog_comments:block_1" => array(
+      "profile_display:page_1" => array(),
+      "blog_comments:block_1" => array(
         'meta' => array('date', 'user-picture', 'username', 'author'),
       ),
     );

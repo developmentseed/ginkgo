@@ -1402,20 +1402,20 @@ div.view div.item-list .count {
   div.view .count span.marker { display:none; }
 
 /* Profile view */
-div.view-atrium-profile li { padding:0px; }
+div.view-profile-display li { padding:0px; }
 
-div.view-atrium-profile div {
+div.view-profile-display div {
   clear:both;
   position:relative;
   }
 
-  div.view-atrium-profile div .field-content {
+  div.view-profile-display div .field-content {
     display:block;
     border-top:1px solid #eee;
     padding:5px 5px 5px 100px;
     }
 
-  div.view-atrium-profile div label {
+  div.view-profile-display div label {
     padding:5px 0px;
     position:absolute;
     left:0px;
@@ -1425,8 +1425,8 @@ div.view-atrium-profile div {
     font-size:11px;
     }
 
-div.view-atrium-profile div.user-picture,
-div.view-atrium-profile div.username {
+div.view-profile-display div.user-picture,
+div.view-profile-display div.username {
   padding:0px 0px 10px;
   border:0px;
   line-height:60px;
@@ -1435,7 +1435,7 @@ div.view-atrium-profile div.username {
   clear:none;
   }
 
-  div.view-atrium-profile div.username {
+  div.view-profile-display div.username {
       font-weight:bold;
       font-size:24px;
       letter-spacing:-1px;
@@ -1453,14 +1453,14 @@ table .date,
 table .type { white-space:nowrap; }
 
 /* Fixable tables */
-div.view-atrium-members table,
-div.view-atrium-book table,
-div.view-atrium-intranet table,
-div.view-atrium-profile-blocks table { table-layout:fixed; }
+div.view-members-listing table,
+div.view-book-listing table,
+div.view-activity-listing table,
+div.view-profile-blocks table { table-layout:fixed; }
 
-div.view-atrium-book table td,
-div.view-atrium-intranet table td,
-div.view-atrium-profile-blocks table td {
+div.view-book-listing table td,
+div.view-activity-listing table td,
+div.view-profile-blocks table td {
   white-space:nowrap;
   overflow:hidden;
   }
@@ -1475,27 +1475,27 @@ div.view td.feature  { width:30px; }
 div.view th.new,
 div.view td.new      { width:30px; }
 
-div.view-atrium-intranet th.date,
-div.view-atrium-intranet td.date { width:60px; }
+div.view-activity-listing th.date,
+div.view-activity-listing td.date { width:60px; }
 
-div.view-atrium-book td.date,
-div.view-atrium-profile-blocks td.date,
-#block-views-atrium_intranet-block_2 td.date { width:120px; }
+div.view-book-listing td.date,
+div.view-profile-blocks td.date,
+#block-views-activity-listing-block_2 td.date { width:120px; }
 
 /* Atrium members */
-div.view-atrium-members td.rid,
-div.view-atrium-members td.groups,
-div.view-atrium-members td.username,
-div.view-atrium-members td.managelink { line-height:15px; }
-div.view-atrium-members small.label { display:block; font-size:11px; }
+div.view-members-listing td.rid,
+div.view-members-listing td.groups,
+div.view-members-listing td.username,
+div.view-members-listing td.managelink { line-height:15px; }
+div.view-members-listing small.label { display:block; font-size:11px; }
 
 div.view th.user-picture,
 div.view td.user-picture { width:40px; }
 
-div.view-atrium-members th.rid,
-div.view-atrium-members td.rid,
-div.view-atrium-members th.groups,
-div.view-atrium-members td.groups { width:160px; }
+div.view-members-listing th.rid,
+div.view-members-listing td.rid,
+div.view-members-listing th.groups,
+div.view-members-listing td.groups { width:160px; }
 
 /* OG faces, Member directory */
 table.views-view-grid .username { font-size:16px; }
@@ -1579,7 +1579,7 @@ div.spaces-empty {
   line-height:20px; height:20px;
   }
 
-.view-atrium-casetracker .crayon-swatch { height:15px; line-height:15px; }
+.view-casetracker-cases .crayon-swatch { height:15px; line-height:15px; }
 
 /**
  * Google gadgets, other embedded content =============================
