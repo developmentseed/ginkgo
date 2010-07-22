@@ -1274,6 +1274,7 @@ div.view-filters {
     }
 
 /* Style plugin grouped headings */
+div.block h3,
 div.view h3,
 div.item-list h3,
 table caption {
@@ -1286,6 +1287,7 @@ table caption {
 
   table caption { text-align:left; }
 
+  #right div.block h3,
   #right div.view h3,
   #right div.item-list h3,
   #right table caption { padding:5px 0px 4px; }
