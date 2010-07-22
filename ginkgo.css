@@ -1637,3 +1637,64 @@ div.block table.gadget td {
     float:left;
     margin-right:10px;
     }
+
+/**
+ * Searchlight, if it exists ==========================================
+ */
+
+div.block-searchlight div.block-content { padding:0px; }
+
+#right div.block-searchlight .item-list h3,
+div.page-region div.block-searchlight .item-list h3 {
+  background:#f8f8f8;
+  padding:5px 10px 4px;
+  border-bottom:1px solid #ddd;
+  }
+
+#right div.block-searchlight .item-list li,
+div.page-region div.block-searchlight .item-list li {
+  border:0px;
+  padding:5px 10px 4px;
+  border-bottom:1px solid #ddd;
+  }
+
+#right div.block-searchlight .item-list li.last,
+div.page-region div.block-searchlight .item-list li.last {
+  padding-bottom:5px;
+  border-bottom:0px;
+  }
+
+div.searchlight-facet {
+  display:block;
+  min-height:20px; /* IE */
+  position:relative;
+  padding-right:30px;
+  }
+
+div.searchlight-facet .remove,
+div.searchlight-facet .count {
+  position:absolute;
+  right:0px;
+  top:0px;
+  margin:0px;
+  }
+
+  div.searchlight-facet .remove a {
+    background:#666 url(images/sprite_base.png) -20px -30px no-repeat;
+    display:block;
+    width:20px;
+    height:20px;
+    text-indent:-999px;
+    overflow:hidden;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    }
+
+  div.searchlight-facet .count {
+    background:#fff;
+    padding:0px 8px;
+    font-weight:bold;
+    font-size:9px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    }
