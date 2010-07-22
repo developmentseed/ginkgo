@@ -1643,56 +1643,71 @@ div.block table.gadget td {
 /**
  * Searchlight, if it exists ==========================================
  */
+div.block-searchlight div.block-content { padding:5px; }
 
-div.block-searchlight div.block-content { padding:0px; }
+#right div.block-searchlight .item-list,
+div.page-region div.block-searchlight .item-list {
+  margin:0px 0px 5px;
+  border:1px solid #ddd;
+  border-color:#ddd #ddd #ccc;
+  background:#f4f4f4;
+  }
+
+  #right div.block-searchlight .item-list:last-child,
+  div.page-region div.block-searchlight .item-list:last-child { margin:0px; }
 
 #right div.block-searchlight .item-list h3,
 div.page-region div.block-searchlight .item-list h3 {
-  background:#f8f8f8;
-  padding:5px 10px 4px;
-  border-bottom:1px solid #ddd;
+  font-size:13px;
+  background:#fff;
+  padding:4px 9px 5px;
+  text-shadow:#fff 0px 1px 0px;
+  -moz-border-radius:3px 3px 0px 0px;
+  -webkit-border-radius:3px 3px 0px 0px;
   }
 
 #right div.block-searchlight .item-list li,
 div.page-region div.block-searchlight .item-list li {
   border:0px;
-  padding:5px 10px 4px;
-  border-bottom:1px solid #ddd;
+  padding:0px;
   }
 
-#right div.block-searchlight .item-list li.last,
-div.page-region div.block-searchlight .item-list li.last {
-  padding-bottom:5px;
-  border-bottom:0px;
-  }
-
-div.searchlight-facet {
+.searchlight-facet {
   display:block;
   min-height:20px; /* IE */
   position:relative;
-  padding-right:30px;
+  padding:5px 30px 5px 10px;
   }
 
-div.searchlight-facet .remove,
-div.searchlight-facet .count {
+ul.searchlight-facet-active { background:#fff; }
+
+  ul.searchlight-facet-active .searchlight-facet {
+    font-weight:bold;
+    font-size:16px;
+    }
+
+.searchlight-facet .remove,
+.searchlight-facet .count {
   position:absolute;
-  right:0px;
-  top:0px;
+  right:5px;
+  top:5px;
   margin:0px;
   }
 
-  div.searchlight-facet .remove a {
+  .searchlight-facet .remove a,
+  .searchlight-facet .remove a.views-throbbing {
     background:#666 url(images/sprite_base.png) -20px -30px no-repeat;
     display:block;
     width:20px;
     height:20px;
+    padding:0px;
     text-indent:-999px;
     overflow:hidden;
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     }
 
-  div.searchlight-facet .count {
+  .searchlight-facet .count {
     background:#fff;
     padding:0px 8px;
     font-weight:bold;
