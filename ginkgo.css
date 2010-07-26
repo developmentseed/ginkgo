@@ -10,6 +10,9 @@ object {
   margin:0px auto;
   }
 
+.content-wrapper,
+.block-content { word-wrap:break-word; }
+
 /**
  * "Power" hover classes ==============================================
  */
@@ -110,6 +113,8 @@ div.comment-links ul li a:hover {
 
   #palette div.more-link { float:right; }
 
+  #palette div.item-list ul li { padding-left:0px; padding-right:0px; }
+
   /* Context editor specific */
   #palette div.context-editor-block-layouts div.form-item {
     padding:0px;
@@ -132,7 +137,6 @@ div.comment-links ul li a:hover {
     white-space:nowrap;
     overflow:hidden;
     }
-
 
   #palette div.context-block-addable {
     float:left;
@@ -1251,7 +1255,15 @@ div.shoutbox-input {
   position:relative;
   }
 
-  div.shoutbox-input div.form-item { padding:0px; }
+  div.shoutbox-input textarea { width:90%; }
+
+  div.shoutbox-input div.form-item,
+  div.shoutbox-input div.form-item:hover {
+    background:transparent;
+    padding:0px;
+    border:0px;
+    }
+
   div.shoutbox-input input.form-submit {
     width:90px;
     position:absolute;
@@ -1259,7 +1271,8 @@ div.shoutbox-input {
     top:0px;
     }
 
-  div.shoutform div.view div.markup { font-size:13px; }
+  .shoutform .ahah-progress-throbber { display:none; }
+  .shoutform div.view div.markup { font-size:13px; }
 
 /**
  * Views ==============================================================
