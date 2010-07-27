@@ -49,7 +49,7 @@ div.comment-links ul li a:hover,
 
 body #space-tools h2.block-title { background-color:#2f773b; }
 
-body #header div.block-widget,
+body #header div.block-widget div.block-content,
 body #header div.block h2.block-title { background-color:#399048; }
 
 body div.page-region div.block h2.block-title {
@@ -166,7 +166,7 @@ table th { text-shadow:#fff 0px 1px 0px; }
 
 #header div.block { padding:0px 5px 0px 0px; }
 
-#header div.block-widget,
+#header div.block-widget div.block-content,
 #header h2.block-title {
   background:transparent;
   color:#fff;
@@ -180,10 +180,9 @@ table th { text-shadow:#fff 0px 1px 0px; }
   #header div.block-widget a,
   #header h2.block-title a { color:#fff; }
 
-  #header div.block-widget div.block-content { padding:0px; background:transparent; }
-
   #header div.block-widget a { font-weight:bold; }
 
+  #header div.block-widget div.block-content,
   #header div.block-toggle h2.block-title {
     -moz-border-radius:3px;
     -webkit-border-radius:3px;

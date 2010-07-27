@@ -1,5 +1,6 @@
 <style type='text/css'>
 .atrium-welcome-links a:hover,
+.dropdown-blocks div.block-toggle li a:hover,
 .dropdown-blocks div.block-toggle ul.links li a:hover,
 .dropdown-blocks div.block-toggle div.item-list li a:hover,
 div.pager li.pager-current,
@@ -11,7 +12,7 @@ div.comment-links ul li a:hover,
 
 body #space-tools h2.block-title { background-color:<?php print designkit_colorshift($background, '#000000', .3) ?>; }
 
-body #header div.block-widget, 
+body #header div.block-widget div.block-content,
 body #header div.block h2.block-title { background-color:<?php print designkit_colorshift($background, '#000000', .15) ?>; }
 
 body div.page-region div.block h2.block-title {

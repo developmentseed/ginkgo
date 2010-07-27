@@ -26,6 +26,7 @@ table td.active,
 div.block table tr.active,
 div.block ul.menu a:hover { background-color:#ecf4f8; }
 
+.dropdown-blocks div.block-toggle li a:hover,
 .dropdown-blocks div.block-toggle ul.links li a:hover,
 .dropdown-blocks div.block-toggle div.item-list li a:hover,
 div.pager li.pager-current,
