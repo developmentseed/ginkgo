@@ -126,21 +126,10 @@ div.comment-links ul li a:hover {
 
   #palette div.context-editable { padding:0px; }
 
-  #palette div.context-block-addable {
-    color:#666;
-    background:#fff;
-    border:0px;
-    margin:0px 5px 5px 0px;
-    padding:10px;
-    font-size:16px;
-
-    white-space:nowrap;
-    overflow:hidden;
-    }
-
+  #palette div.draggable-placeholder,
   #palette div.context-block-addable {
     float:left;
-    width:157px;
+    width:167px;
     margin:0px 5px 5px 0px;
     }
 
