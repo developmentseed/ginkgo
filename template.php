@@ -34,7 +34,7 @@ function ginkgo_icon_links(&$links) {
       else if (empty($v['attributes']['class'])) {
         $v['attributes']['class'] = '';
       }
-      $v['attributes']['class'] .= ' icon-'. seed_id_safe(drupal_get_path_alias($v['href']));
+      $v['attributes']['class'] .= ' icon-'. _ginkgo_icon_class($v['href']);
 
       // Detect and replace counter occurrences with markup.
       $start = strpos($v['title'], '(');
@@ -500,4 +500,13 @@ function _ginkgo_get_comment_decay($nid, $timestamp) {
     return array('order' => $timerange[$nid][$timestamp], 'decay' => $decay);
   }
   return array('order' => 1, 'decay' => 0);
+}
+
+
+/**
+ * Generate an icon class from a path.
+ */
+function _ginkgo_icon_class($path) {
+  $path = drupal_get_path_alias($path);
+  return str_replace('/', '-', $path);
 }
