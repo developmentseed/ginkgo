@@ -991,13 +991,18 @@ div.comment-links {
 
 div.more-link a,
 div.node-links ul.links,
-div.comment-links ul.links {
+div.comment-links ul.links { 
   font-size:11px;
   float:right;
+  display:block;
   }
 
-  div.node-links ul li,
-  div.comment-links ul li { padding-left:5px; }
+  div.node-links ul.links li,
+  div.comment-links ul.links li {
+    float:left;
+    display:block;
+    padding-left:5px;
+    }
 
   div.more-link a,
   div.node-links ul li span,
@@ -1005,10 +1010,13 @@ div.comment-links ul.links {
   div.node-links ul li a,
   div.comment-links ul li a { padding:0px 10px; }
 
-  div.node-links ul li span,
-  div.comment-links ul li span,
-  div.node-links ul li a,
-  div.comment-links ul li a { float:left; }
+  div.node-links ul.links li span,
+  div.comment-links ul.links li span,
+  div.node-links ul.links li a,
+  div.comment-links ul.links li a {
+    display:block;
+    float:left;
+    }
 
     div.node-links ul li span a,
     div.comment-links ul li span a {
