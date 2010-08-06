@@ -159,6 +159,19 @@ div.comment-links ul li a:hover {
     left:5px;
     }
 
+  div.help-page div.column-side .help-page-links {
+    padding:10px;
+    background:#f8f8f8;
+    -moz-column-count:2;
+    -webkit-column-count:2;
+    }
+
+  div.help-page div.column-side .help-page-links li,
+  div.help-page div.column-side .help-page-links li a {
+    float:none;
+    display:block;
+    }
+
 /**
  * Togglable blocks ===================================================
  */
