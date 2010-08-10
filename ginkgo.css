@@ -5,6 +5,8 @@
 
 textarea { resize:none; }
 
+small { font-size:11px; }
+
 object {
   display:block;
   margin:0px auto;
@@ -1231,7 +1233,7 @@ table.cases tr.mine td.username { background:#fffcc0; }
 
 table.cases span.case-priority {
   display:block;
-  margin:0px auto 0px;
+  clear:left;
   width:30px; height:5px;
   overflow:hidden;
   text-indent: -999px;
@@ -1501,7 +1503,9 @@ div.view-profile-blocks table td {
 
 /* Atrium activity views */
 div.view th.group,
-div.view td.group    { width:40px; overflow:visible; }
+div.view td.group,
+div.view th.group_nid,
+div.view td.group_nid { width:40px; overflow:visible; }
 
 div.view th.feature,
 div.view td.feature  { width:30px; }
