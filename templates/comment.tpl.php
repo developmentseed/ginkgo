@@ -4,7 +4,10 @@
 
 <div <?php if (!empty($attr)) print drupal_attributes($attr) ?>>
   <?php if (!empty($submitted)): ?>
-    <div class='<?php print $hook ?>-submitted clear-block'><?php print $submitted ?></div>
+    <div class='<?php print $hook ?>-submitted clear-block'>
+      <?php print $picture ?>
+      <?php print $submitted ?>
+    </div>
   <?php endif; ?>
 
   <?php if (!empty($title)): ?>

@@ -146,7 +146,6 @@ function ginkgo_preprocess_help(&$vars) {
  * Preprocessor for theme_node().
  */
 function ginkgo_preprocess_node(&$vars) {
-  $vars['submitted'] = !empty($vars['submitted']) ? theme('seed_byline', $vars['node']) : '';
   if (!empty($vars['terms'])) {
     $label = t('Tagged');
     $terms = "<div class='field terms clear-block'><span class='field-label'>{$label}:</span> {$vars['terms']}</div>";
@@ -184,7 +183,6 @@ function ginkgo_preprocess_comment(&$vars) {
   if (!variable_get("comment_subject_field_{$vars['node']->type}", 1)) {
     $vars['title'] = l("#{$decay['order']}", "node/{$vars['node']->nid}", array('fragment' => "comment-{$vars['comment']->cid}"));
   }
-  $vars['submitted'] = theme('seed_byline', $vars['comment']);
 
   // We're totally previewing a comment... set a context so others can bail.
   if (module_exists('context')) {
@@ -261,40 +259,6 @@ function ginkgo_breadcrumb($breadcrumb) {
   }
 
   return "<div class='breadcrumb'>{$breadcrumb}</div>";
-}
-
-/**
- * Implementation of hook_preprocess_user_picture().
- * @TODO: Consider switching to imgaecache_profiles for this.
- */
-function ginkgo_preprocess_user_picture(&$vars) {
-  $account = $vars['account'];
-  if (isset($account->picture) && module_exists('imagecache')) {
-    $attr = array('class' => 'user-picture');
-    $preset = variable_get('seed_imagecache_user_picture', '30x30_crop');
-    if (isset($account->imagecache_preset)) {
-      $preset = $account->imagecache_preset;
-    }
-    else if ($view = views_get_current_view()) {
-      switch ($view->name) {
-        case 'members_listing':
-          if ($view->style_plugin->definition['handler'] !== 'views_plugin_style_grid') {
-            break;
-          }
-        case 'profile_display':
-          $preset = 'user-m';
-          break;
-      }
-    }
-    $attr['class'] .= ' picture-'. $preset;
-    if (file_exists($account->picture)) {
-      $image = imagecache_create_url($preset, $account->picture);
-      $attr['style'] = 'background-image: url('. $image .')';
-    }
-    $path = 'user/'. $account->uid;
-    $vars['picture'] = l($account->name, $path, array('attributes' => $attr));
-    $vars['preset'] = $preset;
-  }
 }
 
 /**

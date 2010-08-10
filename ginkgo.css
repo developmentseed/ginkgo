@@ -223,20 +223,7 @@ a.user-picture {
   background-repeat:no-repeat;
   }
 
-  div.picture-user-s,
-  a.picture-user-s {
-    width:30px;
-    height:30px;
-    }
-
-  div.picture-user-m,
-  a.picture-user-m {
-    width:60px;
-    height:60px;
-    }
-
-  div.picture-user-s { background:url(images/sprite_base.png) -270px 0px no-repeat; }
-  div.picture-user-m { background:url(images/sprite_base.png) -300px 0px no-repeat; }
+div.picture img { display:block; }
 
 /**
  * Growl-like messages ================================================
@@ -977,11 +964,6 @@ div.comment-submitted {
     float:left;
     margin-right:5px;
     }
-
-  div.node-submitted .username,
-  div.comment-submitted .username,
-  div.node-submitted span.date,
-  div.comment-submitted span.date { display:block; }
 
   div.node-body { margin:10px 0px; }
 
