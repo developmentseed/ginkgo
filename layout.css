@@ -18,8 +18,6 @@ body.layout-wide #content div.page-region { padding:20px 10px; }
  */
 body.layout-login #page-header div.limiter { width:640px; }
 
-body.layout-login #page { background:#f8f8f8 url(images/page.png) repeat-x; }
-
 body.layout-login #page div.limiter {
   width:660px;
   background:transparent;

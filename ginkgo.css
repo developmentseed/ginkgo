@@ -897,7 +897,7 @@ div.node {
   margin:0px 0px 10px;
   }
 
-  div.node:last-child,
+  .views-row-last div.node,
   div.node-page {
     padding:0px;
     margin:0px;
