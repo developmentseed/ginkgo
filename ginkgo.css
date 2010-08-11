@@ -18,6 +18,11 @@ object {
 /**
  * "Power" hover classes ==============================================
  */
+div.node .field .field-label,
+div.node .field .field-label-inline,
+div.node .field .field-label-inline-first,
+div.node-links ul.links:hover,
+div.comment-links ul.links:hover,
 ul.multistep li.active-step,
 .form-text:focus,
 .form-textarea:focus,
@@ -32,9 +37,7 @@ div.block ul.menu a:hover { background-color:#ecf4f8; }
 .dropdown-blocks div.block-toggle ul.links li a:hover,
 .dropdown-blocks div.block-toggle div.item-list li a:hover,
 div.pager li.pager-current,
-div.more-link a:hover,
-div.node-links ul li a:hover,
-div.comment-links ul li a:hover {
+div.more-link a:hover {
   color:#fff;
   background-image:url(images/sprite_bleeds.png);
   background-position:0px -400px;
@@ -899,7 +902,7 @@ div.node {
 
   .views-row-last div.node,
   div.node-page {
-    padding:0px;
+    padding:0px 0px 10px;
     margin:0px;
     border:0px;
     }
@@ -908,6 +911,7 @@ div.comment {
   background:#fff;
   border:1px solid #ddd;
   border-color:#ddd #ddd #ccc;
+  padding:0px 0px 10px;
   }
 
 h2.comment-title,
@@ -926,7 +930,8 @@ h2.node-title {
   div.node-content,
   div.comment-content { clear:both; }
 
-  div.comment-content { padding:10px; }
+  div.comment-links,
+  div.comment-content { padding:0px 10px; }
 
 div.node-submitted,
 div.comment-submitted {
@@ -965,14 +970,6 @@ div.comment-submitted {
     margin-right:5px;
     }
 
-  div.node-body { margin:10px 0px; }
-
-div.node-links,
-div.comment-links {
-  background:transparent url(images/hrule_dotted.png) 0% 0% repeat-x;
-  padding:5px 0px;
-  }
-
 div.more-link a,
 div.node-links ul.links,
 div.comment-links ul.links { 
@@ -981,12 +978,27 @@ div.comment-links ul.links {
   display:block;
   }
 
+  div.node-links ul.links,
+  div.comment-links ul.links {
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    }
+
+  div.node-links ul.links a,
+  div.comment-links ul.links a { color:#ccc; }
+
+  div.node-links ul.links:hover a,
+  div.comment-links ul.links:hover a { color:inherit; }
+
   div.node-links ul.links li,
   div.comment-links ul.links li {
     float:left;
     display:block;
-    padding-left:5px;
+    border-left:1px solid #fff;
     }
+
+  div.node-links ul.links li.first,
+  div.comment-links ul.links li.first { border:0px; }
 
   div.more-link a,
   div.node-links ul li span,
@@ -1012,17 +1024,22 @@ div.comment-links ul.links {
 
 div.diff-inline-controls,
 div.node div.field {
-  background:transparent url(images/hrule_dotted.png) 0% 100% repeat-x;
-  padding:5px 0px;
+  background:transparent;
+  padding:0px;
   margin:0px;
   }
 
   div.node .field .field-label,
   div.node .field .field-label-inline,
   div.node .field .field-label-inline-first {
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+
+    padding:2px 10px;
     font-size:11px;
     font-weight:bold;
-    color:#666;
+    color:#333;
+    text-transform:uppercase;
     }
 
   div.node div.terms ul.links,
@@ -1033,12 +1050,7 @@ div.node div.field {
     float:none;
     }
 
-  div.node div.terms ul.links li a {
-    background:#fff;
-    padding:2px 5px;
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
-    }
+  div.node div.terms ul.links li a { padding:2px 5px; }
 
 /* Node preview */
 div.node-preview div.node {
@@ -1181,31 +1193,45 @@ body div.view table th {
 /**
  * Module: CASETRACKER ================================================
  */
-div.atrium-case-summary label { color:#999; }
-
-div.atrium-case-summary div.status {
-  color:#333;
-  font-size:20px;
-  background:transparent;
+div.atrium-case-summary {
+  padding:0px;
+  margin:0px 0px 10px;
   }
 
-  /* Closed */
-  div.atrium-case-status-inactive {
-    color:#999;
-    background:#fcfcfc;
-    }
+div.atrium-case-summary label {
+  display:inline;
+  width:auto;
+  margin-right:5px;
+  color:#999;
+  }
+
+div.atrium-case-summary div.primary,
+div.atrium-case-summary div.secondary {
+  overflow:hidden;
+  white-space:nowrap;
+  }
 
 div.atrium-case-summary div.primary {
-  border-right:1px solid #ddd;
-  width:40%;
-  margin-right:10px;
+  margin-left:-10px;
+  background:#f8f8f8;
+  padding:9px;
+  border:1px solid #eee;
+  border-bottom-color:#ccc;
   }
 
-  div.atrium-case-summary div.primary div,
+  div.atrium-case-summary div.primary div.status {
+    color:#333;
+    font-size:20px;
+    background:transparent;
+    }
+
+  div.atrium-case-status-inactive div.primary div.status { color:#999; }
+
+div.atrium-case-summary div.secondary { padding:10px; }
+
   div.atrium-case-summary div.secondary div {
-    padding:5px 0px;
-    height:20px;
-    background:url(images/hrule_dotted.png) 0% 100% repeat-x;
+    font-size:11px;
+    padding:0px;
     }
 
 /* Casetracker tables */

@@ -5,8 +5,6 @@
 .dropdown-blocks div.block-toggle div.item-list li a:hover,
 div.pager li.pager-current,
 div.more-link a:hover,
-div.node-links ul li a:hover,
-div.comment-links ul li a:hover,
 #global,
 #navigation { background-color:<?php print $background ?>; }
 

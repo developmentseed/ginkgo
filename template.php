@@ -326,6 +326,24 @@ function ginkgo_content_multiple_values($element) {
 }
 
 /**
+ * Override of theme('node_submitted').
+ */
+function ginkgo_node_submitted($node) {
+  $byline = theme('username', $node);
+  $date = module_exists('reldate') ? reldate_format_date($node->created) : format_date($node->created, 'small');
+  return "<div class='byline'>{$byline}</div><div class='date'>$date</div>";
+}
+
+/**
+ * Override of theme('comment_submitted').
+ */
+function ginkgo_comment_submitted($comment) {
+  $comment->created = $comment->timestamp;
+  return ginkgo_node_submitted($comment);
+}
+
+
+/**
  * Preprocessor for theme('views_view_fields').
  */
 function ginkgo_preprocess_views_view_fields(&$vars) {
