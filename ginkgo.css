@@ -333,6 +333,7 @@ div.messages li {
   border-bottom:1px solid #eee;
   }
 
+  .dropdown-blocks div.block-toggle li a.active { color:#333; }
   .dropdown-blocks div.block-toggle li a:hover { color:#fff; }
 
   .dropdown-blocks div.block-toggle li a span {
