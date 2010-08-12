@@ -698,7 +698,7 @@ div.block div.minipager li.pager-previous {
     clear:left;
     background:#eee;
     border:1px solid #ddd;
-    border-top-color:#fff;
+    border-color:#fff #ddd #ccc;
     padding:9px;
     }
 
