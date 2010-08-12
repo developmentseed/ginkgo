@@ -1,4 +1,14 @@
 /**
+ * Node submitted
+ */
+div.node-submitted {
+  margin:0pt;
+  line-height:10pt;
+  float:right;
+  white-space:nowrap;
+  }
+
+/**
  * Hide UI related widgets on print.
  */
 div.node .diff-inline-controls,
