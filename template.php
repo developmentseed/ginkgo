@@ -148,7 +148,7 @@ function ginkgo_preprocess_help(&$vars) {
 function ginkgo_preprocess_node(&$vars) {
   if (!empty($vars['terms'])) {
     $label = t('Tagged');
-    $terms = "<div class='field terms clear-block'><span class='field-label'>{$label}:</span> {$vars['terms']}</div>";
+    $terms = "<div class='field terms clear-block'><span class='field-label-inline-first'>{$label}:</span> {$vars['terms']}</div>";
     $vars['content'] =  $terms . $vars['content'];
   }
   $vars['title'] = check_plain($vars['node']->title);
