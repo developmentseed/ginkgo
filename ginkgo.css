@@ -332,6 +332,7 @@ div.messages li {
   border-bottom:1px solid #eee;
   }
 
+  .dropdown-blocks div.block-toggle li a.active { color:#333; }
   .dropdown-blocks div.block-toggle li a:hover { color:#fff; }
 
   .dropdown-blocks div.block-toggle li a span {
@@ -1688,6 +1689,13 @@ div.page-region div.block-searchlight .item-list {
   border-color:#ddd #ddd #ccc;
   background:#f4f4f4;
   }
+
+  #right div.block-searchlight .item-list ul,
+  div.page-region div.block-searchlight .item-list ul {
+    overflow:auto;
+    max-height:300px;
+    position:relative; /* IE7 */
+    }
 
   #right div.block-searchlight .item-list:last-child,
   div.page-region div.block-searchlight .item-list:last-child { margin:0px; }
