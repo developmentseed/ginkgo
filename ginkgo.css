@@ -379,186 +379,6 @@ div.messages li {
   }
 
 /**
- * Page tools ========================================================
- */
-#page-tools {
-  background:#eee url(images/sprite_bleeds.png) 0px -360px repeat-x;
-  height:39px;
-  border-bottom:1px solid #ccc;
-  position:relative;
-  z-index:1;
-  }
-
-  #page-tools h2.page-title,
-  #page-tools div.tabs {
-    padding-top:5px;
-    position:absolute;
-    left:20px;
-    }
-
-  #page-tools div.context-links,
-  #page-tools div.dropdown-blocks { float:right; }
-
-#page-tools h2.page-title {
-  font-size:16px;
-  font-weight:normal;
-  line-height:30px;
-  text-shadow:#fff 0px 1px 0px;
-  }
-
-  #page-tools h2.page-title a.username {
-    color:inherit;
-    font-size:inherit;
-    text-transform:none;
-    }
-
-#page-tools div.dropdown-blocks { height:39px; }
-
-  #page-tools div.dropdown-blocks div.block { padding:0px; }
-
-  #page-tools div.dropdown-blocks div.block-toggle h2.block-title {
-    -moz-border-radius:0px;
-    -webkit-border-radius:0px;
-
-    border:0px;
-    border-left:1px solid #ccc;
-
-    text-shadow:#fff 0px 1px 0px;
-    padding:5px 10px;
-    line-height:30px;
-    background:transparent;
-    }
-
-    #page-tools div.dropdown-blocks div.block-toggle h2.toggle-active {
-      color:#fff;
-      text-shadow:#444 0px 1px 0px;
-      background:#666 url(images/sprite_bleeds.png) 0px 100% repeat-x;
-      }
-
-#page-tools div.context-links {
-  border-left:1px solid #ccc;
-  padding:7px 0px 7px 5px;
-  height:25px;
-  line-height:15px;
-  overflow:hidden;
-  }
-
-  div.buttons a,
-  #page-tools div.context-links a {
-    font-size:11px;
-    font-weight:bold;
-    color:#fff;
-    background:#666 url(images/sprite_bleeds.png) 0px -400px repeat-x;
-    text-shadow:#444 0px 1px 0px;
-
-    border:1px solid #555;
-    border-color:#555 #555 #333;
-
-    margin-left:5px;
-    padding:4px 9px;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
-    }
-
-    div.buttons a { margin-right:5px; }
-
-    div.buttons a:active,
-    #page-tools div.context-links a:active { background-position:0px 100%; }
-
-#page-tools #help-toggler {
-  background:url(images/sprite_base.png) 0px -30px no-repeat;
-  height:20px;
-  width:20px;
-
-  text-indent:-999px;
-  overflow:hidden;
-
-  margin: 10px 0px 0px 10px;
-  position:static;
-  float:right;
-  }
-
-  #page-tools #help-toggler.toggle-active { background-position:-20px -30px; }
-
-/**
- * Tabs ===============================================================
- */
-#page-tools div.tabs ul.links {
-  height:35px;
-  float:none;
-  position:static;
-  }
-
-#page-tools div.tabs li a,
-#page-tools div.tabs li a:hover,
-#page-tools div.tabs li.active a,
-#page-tools div.tabs li a.active {
-  color:#888;
-  font-weight:bold;
-  font-size:13px;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
-  text-shadow:#fff 0px 1px 0px;
-  padding:5px 10px;
-  margin-right:1px;
-  background:transparent;
-  }
-
-  #page-tools div.tabs li a:hover {
-    color:#333;
-    background:#ddd;
-    padding:4px 9px;
-    border:1px solid #ccc;
-    border-color:#ccc #ddd #fff;
-    }
-
-    #page-tools div.tabs li a:active {
-      background:#ccc;
-      border-color:#bbb #ccc #eee;
-      }
-
-  #page-tools div.tabs li.active a,
-  #page-tools div.tabs li a.active {
-    background:#fff;
-    color:#333;
-    -moz-border-radius:5px 5px 0px 0px;
-    -webkit-border-radius:5px 5px 0px 0px;
-
-    padding:4px 9px 10px;
-    border-width:1px 1px 0px;
-    border-color:#ccc #ddd;
-    border-style:solid;
-    }
-
-/**
- * Secondary tabs =====================================================
- */
-#secondary-tabs {
-  background:#fff url(images/sprite_bleeds.png) 0px -360px repeat-x;
-  padding:5px 0px 4px;
-  height:20px;
-  border-bottom:1px solid #ccc;
-  }
-
-  #secondary-tabs a {
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    color:#999;
-    padding:0px 10px;
-    }
-
-  #secondary-tabs a:hover {
-    color:#333;
-    background:#ddd url(images/sprite_bleeds.png) 0px -360px repeat-x;
-    }
-
-  #secondary-tabs li.active a,
-  #secondary-tabs a.active {
-    color:#fff;
-    background:#999 url(images/sprite_bleeds.png) 0px -360px repeat-x;
-    }
-
-/**
  * Mission text =======================================================
  */
 div.mission {
@@ -615,7 +435,7 @@ div.pager li.pager-current {
 
   div.pager li.pager-current {
     text-shadow:none;
-    background:#4a5;
+    background:#999;
     color:#fff;
     }
 
@@ -923,7 +743,7 @@ h2.node-title {
   }
 
   h2.comment-title {
-    border-top:3px solid #4a5;
+    border-top:3px solid #999;
     padding: 6px 10px 10px;
     }
 
