@@ -271,7 +271,7 @@ function ginkgo_pager($tags = array(), $limit = 10, $element = 0, $parameters = 
   $links = array();
   $links['pager-previous'] = theme('pager_previous', ($tags[1] ? $tags[1] : t('Prev')), $limit, $element, 1, $parameters);
   $links['pager-next'] = theme('pager_next', ($tags[3] ? $tags[3] : t('Next')), $limit, $element, 1, $parameters);
-  $pager_links = theme('links', $links, array('class' => 'links pager pager-links'));
+  $pager_links = theme('links', $links, array('class' => 'links pager-links'));
 
   if ($pager_list) {
     return "<div class='pager clear-block'>$pager_list $pager_links</div>";
