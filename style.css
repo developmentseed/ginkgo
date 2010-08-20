@@ -18,20 +18,18 @@ a {
   text-decoration:none;
   }
 
-.block-title { font-weight:bold; }
+div.limiter { padding:0px 20px; }
 
-.limiter { padding:0px 20px; }
-
-#page .limiter { max-width:1280px; }
+#page div.limiter { max-width:1280px; }
 
 /**
  * Skinnable elements =================================================
  */
 #global,
 #global a.logo,
-#global .breadcrumb span.link-0 a,
-#global .breadcrumb span.divider,
-#global .breadcrumb span.space a,
+#global div.breadcrumb span.link-0 a,
+#global div.breadcrumb span.divider,
+#global div.breadcrumb span.space a,
 #navigation,
 #features-menu li,
 #features-menu li a { background-image:url(images/sprite_skin.png); }
@@ -40,35 +38,35 @@ a {
  * Default designkit colors ===========================================
  */
 .atrium-welcome-links a:hover,
-.dropdown-blocks .block-toggle ul.links li a:hover,
-.dropdown-blocks .block-toggle .item-list li a:hover,
-.pager li.pager-current,
-.more-link a:hover,
+.dropdown-blocks div.block-toggle ul.links li a:hover,
+.dropdown-blocks div.block-toggle div.item-list li a:hover,
+div.pager li.pager-current,
+div.more-link a:hover,
 #global,
 #navigation { background-color:#44aa55; }
 
-body #space-tools .block-title { background-color:#2f773b; }
+body #space-tools h2.block-title { background-color:#2f773b; }
 
-body #header .block-widget .block-content,
-body #header .block .block-title { background-color:#399048; }
+body #header div.block-widget div.block-content,
+body #header div.block h2.block-title { background-color:#399048; }
 
-body .page-region .block .block-title {
+body div.page-region div.block h2.block-title {
   background-color:#cce0cf;
   border-color:#bed2c1;
   border-bottom-color:#b0c5b4;
   }
 
-.decay-10 .comment-title { border-color:#eeeeee; }
-.decay-9 .comment-title { border-color:#dde7de; }
-.decay-8 .comment-title { border-color:#cce0cf; }
-.decay-7 .comment-title { border-color:#bbd9c0; }
-.decay-6 .comment-title { border-color:#aad2b0; }
-.decay-5 .comment-title { border-color:#99cca1; }
-.decay-4 .comment-title { border-color:#88c592; }
-.decay-3 .comment-title { border-color:#77be82; }
-.decay-2 .comment-title { border-color:#66b773; }
-.decay-1 .comment-title { border-color:#55b064; }
-.decay-0 .comment-title { border-color:#44aa55; }
+div.decay-10 h2.comment-title { border-color:#eeeeee; }
+div.decay-9 h2.comment-title { border-color:#dde7de; }
+div.decay-8 h2.comment-title { border-color:#cce0cf; }
+div.decay-7 h2.comment-title { border-color:#bbd9c0; }
+div.decay-6 h2.comment-title { border-color:#aad2b0; }
+div.decay-5 h2.comment-title { border-color:#99cca1; }
+div.decay-4 h2.comment-title { border-color:#88c592; }
+div.decay-3 h2.comment-title { border-color:#77be82; }
+div.decay-2 h2.comment-title { border-color:#66b773; }
+div.decay-1 h2.comment-title { border-color:#55b064; }
+div.decay-0 h2.comment-title { border-color:#44aa55; }
 
 /**
  * "Rounded" elements =================================================
@@ -82,9 +80,9 @@ body .page-region .block .block-title {
 .node-type-list,
 .admin-panel,
 .box-title,
-.compact-link a,
-.confirmation ul,
-form .buttons,
+div.compact-link a,
+form.confirmation ul,
+form div.buttons,
 input.teaser-button,
 input.form-submit {
   -moz-border-radius:3px;
@@ -164,10 +162,10 @@ table th { text-shadow:#fff 0px 1px 0px; }
   float:left;
   }
 
-#header .block { padding:0px 5px 0px 0px; }
+#header div.block { padding:0px 5px 0px 0px; }
 
-#header .block-widget .block-content,
-#header .block-title {
+#header div.block-widget div.block-content,
+#header h2.block-title {
   background:transparent;
   color:#fff;
   font-size:11px;
@@ -177,26 +175,26 @@ table th { text-shadow:#fff 0px 1px 0px; }
   padding:0px 10px;
   }
 
-  #header .block-widget a,
-  #header .block-title a { color:#fff; }
+  #header div.block-widget a,
+  #header h2.block-title a { color:#fff; }
 
-  #header .block-widget a { font-weight:bold; }
+  #header div.block-widget a { font-weight:bold; }
 
-  #header .block-widget .block-content,
-  #header .block-toggle .block-title {
+  #header div.block-widget div.block-content,
+  #header div.block-toggle h2.block-title {
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     background:transparent;
     }
 
-  #header .block-toggle .toggle-active {
+  #header div.block-toggle h2.toggle-active {
     background-color:#fff !important;
     color:#333 !important;
     -moz-border-radius:3px 3px 0px 0px;
     -webkit-border-radius:3px 3px 0px 0px;
     }
 
-  #header .block-toggle .block-content {
+  #header div.block-toggle div.block-content {
     left:0px;
     right:auto;
     -moz-border-radius:0px 5px 5px 5px;
@@ -204,12 +202,12 @@ table th { text-shadow:#fff 0px 1px 0px; }
     }
 
 /* Account block */
-body.logged-in #block-atrium-account .block-title {
+body.logged-in #block-atrium-account h2.block-title {
   position:relative;
   padding-left:35px;
   }
 
-#block-atrium-account .block-title div.picture {
+#block-atrium-account h2.block-title div.picture {
   -moz-border-radius:3px 0px 0px 3px;
   -webkit-border-radius:3px 0px 0px 3px;
   position:absolute;
@@ -217,13 +215,13 @@ body.logged-in #block-atrium-account .block-title {
   top:0px;
   }
 
-  #block-atrium-account .toggle-active div.picture {
+  #block-atrium-account h2.toggle-active div.picture {
     -moz-border-radius:3px 0px 0px 0px;
     -webkit-border-radius:3px 0px 0px 0px;
     }
 
 /* Breadcrumb */
-#global .breadcrumb {
+#global div.breadcrumb {
   float:left;
   padding:5px;
   height:30px;
@@ -233,16 +231,16 @@ body.logged-in #block-atrium-account .block-title {
   overflow:hidden;
   }
 
-  #global .breadcrumb span,
-  #global .breadcrumb span a {
+  #global div.breadcrumb span,
+  #global div.breadcrumb span a {
     color:#fff;
     height:30px;
     float:left;
     }
 
-  #global .breadcrumb span.space a,
-  #global .breadcrumb span.link-0 a,
-  #global .breadcrumb span.divider {
+  #global div.breadcrumb span.space a,
+  #global div.breadcrumb span.link-0 a,
+  #global div.breadcrumb span.divider {
     background-position:-20px -265px;
     background-repeat:no-repeat;
     text-indent:-999px;
@@ -250,11 +248,11 @@ body.logged-in #block-atrium-account .block-title {
     width:20px;
     }
 
-  #global .breadcrumb span.link-0 a { background-position:0px -265px; }
+  #global div.breadcrumb span.link-0 a { background-position:0px -265px; }
 
-  #global .breadcrumb span.space { padding-left:5px; }
-  #global .breadcrumb span.space a.private { background-position:-40px -265px; }
-  #global .breadcrumb span.space a.public { background-position:-60px -265px; }
+  #global div.breadcrumb span.space { padding-left:5px; }
+  #global div.breadcrumb span.space a.private { background-position:-40px -265px; }
+  #global div.breadcrumb span.space a.public { background-position:-60px -265px; }
 
 
 /**
@@ -270,7 +268,7 @@ body.logged-in #block-atrium-account .block-title {
 
   #footer a { color:#666; }
 
-#footer .footer-message { float:left; }
+#footer div.footer-message { float:left; }
 
 #footer ul.links { float:right; }
 
@@ -292,7 +290,7 @@ body.logged-in #block-atrium-account .block-title {
   z-index:2;
   }
 
-  #navigation .limiter {
+  #navigation div.limiter {
     padding-top:20px;
     height:50px;
     }
@@ -303,17 +301,17 @@ body.logged-in #block-atrium-account .block-title {
   top:20px;
   }
 
-#space-tools .block-widget,
-#space-tools .block-widget a {
+#space-tools div.block-widget,
+#space-tools div.block-widget a {
   font-size:11px;
   color:#fff;
   }
 
-  #space-tools .block-widget a { font-weight:bold; }
+  #space-tools div.block-widget a { font-weight:bold; }
 
-#space-tools .block-title { color:#fff; }
+#space-tools h2.block-title { color:#fff; }
 
-  #space-tools .toggle-active {
+  #space-tools h2.toggle-active {
     background-color:#fff !important;
     color:#333;
     }
@@ -472,20 +470,20 @@ span.feature-atrium_members { background-position:-140px 100%; }
 span.feature-atrium_shoutbox { background-position:-160px 100%; }
 
 #block-atrium-admin_links span.icon { background:url(images/sprite_icons.png) -20px -400px no-repeat; }
-#block-atrium-admin_links .toggle-active span.icon { background-position:-20px -420px; }
+#block-atrium-admin_links h2.toggle-active span.icon { background-position:-20px -420px; }
 #block-atrium-create span.icon { background:url(images/sprite_icons.png) 0px -400px no-repeat; }
-#block-atrium-create .toggle-active span.icon { background-position:0px -420px; }
+#block-atrium-create h2.toggle-active span.icon { background-position:0px -420px; }
 #block-atrium-search span.icon { background:url(images/sprite_icons.png) -40px -400px no-repeat; }
-#block-atrium-search .toggle-active span.icon { background-position:-40px -420px; }
+#block-atrium-search h2.toggle-active span.icon { background-position:-40px -420px; }
 
 /**
  * Error pages ========================================================
  */
-body.page-access-denied #page-header .limiter,
-body.page-not-found #page-header .limiter { display:none; }
+body.page-access-denied #page-header div.limiter,
+body.page-not-found #page-header div.limiter { display:none; }
 
-body.page-access-denied .access-denied,
-body.page-not-found .not-found {
+body.page-access-denied div.access-denied,
+body.page-not-found div.not-found {
   font-size:32px;
   font-weight:300;
 
@@ -497,7 +495,7 @@ body.page-not-found .not-found {
   background:url(images/404.png) 100% 50% no-repeat;
   }
 
-body.page-access-denied .access-denied { background-image:url(images/403.png); }
+body.page-access-denied div.access-denied { background-image:url(images/403.png); }
 
 /**
  * Page tools ========================================================
@@ -510,39 +508,34 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   z-index:1;
   }
 
-  #page-tools .page-title,
-  #page-tools .tabs {
+  #page-tools h2.page-title,
+  #page-tools div.tabs {
     padding-top:5px;
     position:absolute;
     left:20px;
     }
 
-  #page-tools .context-links,
-  #page-tools .dropdown-blocks { float:right; }
+  #page-tools div.context-links,
+  #page-tools div.dropdown-blocks { float:right; }
 
-#page-tools .page-title {
+#page-tools h2.page-title {
   font-size:16px;
   font-weight:normal;
   line-height:30px;
   text-shadow:#fff 0px 1px 0px;
   }
 
-  #page-tools .page-title-hidden {
-    text-indent:-999px;
-    overflow:hidden;
-    }
-
-  #page-tools .page-title a.username {
+  #page-tools h2.page-title a.username {
     color:inherit;
     font-size:inherit;
     text-transform:none;
     }
 
-#page-tools .dropdown-blocks { height:39px; }
+#page-tools div.dropdown-blocks { height:39px; }
 
-  #page-tools .dropdown-blocks .block { padding:0px; }
+  #page-tools div.dropdown-blocks div.block { padding:0px; }
 
-  #page-tools .dropdown-blocks .block-toggle .block-title {
+  #page-tools div.dropdown-blocks div.block-toggle h2.block-title {
     -moz-border-radius:0px;
     -webkit-border-radius:0px;
 
@@ -555,13 +548,13 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
     background:transparent;
     }
 
-    #page-tools .dropdown-blocks .block-toggle .toggle-active {
+    #page-tools div.dropdown-blocks div.block-toggle h2.toggle-active {
       color:#fff;
       text-shadow:#444 0px 1px 0px;
       background:#666 url(images/sprite_bleeds.png) 0px 100% repeat-x;
       }
 
-#page-tools .context-links {
+#page-tools div.context-links {
   border-left:1px solid #ccc;
   padding:7px 0px 7px 5px;
   height:25px;
@@ -569,8 +562,8 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   overflow:hidden;
   }
 
-  .buttons a,
-  #page-tools .context-links a {
+  div.buttons a,
+  #page-tools div.context-links a {
     font-size:11px;
     font-weight:bold;
     color:#fff;
@@ -586,10 +579,10 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
     -webkit-border-radius:5px;
     }
 
-    .buttons a { margin-right:5px; }
+    div.buttons a { margin-right:5px; }
 
-    .buttons a:active,
-    #page-tools .context-links a:active { background-position:0px 100%; }
+    div.buttons a:active,
+    #page-tools div.context-links a:active { background-position:0px 100%; }
 
 #page-tools #help-toggler {
   background:url(images/sprite_base.png) 0px -30px no-repeat;
@@ -609,16 +602,16 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
 /**
  * Tabs ===============================================================
  */
-#page-tools .tabs ul.links {
+#page-tools div.tabs ul.links {
   height:35px;
   float:none;
   position:static;
   }
 
-#page-tools .tabs li a,
-#page-tools .tabs li a:hover,
-#page-tools .tabs li.active a,
-#page-tools .tabs li a.active {
+#page-tools div.tabs li a,
+#page-tools div.tabs li a:hover,
+#page-tools div.tabs li.active a,
+#page-tools div.tabs li a.active {
   color:#888;
   font-weight:bold;
   font-size:13px;
@@ -630,7 +623,7 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   background:transparent;
   }
 
-  #page-tools .tabs li a:hover {
+  #page-tools div.tabs li a:hover {
     color:#333;
     background:#ddd;
     padding:4px 9px;
@@ -638,13 +631,13 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
     border-color:#ccc #ddd #fff;
     }
 
-    #page-tools .tabs li a:active {
+    #page-tools div.tabs li a:active {
       background:#ccc;
       border-color:#bbb #ccc #eee;
       }
 
-  #page-tools .tabs li.active a,
-  #page-tools .tabs li a.active {
+  #page-tools div.tabs li.active a,
+  #page-tools div.tabs li a.active {
     background:#fff;
     color:#333;
     -moz-border-radius:5px 5px 0px 0px;
@@ -683,3 +676,4 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
     color:#fff;
     background:#999 url(images/sprite_bleeds.png) 0px -360px repeat-x;
     }
+

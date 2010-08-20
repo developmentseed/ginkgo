@@ -6,19 +6,19 @@ body.layout-wide #content {
   width:auto;
   }
 
-body.layout-wide #page .limiter {
+body.layout-wide #page div.limiter {
   padding:0px 10px;
   background:transparent;
   }
 
-body.layout-wide #content .page-region { padding:20px 10px; }
+body.layout-wide #content div.page-region { padding:20px 10px; }
 
 /**
  * Login ==============================================================
  */
-body.layout-login #page-header .limiter { width:640px; }
+body.layout-login #page-header div.limiter { width:640px; }
 
-body.layout-login #page .limiter {
+body.layout-login #page div.limiter {
   width:660px;
   background:transparent;
   }
@@ -28,7 +28,7 @@ body.layout-login #content {
   width:auto;
   }
 
-body.layout-login #content .page-region { padding:20px 10px; }
+body.layout-login #content div.page-region { padding:20px 10px; }
 
 /**
  * Split ==============================================================
@@ -39,13 +39,13 @@ body.layout-split #right {
   width:49.99%;
   }
 
-body.layout-split #page .limiter {
+body.layout-split #page div.limiter {
   padding:0px 10px;
   background-position:50% 0%;
   }
 
-body.layout-split #content .page-region,
-body.layout-split #right .page-region { padding:20px 10px; }
+body.layout-split #content div.page-region,
+body.layout-split #right div.page-region { padding:20px 10px; }
 
 /**
  * Columns ============================================================
@@ -57,11 +57,11 @@ body.layout-columns #right {
   width:33.33%;
   }
 
-body.layout-columns #page .limiter {
+body.layout-columns #page div.limiter {
   padding:0px 10px;
   background:transparent;
   }
 
-body.layout-columns #left .page-region,
-body.layout-columns #content .page-region,
-body.layout-columns #right .page-region { padding:20px 10px; }
+body.layout-columns #left div.page-region,
+body.layout-columns #content div.page-region,
+body.layout-columns #right div.page-region { padding:20px 10px; }

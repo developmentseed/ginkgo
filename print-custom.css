@@ -1,7 +1,7 @@
 /**
  * Node submitted
  */
-.node-submitted {
+div.node-submitted {
   margin:0pt;
   line-height:10pt;
   float:right;
@@ -12,16 +12,18 @@
  * Hide UI related widgets on print.
  */
 div.node .diff-inline-controls,
-div.node .xref { display:none; }
+div.node .xref {
+  display:none;
+  }
 
 /**
  * Case state display
  */
-.atrium-case-summary { margin:0pt 0pt 10pt; }
+div.atrium-case-summary { margin:0pt 0pt 10pt; }
 
-.atrium-case-summary .primary {
-  float:left;
-  width:50%;
-  }
+  div.atrium-case-summary div.primary {
+    float:left;
+    width:50%;
+    }
 
-.atrium-case-summary label { margin-right:1em; }
+  div.atrium-case-summary label { margin-right:1em; }
