@@ -24,7 +24,7 @@ Drupal.behaviors.ginkgo = function (context) {
 
         // Make block draggable and set position of each block on drag end.
         var options = {
-          handle: 'h2.block-title',
+          handle: '.block-title',
           containment: 'document',
           stop: function(event, ui) {
             var state = {};
@@ -45,7 +45,7 @@ Drupal.behaviors.ginkgo = function (context) {
       }
 
       // Add a click handler for closing the block.
-      $('h2.block-title span.close', this).click(function() {
+      $('.block-title span.close', this).click(function() {
         target.hide();
         if (editor) {
           editor.pageEditor('end');
@@ -105,9 +105,9 @@ Drupal.behaviors.ginkgo = function (context) {
   $('div.toggle-blocks:not(.processed)')
     .addClass('processed')
     .each(function() {
-      $('h2.block-title', this).click(function() {
+      $('.block-title', this).click(function() {
         if (!$(this).is('.toggle-active')) {
-          $('div.toggle-blocks h2.block-title').removeClass('toggle-active');
+          $('div.toggle-blocks .block-title').removeClass('toggle-active');
           $('div.toggle-blocks div.block-toggle div.block-content').hide();
           $(this).addClass('toggle-active').siblings('div.block-content').show();
         }

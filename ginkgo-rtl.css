@@ -1,23 +1,22 @@
-.toggle-blocks div.context-block,
-.toggle-blocks div.block {
+.toggle-blocks .block {
   float:right;
   }
 
 /**
  * Togglable blocks ===================================================
  */
-.dropdown-blocks div.block {
+.dropdown-blocks .block {
   padding-left:0px;
   padding-right:5px;
   }
 
-.dropdown-blocks div.block h2.block-title span.icon {
+.dropdown-blocks .block .block-title span.icon {
   float:right;
   margin-right:0px;
   margin-left:5px;
   }
 
-.dropdown-blocks div.block-toggle div.block-content {
+.dropdown-blocks .block-toggle .block-content {
   left:0px;
   right:auto;
   -moz-border-radius:0px 5px 5px 5px;
@@ -25,48 +24,48 @@
   -webkit-border-top-left-radius:0px;
   }
 
-.dropdown-blocks div.block-toggle li a,
-.dropdown-blocks div.block-toggle div.more-link a { padding:2px 10px 2px 40px; }
+.dropdown-blocks .block-toggle li a,
+.dropdown-blocks .block-toggle .more-link a { padding:2px 10px 2px 40px; }
 
-.dropdown-blocks div.block-toggle li a span {
+.dropdown-blocks .block-toggle li a span {
   float:right;
   margin-right:0px;
   margin-left:10px;
   }
 
 /* Panes */
-.dropdown-blocks div.block-toggle div.panes { background-position:359px 0px; }
+.dropdown-blocks .block-toggle .panes { background-position:359px 0px; }
 
-.dropdown-blocks div.block-toggle div.pane-left,
-.dropdown-blocks div.block-toggle div.pane-right { float:right; }
+.dropdown-blocks .block-toggle .pane-left,
+.dropdown-blocks .block-toggle .pane-right { float:right; }
 
-.dropdown-blocks div.block-toggle div.pane-right li { float:right; }
+.dropdown-blocks .block-toggle .pane-right li { float:right; }
 
 /**
  * Page tools ========================================================
  */
-#page-tools h2.page-title,
-#page-tools div.tabs {
+#page-tools .page-title,
+#page-tools .tabs {
   left:auto;
   right:20px;
   }
 
-#page-tools div.context-links,
-#page-tools div.dropdown-blocks { float:left; }
+#page-tools .context-links,
+#page-tools .dropdown-blocks { float:left; }
 
-#page-tools div.dropdown-blocks div.block-toggle h2.block-title {
+#page-tools .dropdown-blocks .block-toggle .block-title {
   border-right:1px solid #ccc;
   border-left:0px;
   }
 
-#page-tools div.context-links {
+#page-tools .context-links {
   border-right:1px solid #ccc;
   border-left:0px;
   padding:7px 5px 7px 0px;
   }
 
-  div.buttons a,
-  #page-tools div.context-links a {
+  .buttons a,
+  #page-tools .context-links a {
     margin-left:0px;
     margin-right:5px;
     }
@@ -79,16 +78,16 @@
 /**
  * Page layout ========================================================
  */
-#page div.limiter { background-position:35% 0px; }
+#page .limiter { background-position:35% 0px; }
 
 #content { float:right; }
-#content div.page-region {
+#content .page-region {
   padding-left:10px;
   padding-right:20px;
   }
 
 #right { float:left; }
-#right div.page-region {
+#right .page-region {
   padding-right:10px;
   padding-left:20px;
   }
@@ -96,61 +95,61 @@
 /**
  * Menus ==============================================================
  */
-div.drilldown span.trail a {
+.drilldown .trail a {
   background-image:url(images/sprite_base-rtl.png);
   background-position:100% -160px;
   }
 
-div.drilldown span.trail a.depth-1,
-div.drilldown span.trail a.depth-2,
-div.drilldown span.trail a.depth-3,
-div.drilldown span.trail a.depth-4,
-div.drilldown span.trail a.depth-5,
-div.drilldown span.trail a.depth-6,
-div.drilldown span.trail a.depth-7 { padding-left:0px; }
+.drilldown .trail a.depth-1,
+.drilldown .trail a.depth-2,
+.drilldown .trail a.depth-3,
+.drilldown .trail a.depth-4,
+.drilldown .trail a.depth-5,
+.drilldown .trail a.depth-6,
+.drilldown .trail a.depth-7 { padding-left:0px; }
 
-div.drilldown span.trail a.depth-1 {
+.drilldown .trail a.depth-1 {
   padding-right:25px;
   }
 
-div.drilldown span.trail a.depth-2 {
+.drilldown .trail a.depth-2 {
   padding-right:50px;
   background-position:30px -160px;
   }
 
-div.drilldown span.trail a.depth-3 {
+.drilldown .trail a.depth-3 {
   padding-right:75px;
   background-position:55px -160px;
   }
 
-div.drilldown span.trail a.depth-4 {
+.drilldown .trail a.depth-4 {
   padding-right:100px;
   background-position:80px -160px;
   }
 
-div.drilldown span.trail a.depth-5 {
+.drilldown .trail a.depth-5 {
   padding-right:125px;
   background-position:105px -160px;
   }
 
-div.drilldown span.trail a.depth-6 {
+.drilldown .trail a.depth-6 {
   padding-right:150px;
   background-position:130px -160px;
   }
 
-div.drilldown span.trail a.depth-7 {
+.drilldown .trail a.depth-7 {
   padding-right:175px;
   background-position:155px -160px;
   }
 
-div.block-atrium ul.menu a,
-div.drilldown ul.menu a {
+.block-atrium .menu a,
+.drilldown .menu a {
   padding:4px 0px 5px 10px;
   margin-left:0px;
   margin-right:25px;
   }
 
-div.block-atrium ul.menu ul {
+.block-atrium .menu ul {
   border-left:0px;
   border-right:24px solid #f8f8f8;
   padding-left:0px;
@@ -158,26 +157,26 @@ div.block-atrium ul.menu ul {
   }
 
 /* RESET, now do it again */
-div.drilldown ul.menu ul,
-div.drilldown ul.menu li {
+.drilldown .menu ul,
+.drilldown .menu li {
   padding:0px;
   border:0px;
   }
 
-  div.drilldown ul.menu ul ul {
+  .drilldown .menu ul ul {
     border-left:0px;
     border-right:24px solid #f8f8f8;
     padding-left:0px;
     padding-right:1px;
     }
 
-div.block-atrium ul.menu li.collapsed,
-div.block-atrium ul.menu li.expanded {
+.block-atrium .menu li.collapsed,
+.block-atrium .menu li.expanded {
   background-image:url(images/sprite_base-rtl.png);
   background-position:100% -60px;
   }
 
-div.block-atrium ul.menu li.leaf {
+.block-atrium .menu li.leaf {
   background-image:url(images/sprite_base-rtl.png);
   background-position:100% -110px;
   }
@@ -186,7 +185,7 @@ div.block-atrium ul.menu li.leaf {
  * Palette blocks =====================================================
  */
 div.messages span.close,
-#palette div.block h2.block-title span.close {
+#palette .block .block-title span.close {
   left:5px;
   right:auto;
   }
@@ -202,32 +201,32 @@ div.messages span.close,
 /**
  * Nodes, comments ====================================================
  */
-div.node-submitted,
-div.comment-submitted { float:left; }
+.node-submitted,
+.comment-submitted { float:left; }
 
-div.node-submitted div.picture,
-div.comment-submitted div.picture {
+.node-submitted div.picture,
+.comment-submitted div.picture {
   float:right;
   margin-right:0px;
   margin-left:5px;
   }
 
-div.more-link a,
-div.node-links ul.links,
-div.comment-links ul.links { float:left; }
+.more-link a,
+.node-links ul.links,
+.comment-links ul.links { float:left; }
 
 /**
  * Module: SHOUTBOX ===================================================
  */
-div.shoutbox-input { padding:0px 0px 10px 100px; }
+.shoutbox-input { padding:0px 0px 10px 100px; }
 
-div.shoutbox-input input.form-submit {
+.shoutbox-input input.form-submit {
   right:auto;
   left:0px;
   }
 
-div.view-atrium-profile div.user-picture,
-div.view-atrium-profile div.username {
+.view-atrium-profile div.user-picture,
+.view-atrium-profile div.username {
   margin-right:0px;
   margin-left:0px;
   float:right;
@@ -244,22 +243,22 @@ table.views-view-grid div.picture {
  */
 
 /* Grouped fields */
-div.view div.grouped-meta {
+.view .grouped-meta {
   float:left;
   margin-left:0px;
   margin-right:10px;
   }
 
-div.view div.grouped-meta div.user-picture {
+.view .grouped-meta .user-picture {
   float:right;
   margin-left:5px;
   margin-right:0px;
   }
 
 /* Views block filter */
-div.block div.views-exposed-form div.views-exposed-widget { padding:5px 100px 4px 0px; }
+.block .views-exposed-form .views-exposed-widget { padding:5px 100px 4px 0px; }
 
-div.block div.views-exposed-form div.views-exposed-widget label {
+.block .views-exposed-form .views-exposed-widget label {
   right:0px;
   left:auto;
   }
@@ -267,9 +266,9 @@ div.block div.views-exposed-form div.views-exposed-widget label {
 /**
  * Pager ==============================================================
  */
-#palette div.block div.minipager,
-div.page-region div.block div.boxes-box-controls,
-div.page-region div.block div.minipager {
+#palette .block .minipager,
+.page-region .block .boxes-box-controls,
+.page-region .block .minipager {
   right:auto;
   left:5px;
   }
