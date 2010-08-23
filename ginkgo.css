@@ -389,7 +389,7 @@ div.messages li {
  * Pager ==============================================================
  */
 .block .boxes-box-controls,
-.pager {
+div.pager {
   -moz-border-radius:3px;
   -webkit-border-radius:3px;
 
