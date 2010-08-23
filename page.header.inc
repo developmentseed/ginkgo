@@ -9,6 +9,8 @@
   </head>
   <body <?php print drupal_attributes($attr) ?>>
 
+  <?php print $skipnav ?>
+
   <div id='global'><div class='limiter clear-block'>
     <?php if ($header): ?>
       <div id='header' class='dropdown-blocks toggle-blocks clear-block'>
