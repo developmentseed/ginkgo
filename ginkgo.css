@@ -22,6 +22,7 @@ div.node .field .field-label-inline,
 div.node .field .field-label-inline-first,
 .node-links ul.links:hover,
 .comment-links ul.links:hover,
+.view .grouped-admin:hover,
 .multistep li.active-step,
 .form-text:focus,
 .form-textarea:focus,
@@ -790,6 +791,7 @@ div.comment {
     }
 
 .more-link a,
+.view .grouped-admin,
 .node-links ul.links,
 .comment-links ul.links {
   font-size:11px;
@@ -797,29 +799,36 @@ div.comment {
   display:block;
   }
 
+  .view .grouped-admin,
   .node-links ul.links,
   .comment-links ul.links {
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     }
 
+  .view .grouped-admin a,
   .node-links ul.links a,
   .comment-links ul.links a { color:#ccc; }
 
+  .view .grouped-admin:hover a,
   .node-links ul.links:hover a,
   .comment-links ul.links:hover a { color:inherit; }
 
+  .view .grouped-admin .views-field,
   .node-links ul.links li,
   .comment-links ul.links li {
     float:left;
     display:block;
-    border-left:1px solid #fff;
     }
 
-  .node-links ul.links li.first,
-  .comment-links ul.links li.first { border:0px; }
+    .node-links ul.links li,
+    .comment-links ul.links li { border-left:1px solid #fff; }
+
+    .node-links ul.links li.first,
+    .comment-links ul.links li.first { border:0px; }
 
   .more-link a,
+  .view .grouped-admin a,
   .node-links ul li span,
   .comment-links ul li span,
   .node-links ul li a,
@@ -1106,8 +1115,8 @@ table.case_changes td { padding:5px; }
     top:0px;
     }
 
-  .shoutform .ahah-progress-throbber { display:none; }
-  .shoutform .view .markup { font-size:13px; }
+form.shoutform .ahah-progress-throbber { display:none; }
+form.shoutform .view .markup { font-size:13px; }
 
 /**
  * Views ==============================================================
@@ -1209,20 +1218,6 @@ table caption {
     overflow:hidden;
     white-space:nowrap;
     }
-
-/* Admin links */
-.view .grouped-admin {
-  float:right;
-  font-size:11px;
-  }
-
-.view .grouped-admin .views-field { float:left; }
-
-.view .grouped-admin a {
-  float:left;
-  background:#fff;
-  padding:0px 5px;
-  }
 
 /* VBO */
 #views-bulk-operations-dropdown,
