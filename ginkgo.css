@@ -575,8 +575,7 @@ div.pager {
 /**
  * Menus ==============================================================
  */
-#block-atrium-book .block-content,
-#block-atrium-book_all .block-content,
+.block-atrium_book .block-content,
 .page-region .drilldown .block-content {
   -moz-border-radius:0px;
   -webkit-border-radius:0px;
@@ -638,25 +637,25 @@ div.pager {
     }
 
 /* Legacy block menu */
-.block-atrium .menu ul,
-.block-atrium .menu li {
+.block .menu ul,
+.block .menu li {
   padding:0px;
   border:0px;
   }
 
-  .block-atrium .menu ul {
+  .block .menu ul {
     border-left:24px solid #f8f8f8;
     padding-left:1px;
     }
 
-    .block-atrium .menu ul ul { border-color:#f4f4f4; }
-    .block-atrium .menu ul ul ul { border-color:#eee; }
-    .block-atrium .menu ul ul ul ul { border-color:#e8e8e8; }
+    .block .menu ul ul { border-color:#f4f4f4; }
+    .block .menu ul ul ul { border-color:#eee; }
+    .block .menu ul ul ul ul { border-color:#e8e8e8; }
 
-  .block-atrium .menu li.collapsed,
-  .block-atrium .menu li.expanded { background:#fff url(images/sprite_base.png) 0px -60px no-repeat; }
+  .block .menu li.collapsed,
+  .block .menu li.expanded { background:#fff url(images/sprite_base.png) 0px -60px no-repeat; }
 
-  .block-atrium .menu li.leaf { background:#fff url(images/sprite_base.png) 0px -110px no-repeat; }
+  .block .menu li.leaf { background:#fff url(images/sprite_base.png) 0px -110px no-repeat; }
 
 /* RESET, now do it again */
 .drilldown .menu ul,
@@ -682,7 +681,7 @@ div.pager {
     background:url(images/sprite_base.png) 0px -60px no-repeat;
     }
 
-.block-atrium .menu a,
+.block .menu a,
 .drilldown .menu a {
   display:block;
   line-height:15px;
@@ -692,7 +691,7 @@ div.pager {
   margin-left:25px;
   }
 
-  .block-atrium .menu a.active,
+  .block .menu a.active,
   .drilldown .menu a.active {
     font-weight:bold;
     color:#333;
