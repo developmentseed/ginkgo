@@ -110,10 +110,14 @@ function ginkgo_preprocess_block(&$vars) {
   // If block is in a toggleable region and does not have a subject, mark it as a "widget,"
   // i.e. show its contents rather than a toggle trigger label.
   if (in_array($vars['block']->region, array('header', 'page_tools', 'space_tools'))) {
-    $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-widget' : ' block-toggle';
-
-    // Add invisible link element for toggling block via keyboard.
-    $vars['title'] = l(t('Toggle'), $_GET['q'], array('fragment' => $vars['attr']['id'], 'attributes' => array('class' => 'toggle element-invisible'))) . $vars['title'];
+    if (empty($vars['block']->subject)) {
+      $vars['attr']['class'] .= ' block-widget';
+    }
+    else {
+      $vars['attr']['class'] .= ' block-toggle';
+      // Add invisible link element for toggling block via keyboard.
+      $vars['title'] = l(t('Toggle'), $_GET['q'], array('fragment' => $vars['attr']['id'], 'attributes' => array('class' => 'toggle element-invisible'))) . $vars['title'];
+    }
   }
   if ($vars['block']->region === 'palette') {
     // Palette region requires module-level jQuery UI, Cookie, JSON includes.
