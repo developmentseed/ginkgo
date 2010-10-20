@@ -16,6 +16,15 @@ object {
 .block-content { word-wrap:break-word; }
 
 /**
+ * Backport of .element-invisible class from D7.
+ */
+.element-invisible {
+  position:absolute !important;
+  clip:rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip:rect(1px, 1px, 1px, 1px);
+  }
+
+/**
  * "Power" hover classes ==============================================
  */
 div.node .field .field-label-inline,
@@ -34,8 +43,11 @@ table td.active,
 .block .menu a:hover { background-color:#ecf4f8; }
 
 .dropdown-blocks .block-toggle li a:hover,
+.dropdown-blocks .block-toggle li a:focus,
 .dropdown-blocks .block-toggle ul.links li a:hover,
+.dropdown-blocks .block-toggle ul.links li a:focus,
 .dropdown-blocks .block-toggle div.item-list li a:hover,
+.dropdown-blocks .block-toggle div.item-list li a:focus,
 .pager li.pager-current,
 .more-link a:hover {
   color:#fff;

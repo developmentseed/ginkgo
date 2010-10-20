@@ -1,8 +1,11 @@
 <style type='text/css'>
 .atrium-welcome-links a:hover,
 .dropdown-blocks .block-toggle li a:hover,
+.dropdown-blocks .block-toggle li a:focus,
 .dropdown-blocks .block-toggle ul.links li a:hover,
+.dropdown-blocks .block-toggle ul.links li a:focus,
 .dropdown-blocks .block-toggle .item-list li a:hover,
+.dropdown-blocks .block-toggle .item-list li a:focus,
 .pager li.pager-current,
 .more-link a:hover,
 #global,
