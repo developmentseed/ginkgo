@@ -1,3 +1,9 @@
 ul.menu,
+ul.menu ul,
 ul.menu li,
 ul.menu li a { height:1%; }
+
+.drilldown ul.menu,
+.drilldown ul.menu ul,
+.drilldown ul.menu li,
+.drilldown ul.menu li a { overflow:hidden; }

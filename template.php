@@ -96,7 +96,7 @@ function ginkgo_preprocess_page(&$vars) {
 
   // IE7 CSS
   // @TODO: Implement IE styles key in tao.
-  $ie = base_path() . path_to_theme() .'/ie.css';
+  $ie = base_path() . drupal_get_path('theme', 'ginkgo') .'/ie.css';
   $vars['ie'] = "<!--[if lte IE 8]><style type='text/css' media='screen'>@import '{$ie}';</style><![endif]-->";
 
   // Help text toggler link.
