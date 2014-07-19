@@ -132,7 +132,7 @@ Drupal.behaviors.ginkgo = function (context) {
     // in an actively toggled block we can assume that focus has "left" that
     // block and hide it.
     $('body:not(.ginkgoProcessed)').each(function() {
-        $(this).addClass('.ginkgoProcessed');
+        $(this).addClass('ginkgoProcessed');
         $('a, input, textarea, select', this).focus(function() {
             if (!$(this).parents('.block:has(.toggle-active)').size()) {
                 $('.toggle-active').removeClass('toggle-active').siblings('div.block-content').hide();
